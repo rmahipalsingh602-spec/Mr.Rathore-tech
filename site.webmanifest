@@ -1,0 +1,15 @@
+﻿{
+  "name": "Mr. Rathore Tech Company",
+  "short_name": "MrRathore",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#071019",
+  "theme_color": "#071019",
+  "icons": [
+    {
+      "src": "assets/logo.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
