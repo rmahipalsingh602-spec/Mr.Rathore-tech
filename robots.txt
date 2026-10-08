@@ -1,3 +1,54 @@
-﻿User-agent: *
+# ==============================================================================
+# ROBOTS.TXT FOR MR. RATHORE TECH COMPANY & MAHIPAL SINGH RATHORE PORTFOLIO
+# Optimized for Google, Bing, Perplexity AI, ChatGPT, Gemini, Applebot & Social
+# ==============================================================================
+
+User-agent: *
 Allow: /
-Sitemap: /sitemap.xml
+Crawl-delay: 1
+
+# Google Search Engine & SGE (Search Generative Experience)
+User-agent: Googlebot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+# Microsoft Bing & Copilot
+User-agent: Bingbot
+Allow: /
+
+# Modern AI Search Engines & Indexers
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: YandexBot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+# Official XML Sitemaps
+Sitemap: https://rmahipalsingh602-group.gitlab.io/rmahipalsingh602-project/sitemap.xml
+Sitemap: https://mr-rathore-company-site.netlify.app/sitemap.xml

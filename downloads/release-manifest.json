@@ -1,0 +1,129 @@
+{
+  "product": "MRL",
+  "version": "3.2.0",
+  "display_version": "MRL 3.2.0",
+  "platform": "multi-platform",
+  "generated_at": "2026-06-15T15:22:41.039672+00:00",
+  "artifacts": {
+    "setup": {
+      "key": "setup",
+      "name": "mrl-windows-x64-setup-3.2.0.exe",
+      "download_path": "downloads/mrl-windows-x64-setup-3.2.0.exe",
+      "alias_path": "downloads/mrl-windows-x64-setup.exe",
+      "size_bytes": 15415029,
+      "sha256": "9D7F36B3FCF6304694EC849531BA1C37B284A3E654331A2EE1F1637DBF5694FA",
+      "signature_status": "NotSigned",
+      "signature_label": "Unsigned build",
+      "signer_subject": null
+    },
+    "portable": {
+      "key": "portable",
+      "name": "mrl-windows-x64-3.2.0.exe",
+      "download_path": "downloads/mrl-windows-x64-3.2.0.exe",
+      "alias_path": "downloads/mrl-windows-x64.exe",
+      "size_bytes": 13553114,
+      "sha256": "F346F9DBD006EF79C3FE8D3E91C18B6BF52C82C9708EDE4C8E768595D59172D0",
+      "signature_status": "NotSigned",
+      "signature_label": "Unsigned build",
+      "signer_subject": null
+    },
+    "macos_source": {
+      "key": "macos_source",
+      "name": "mrl-macos-source-3.2.0.zip",
+      "platform": "macos",
+      "kind": "source-launcher",
+      "label": "macOS source launcher",
+      "download_path": "downloads/mrl-macos-source-3.2.0.zip",
+      "alias_path": "downloads/mrl-macos-source.zip",
+      "size_bytes": 58091,
+      "sha256": "BE03B4D3F8005AA61BBADFAE6DF49797DBB3DEFA015F53DE84D806E76DFC5035",
+      "signature_status": "NotApplicable",
+      "signature_label": "Source launch package",
+      "signer_subject": null
+    },
+    "linux_source": {
+      "key": "linux_source",
+      "name": "mrl-linux-source-3.2.0.tar.gz",
+      "platform": "linux",
+      "kind": "source-launcher",
+      "label": "Linux source launcher",
+      "download_path": "downloads/mrl-linux-source-3.2.0.tar.gz",
+      "alias_path": "downloads/mrl-linux-source.tar.gz",
+      "size_bytes": 46873,
+      "sha256": "261B141EB1E1A18BE2E6C358944317B652CC4EF5E6C913A62E12AA8B99A3DA20",
+      "signature_status": "NotApplicable",
+      "signature_label": "Source launch package",
+      "signer_subject": null
+    }
+  },
+  "platforms": {
+    "windows": {
+      "label": "Windows x64",
+      "status": "available",
+      "artifacts": {
+        "setup": {
+          "key": "setup",
+          "name": "mrl-windows-x64-setup-3.2.0.exe",
+          "download_path": "downloads/mrl-windows-x64-setup-3.2.0.exe",
+          "alias_path": "downloads/mrl-windows-x64-setup.exe",
+          "size_bytes": 15415029,
+          "sha256": "9D7F36B3FCF6304694EC849531BA1C37B284A3E654331A2EE1F1637DBF5694FA",
+          "signature_status": "NotSigned",
+          "signature_label": "Unsigned build",
+          "signer_subject": null
+        },
+        "portable": {
+          "key": "portable",
+          "name": "mrl-windows-x64-3.2.0.exe",
+          "download_path": "downloads/mrl-windows-x64-3.2.0.exe",
+          "alias_path": "downloads/mrl-windows-x64.exe",
+          "size_bytes": 13553114,
+          "sha256": "F346F9DBD006EF79C3FE8D3E91C18B6BF52C82C9708EDE4C8E768595D59172D0",
+          "signature_status": "NotSigned",
+          "signature_label": "Unsigned build",
+          "signer_subject": null
+        }
+      }
+    },
+    "macos": {
+      "label": "macOS",
+      "status": "available",
+      "artifacts": {
+        "source": {
+          "key": "macos_source",
+          "name": "mrl-macos-source-3.2.0.zip",
+          "platform": "macos",
+          "kind": "source-launcher",
+          "label": "macOS source launcher",
+          "download_path": "downloads/mrl-macos-source-3.2.0.zip",
+          "alias_path": "downloads/mrl-macos-source.zip",
+          "size_bytes": 58091,
+          "sha256": "BE03B4D3F8005AA61BBADFAE6DF49797DBB3DEFA015F53DE84D806E76DFC5035",
+          "signature_status": "NotApplicable",
+          "signature_label": "Source launch package",
+          "signer_subject": null
+        }
+      }
+    },
+    "linux": {
+      "label": "Linux",
+      "status": "available",
+      "artifacts": {
+        "source": {
+          "key": "linux_source",
+          "name": "mrl-linux-source-3.2.0.tar.gz",
+          "platform": "linux",
+          "kind": "source-launcher",
+          "label": "Linux source launcher",
+          "download_path": "downloads/mrl-linux-source-3.2.0.tar.gz",
+          "alias_path": "downloads/mrl-linux-source.tar.gz",
+          "size_bytes": 46873,
+          "sha256": "261B141EB1E1A18BE2E6C358944317B652CC4EF5E6C913A62E12AA8B99A3DA20",
+          "signature_status": "NotApplicable",
+          "signature_label": "Source launch package",
+          "signer_subject": null
+        }
+      }
+    }
+  }
+}

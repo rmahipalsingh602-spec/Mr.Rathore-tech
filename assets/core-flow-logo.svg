@@ -1,0 +1,140 @@
+<svg width="1024" height="576" viewBox="0 0 1024 576" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="bgGlowA" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(238 188) rotate(37) scale(238 171)">
+      <stop stop-color="#F1C766" stop-opacity="0.3"/>
+      <stop offset="1" stop-color="#071016" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="bgGlowB" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(739 184) rotate(137) scale(285 207)">
+      <stop stop-color="#39C7FF" stop-opacity="0.34"/>
+      <stop offset="1" stop-color="#071016" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="ribbon" x1="99" y1="215" x2="914" y2="215" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F2C863"/>
+      <stop offset="0.3" stop-color="#FBE68C"/>
+      <stop offset="0.53" stop-color="#61F0C6"/>
+      <stop offset="0.75" stop-color="#4ACDFF"/>
+      <stop offset="1" stop-color="#276DFF"/>
+    </linearGradient>
+    <linearGradient id="ribbonHighlight" x1="108" y1="169" x2="903" y2="169" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFF1A2"/>
+      <stop offset="0.5" stop-color="#C7FFF2"/>
+      <stop offset="1" stop-color="#BDE6FF"/>
+    </linearGradient>
+    <linearGradient id="goldCrystal" x1="228" y1="139" x2="284" y2="225" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFF098"/>
+      <stop offset="0.5" stop-color="#FFB22F"/>
+      <stop offset="1" stop-color="#A95B00"/>
+    </linearGradient>
+    <linearGradient id="greenCrystal" x1="484" y1="144" x2="543" y2="229" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#B8FFD8"/>
+      <stop offset="0.5" stop-color="#26DE74"/>
+      <stop offset="1" stop-color="#058044"/>
+    </linearGradient>
+    <linearGradient id="blueCrystal" x1="734" y1="142" x2="796" y2="232" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#9AF7FF"/>
+      <stop offset="0.45" stop-color="#36A8FF"/>
+      <stop offset="1" stop-color="#2A45D8"/>
+    </linearGradient>
+    <filter id="softGlow" x="-20%" y="-45%" width="140%" height="190%" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="14" result="blur"/>
+      <feColorMatrix in="blur" type="matrix" values="0 0 0 0 0.22 0 0 0 0 0.9 0 0 0 0 1 0 0 0 0.8 0"/>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="textGlow" x="-8%" y="-25%" width="116%" height="150%" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feColorMatrix in="blur" type="matrix" values="0 0 0 0 0.74 0 0 0 0 1 0 0 0 0 0.93 0 0 0 0.6 0"/>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="gemGlow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1024" height="576" rx="18" fill="#071016"/>
+  <rect width="1024" height="576" rx="18" fill="url(#bgGlowA)"/>
+  <rect width="1024" height="576" rx="18" fill="url(#bgGlowB)"/>
+  <g filter="url(#softGlow)">
+    <path
+      d="M112 257C160 123 267 124 356 255C445 386 521 385 611 255C700 126 868 104 908 255C868 406 700 384 611 255C521 125 445 126 356 255C267 386 160 391 112 257Z"
+      stroke="#071016"
+      stroke-width="58"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      opacity="0.7"
+    />
+    <path
+      d="M112 257C160 123 267 124 356 255C445 386 521 385 611 255C700 126 868 104 908 255C868 406 700 384 611 255C521 125 445 126 356 255C267 386 160 391 112 257Z"
+      stroke="url(#ribbon)"
+      stroke-width="30"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+    <path
+      d="M126 239C178 140 267 152 345 265C437 399 526 385 611 255C696 126 845 119 890 235"
+      stroke="url(#ribbonHighlight)"
+      stroke-width="8"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      opacity="0.78"
+    />
+  </g>
+
+  <g filter="url(#gemGlow)">
+    <g transform="translate(255 188)">
+      <path d="M0 -53L35 -30V30L0 53L-35 30V-30L0 -53Z" fill="url(#goldCrystal)"/>
+      <path d="M0 -53V53L-35 30V-30L0 -53Z" fill="#FFE37A" opacity="0.38"/>
+      <path d="M0 -53V53L35 30V-30L0 -53Z" fill="#FF8A12" opacity="0.32"/>
+      <path d="M-35 -30L0 -6L35 -30L0 -53L-35 -30Z" fill="#FFF5A8" opacity="0.42"/>
+      <path d="M-35 30L0 6L35 30L0 53L-35 30Z" fill="#8B4A00" opacity="0.28"/>
+      <path d="M0 -53L35 -30V30L0 53L-35 30V-30L0 -53Z" stroke="#FFF0A6" stroke-width="3" opacity="0.8"/>
+    </g>
+    <g transform="translate(512 195)">
+      <path d="M0 -55L36 -31V31L0 55L-36 31V-31L0 -55Z" fill="url(#greenCrystal)"/>
+      <path d="M0 -55V55L-36 31V-31L0 -55Z" fill="#AEFFD4" opacity="0.34"/>
+      <path d="M0 -55V55L36 31V-31L0 -55Z" fill="#08A95D" opacity="0.34"/>
+      <path d="M-36 -31L0 -7L36 -31L0 -55L-36 -31Z" fill="#D8FFE6" opacity="0.42"/>
+      <path d="M-36 31L0 7L36 31L0 55L-36 31Z" fill="#004E32" opacity="0.3"/>
+      <path d="M0 -55L36 -31V31L0 55L-36 31V-31L0 -55Z" stroke="#C7FFE0" stroke-width="3" opacity="0.85"/>
+    </g>
+    <g transform="translate(769 191)">
+      <path d="M0 -56L37 -32V32L0 56L-37 32V-32L0 -56Z" fill="url(#blueCrystal)"/>
+      <path d="M0 -56V56L-37 32V-32L0 -56Z" fill="#BFFBFF" opacity="0.34"/>
+      <path d="M0 -56V56L37 32V-32L0 -56Z" fill="#2350F3" opacity="0.34"/>
+      <path d="M-37 -32L0 -7L37 -32L0 -56L-37 -32Z" fill="#C8F6FF" opacity="0.42"/>
+      <path d="M-37 32L0 7L37 32L0 56L-37 32Z" fill="#162D95" opacity="0.3"/>
+      <path d="M0 -56L37 -32V32L0 56L-37 32V-32L0 -56Z" stroke="#B8F0FF" stroke-width="3" opacity="0.86"/>
+    </g>
+  </g>
+
+  <text
+    x="512"
+    y="422"
+    text-anchor="middle"
+    fill="#FAFFF7"
+    filter="url(#textGlow)"
+    font-family="Montserrat, Bahnschrift, Segoe UI, Arial, sans-serif"
+    font-size="74"
+    font-weight="900"
+    letter-spacing="9"
+  >CORE-FLOW</text>
+  <text
+    x="512"
+    y="481"
+    text-anchor="middle"
+    fill="#D8C393"
+    font-family="Montserrat, Bahnschrift, Segoe UI, Arial, sans-serif"
+    font-size="30"
+    font-weight="600"
+    letter-spacing="15"
+  >QUESTS OVER TICKETS</text>
+</svg>

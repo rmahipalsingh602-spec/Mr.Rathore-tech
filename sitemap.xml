@@ -1,9 +1,72 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <!-- Replace the domain below with your live production domain before launch -->
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
+
+  <!-- 1. Main Official Portal (GitLab Architecture) -->
   <url>
-    <loc>https://replace-with-your-domain.example/</loc>
-    <changefreq>weekly</changefreq>
+    <loc>https://rmahipalsingh602-group.gitlab.io/rmahipalsingh602-project/</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>daily</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://rmahipalsingh602-group.gitlab.io/rmahipalsingh602-project/assets/showcase-shot.jpg</image:loc>
+      <image:title>Mr. Rathore Tech Company AI, Desktop Apps &amp; Developer Tools</image:title>
+      <image:caption>Official product home for AI tools, C++ 3D Game Engine, CORE-FLOW, and developer software.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://rmahipalsingh602-group.gitlab.io/rmahipalsingh602-project/assets/ekarshinga-hero.png</image:loc>
+      <image:title>Bharatverse 3D Game Engine (Ekarshinga)</image:title>
+      <image:caption>Native C++17 3D game engine and open world editor for Windows x64.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://rmahipalsingh602-group.gitlab.io/rmahipalsingh602-project/assets/coreflow-shot.jpg</image:loc>
+      <image:title>CORE-FLOW Quest Workspace for Windows</image:title>
+    </image:image>
   </url>
+
+  <!-- 2. Main Official Netlify Architecture -->
+  <url>
+    <loc>https://mr-rathore-company-site.netlify.app/</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://mr-rathore-company-site.netlify.app/assets/showcase-shot.jpg</image:loc>
+      <image:title>Mr. Rathore Tech Company &amp; Mahipal Singh Rathore Portfolio</image:title>
+    </image:image>
+  </url>
+
+  <!-- 3. Ekarshinga C++ 3D Game Engine Flagship Portal -->
+  <url>
+    <loc>https://ekarshinga-engine.netlify.app/</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- 4. CORE-FLOW Official Workspace & Documentation -->
+  <url>
+    <loc>https://core-flow-website-offi.netlify.app/</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- 5. MRL 3.2.0 Multi Runtime Language & Compiler Documentation -->
+  <url>
+    <loc>https://mrl-hi.netlify.app/</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- 6. Pocket Gamer Mobile Gaming Web Property -->
+  <url>
+    <loc>https://pocket-gamer.netlify.app/</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
 </urlset>

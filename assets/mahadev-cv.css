@@ -1,0 +1,1866 @@
+/* ==========================================================================
+   MAHADEV & OM SACRED DIVINE STYLES + CUTE ANIMAL CURSOR + 3D CV PORTFOLIO
+   Theme: Kailash Pure White & Mahakaal Cosmic Dark (Satyam Shivam Sundaram)
+   Author: Mahipal Singh Rathore | Website Specialist & AI Web Developer
+   ========================================================================== */
+
+:root {
+  /* Sacred Om / Mahadev Palette */
+  --om-white: #ffffff;
+  --om-kailash-mist: #f8fafc;
+  --om-kailash-border: rgba(100, 116, 139, 0.18);
+  --om-neelkanth-blue: #2563eb;
+  --om-neelkanth-sky: #0284c7;
+  --om-neelkanth-glow: rgba(37, 99, 235, 0.18);
+  --om-saffron: #ea580c;
+  --om-chandan-gold: #f59e0b;
+  --om-gold-glow: rgba(245, 158, 11, 0.22);
+  --om-bhasma-silver: #94a3b8;
+  --om-mahakaal-dark: #060810;
+  --om-mahakaal-deep: #090d18;
+  --om-mahakaal-card: rgba(13, 19, 33, 0.78);
+  --om-mahakaal-border: rgba(56, 189, 248, 0.15);
+  --om-mahakaal-glow: rgba(56, 189, 248, 0.25);
+  
+  /* Text & Contrast */
+  --om-ink-dark: #0f172a;
+  --om-ink-muted: #475569;
+  --om-ink-light: #f8fafc;
+  --om-ink-light-muted: #cbd5e1;
+}
+
+/* Hide default system arrow on desktop with mouse, replace with cute animal companion */
+@media (pointer: fine) {
+  html, body, a, button, input, select, textarea, [role="button"] {
+    cursor: none !important;
+  }
+}
+
+#cute-cursor-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 999999;
+  overflow: hidden;
+}
+
+#cute-cursor-avatar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  transform: translate(0, 0);
+  transition: transform 0.06s ease-out;
+  will-change: transform, left, top;
+}
+
+/* Precision click dot */
+.cursor-pointer-dot {
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #38bdf8;
+  box-shadow: 0 0 8px #38bdf8, 0 0 16px rgba(56, 189, 248, 0.6);
+  pointer-events: none;
+  transition: transform 0.15s ease;
+}
+
+#cute-cursor-avatar.is-hovering .cursor-pointer-dot {
+  transform: scale(1.6);
+  background: #f59e0b;
+  box-shadow: 0 0 10px #f59e0b;
+}
+
+.cursor-animal-body {
+  position: absolute;
+  top: 4px;
+  left: 6px;
+  width: 42px;
+  height: 42px;
+  filter: drop-shadow(0 6px 14px rgba(0, 0, 0, 0.28));
+  pointer-events: none;
+  transition: transform 0.15s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.cursor-animal-body svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  transform-origin: center center;
+  transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+#cute-cursor-avatar.is-clicking svg {
+  transform: scale(0.82) rotate(-8deg);
+}
+
+#cute-cursor-avatar.is-hovering svg {
+  transform: scale(1.18) rotate(6deg);
+}
+
+/* Paw prints and sparkles trail */
+.cute-paw-trail {
+  position: absolute;
+  pointer-events: none;
+  width: 14px;
+  height: 14px;
+  transform: translate(-50%, -50%);
+  opacity: 0.85;
+  animation: pawFade 1.1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes pawFade {
+  0% {
+    opacity: 0.85;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.3) translateY(8px);
+  }
+}
+
+/* Cute Floating Animal Switcher Widget */
+.cute-animal-switcher {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.88);
+  border: 1px solid var(--om-kailash-border);
+  padding: 6px 14px;
+  border-radius: 999px;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.12);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  transition: all 0.3s ease;
+  font-family: Inter, sans-serif;
+}
+
+body.theme-dark .cute-animal-switcher {
+  background: rgba(13, 19, 33, 0.88);
+  border-color: var(--om-mahakaal-border);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+}
+
+.cute-animal-switcher .switcher-label {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--om-neelkanth-blue);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+body.theme-dark .cute-animal-switcher .switcher-label {
+  color: #38bdf8;
+}
+
+.cute-animal-btns {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.c-animal-btn {
+  background: transparent;
+  border: 1px solid transparent;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  transition: all 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+  padding: 0;
+}
+
+.c-animal-btn:hover {
+  transform: scale(1.22);
+  background: rgba(37, 99, 235, 0.08);
+}
+
+.c-animal-btn.is-active {
+  background: var(--om-neelkanth-blue);
+  color: #fff;
+  border-color: var(--om-neelkanth-blue);
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.35);
+  transform: scale(1.15);
+}
+
+body.theme-dark .c-animal-btn.is-active {
+  background: #0284c7;
+  box-shadow: 0 4px 12px rgba(2, 132, 199, 0.45);
+}
+
+.switcher-sfx-btn {
+  background: transparent;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+  padding: 4px 6px;
+  border-radius: 6px;
+  color: var(--om-ink-muted);
+  transition: all 0.2s ease;
+  margin-left: 4px;
+}
+
+body.theme-dark .switcher-sfx-btn {
+  color: var(--om-ink-light-muted);
+}
+
+.switcher-sfx-btn:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+/* ==========================================================================
+   2. SACRED MAHADEV 3D CV HERO STAGE
+   ========================================================================== */
+.mahadev-cv-cinematic-section {
+  position: relative;
+  width: 100%;
+  background: linear-gradient(180deg, #f8fafc 0%, #ffffff 50%, #f1f5f9 100%);
+  padding: 30px 0 60px 0;
+  overflow: hidden;
+  border-bottom: 1px solid var(--om-kailash-border);
+}
+
+body.theme-dark .mahadev-cv-cinematic-section {
+  background: radial-gradient(circle at 50% 20%, #0d1527 0%, #060810 70%, #020408 100%);
+  border-bottom-color: var(--om-mahakaal-border);
+}
+
+/* Decorative Sacred Cosmic Aura */
+.mahadev-ambient-aura {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: 
+    radial-gradient(circle at 18% 25%, rgba(37, 99, 235, 0.08) 0%, transparent 45%),
+    radial-gradient(circle at 82% 35%, rgba(245, 158, 11, 0.08) 0%, transparent 45%),
+    radial-gradient(circle at 50% 85%, rgba(2, 132, 199, 0.06) 0%, transparent 50%);
+  z-index: 0;
+}
+
+body.theme-dark .mahadev-ambient-aura {
+  background-image: 
+    radial-gradient(circle at 18% 25%, rgba(56, 189, 248, 0.12) 0%, transparent 45%),
+    radial-gradient(circle at 82% 35%, rgba(245, 158, 11, 0.1) 0%, transparent 45%),
+    radial-gradient(circle at 50% 85%, rgba(99, 102, 241, 0.1) 0%, transparent 50%);
+}
+
+.mahadev-stage-container {
+  position: relative;
+  z-index: 2;
+  width: var(--shell);
+  margin: 0 auto;
+}
+
+/* Sacred Header Banner */
+.mahadev-stage-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+
+.mahadev-sacred-title {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.om-symbol-seal {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.12) 0%, rgba(245, 158, 11, 0.15) 100%);
+  border: 1.5px solid rgba(245, 158, 11, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  color: var(--om-saffron);
+  box-shadow: 0 8px 24px rgba(245, 158, 11, 0.15);
+  animation: sealFloat 4s ease-in-out infinite alternate;
+}
+
+body.theme-dark .om-symbol-seal {
+  background: linear-gradient(135deg, rgba(56, 189, 248, 0.2) 0%, rgba(245, 158, 11, 0.25) 100%);
+  border-color: rgba(245, 158, 11, 0.5);
+  color: #fbbf24;
+  box-shadow: 0 8px 24px rgba(245, 158, 11, 0.25);
+}
+
+@keyframes sealFloat {
+  0% { transform: translateY(0) rotate(0deg); }
+  100% { transform: translateY(-4px) rotate(2deg); }
+}
+
+.title-copy h2 {
+  margin: 0;
+  font-size: clamp(20px, 3vw, 28px);
+  font-weight: 800;
+  color: var(--om-ink-dark);
+  letter-spacing: -0.01em;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+body.theme-dark .title-copy h2 {
+  color: var(--om-ink-light);
+}
+
+.title-copy h2 span.sacred-accent {
+  background: linear-gradient(135deg, var(--om-neelkanth-blue) 0%, var(--om-chandan-gold) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+body.theme-dark .title-copy h2 span.sacred-accent {
+  background: linear-gradient(135deg, #38bdf8 0%, #fbbf24 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.title-copy p {
+  margin: 4px 0 0 0;
+  font-size: 13px;
+  color: var(--om-ink-muted);
+}
+
+body.theme-dark .title-copy p {
+  color: var(--om-ink-light-muted);
+}
+
+/* Quick Action Toolbar on Banner */
+.mahadev-banner-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.sacred-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  text-decoration: none;
+}
+
+.sacred-btn.primary {
+  background: linear-gradient(135deg, var(--om-neelkanth-blue) 0%, #1e40af 100%);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.3);
+}
+
+body.theme-dark .sacred-btn.primary {
+  background: linear-gradient(135deg, #0284c7 0%, #1d4ed8 100%);
+  box-shadow: 0 4px 18px rgba(2, 132, 199, 0.4);
+}
+
+.sacred-btn.primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(37, 99, 235, 0.45);
+}
+
+.sacred-btn.gold {
+  background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 4px 14px rgba(245, 158, 11, 0.3);
+}
+
+.sacred-btn.gold:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(245, 158, 11, 0.45);
+}
+
+.sacred-btn.outline {
+  background: rgba(255, 255, 255, 0.8);
+  color: var(--om-ink-dark);
+  border: 1px solid var(--om-kailash-border);
+}
+
+body.theme-dark .sacred-btn.outline {
+  background: rgba(15, 23, 42, 0.7);
+  color: var(--om-ink-light);
+  border-color: var(--om-mahakaal-border);
+}
+
+.sacred-btn.outline:hover {
+  background: rgba(37, 99, 235, 0.08);
+  border-color: var(--om-neelkanth-blue);
+}
+
+/* ==========================================================================
+   3. THE 3D CINEMATIC VIEWPORT & STORY CONTROLLER
+   ========================================================================== */
+.mahadev-cinematic-viewport-box {
+  position: relative;
+  width: 100%;
+  height: clamp(520px, 68vh, 680px);
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1.5px solid var(--om-kailash-border);
+  box-shadow: 0 24px 60px rgba(15, 23, 42, 0.1);
+  background: #060812;
+}
+
+body.theme-dark .mahadev-cinematic-viewport-box {
+  border-color: rgba(56, 189, 248, 0.22);
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.6), 0 0 30px rgba(56, 189, 248, 0.08);
+}
+
+/* 3D WebGL Canvas Layer */
+#cv-3d-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  z-index: 1;
+}
+
+/* Viewport HUD & Window Topbar */
+.viewport-topbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 48px;
+  z-index: 10;
+  background: linear-gradient(180deg, rgba(6, 8, 18, 0.85) 0%, rgba(6, 8, 18, 0.2) 100%);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 18px;
+  color: #e2e8f0;
+}
+
+.viewport-tag {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #38bdf8;
+}
+
+.viewport-tag .pulse-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #38bdf8;
+  box-shadow: 0 0 10px #38bdf8;
+  animation: pulseBeacon 2s infinite;
+}
+
+@keyframes pulseBeacon {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(0.85); }
+}
+
+.viewport-controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.v-ctrl-btn {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #e2e8f0;
+  border-radius: 6px;
+  padding: 4px 10px;
+  font-size: 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: all 0.2s ease;
+}
+
+.v-ctrl-btn:hover {
+  background: rgba(56, 189, 248, 0.2);
+  border-color: #38bdf8;
+  color: #fff;
+}
+
+.v-ctrl-btn.is-active {
+  background: #0284c7;
+  border-color: #38bdf8;
+}
+
+/* Story Chapters Navigation Bar (Inside Viewport) */
+.story-chapter-tabs {
+  position: absolute;
+  top: 56px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(9, 13, 24, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 4px 6px;
+  border-radius: 999px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  max-width: 95%;
+  overflow-x: auto;
+}
+
+.story-tab {
+  background: transparent;
+  border: none;
+  color: #94a3b8;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s ease;
+}
+
+.story-tab:hover {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.story-tab.is-active {
+  background: linear-gradient(135deg, var(--om-neelkanth-blue) 0%, var(--om-chandan-gold) 100%);
+  color: #ffffff;
+  font-weight: 700;
+  box-shadow: 0 2px 10px rgba(37, 99, 235, 0.4);
+}
+
+/* ==========================================================================
+   4. INTERACTIVE STORY OVERLAY CARDS (CHAPTER CONTENT)
+   ========================================================================== */
+.story-content-overlay {
+  position: absolute;
+  bottom: 24px;
+  left: 24px;
+  right: 24px;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.story-card-panel {
+  display: none;
+  pointer-events: auto;
+  max-width: 720px;
+  background: rgba(11, 16, 29, 0.85);
+  border: 1.5px solid rgba(56, 189, 248, 0.25);
+  border-radius: 16px;
+  padding: 20px 24px;
+  color: #fff;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5), 0 0 24px rgba(56, 189, 248, 0.12);
+  animation: cardSlideUp 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.story-card-panel.is-active {
+  display: block;
+}
+
+@keyframes cardSlideUp {
+  0% { opacity: 0; transform: translateY(14px) scale(0.98); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.card-header-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(245, 158, 11, 0.15);
+  border: 1px solid rgba(245, 158, 11, 0.35);
+  color: #fbbf24;
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.story-card-panel h3 {
+  margin: 0 0 8px 0;
+  font-size: clamp(20px, 2.5vw, 26px);
+  font-weight: 800;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.story-card-panel h3 span.highlight {
+  color: #38bdf8;
+}
+
+.story-card-panel p.lead {
+  margin: 0 0 14px 0;
+  font-size: 13.5px;
+  line-height: 1.55;
+  color: #cbd5e1;
+}
+
+/* Story chapter actions */
+.story-panel-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  padding-top: 12px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.story-nav-buttons {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.story-nav-btn {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: #fff;
+  padding: 6px 14px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.story-nav-btn:hover {
+  background: rgba(56, 189, 248, 0.25);
+  border-color: #38bdf8;
+}
+
+.story-nav-btn.primary {
+  background: linear-gradient(135deg, var(--om-neelkanth-blue) 0%, var(--om-chandan-gold) 100%);
+  border-color: transparent;
+  box-shadow: 0 2px 10px rgba(37, 99, 235, 0.4);
+}
+
+/* Story interactive badges list inside overlay */
+.story-tech-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 12px 0;
+}
+
+.story-tech-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  padding: 5px 10px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #e2e8f0;
+}
+
+.story-tech-badge svg,
+.story-tech-badge img {
+  width: 16px;
+  height: 16px;
+}
+
+/* ==========================================================================
+   5. COMPLETE CV DOSSIER & PROGRAMMING LANGUAGES MATRIX
+   ========================================================================== */
+.cv-dossier-wrapper {
+  margin-top: 48px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 36px;
+}
+
+/* Bento-style Identity Card */
+.cv-bento-hero {
+  display: grid;
+  grid-template-columns: 340px 1fr;
+  gap: 24px;
+}
+
+@media (max-width: 900px) {
+  .cv-bento-hero {
+    grid-template-columns: 1fr;
+  }
+}
+
+.cv-identity-card {
+  background: #ffffff;
+  border: 1px solid var(--om-kailash-border);
+  border-radius: 18px;
+  padding: 24px;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.06);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+body.theme-dark .cv-identity-card {
+  background: var(--om-mahakaal-card);
+  border-color: var(--om-mahakaal-border);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.35);
+}
+
+.identity-avatar-box {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.avatar-seal {
+  width: 68px;
+  height: 68px;
+  border-radius: 18px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 8px 24px rgba(37, 99, 235, 0.3), 0 0 15px rgba(56, 189, 248, 0.25);
+  border: 2px solid rgba(56, 189, 248, 0.5);
+  flex-shrink: 0;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease, border-color 0.3s ease;
+  background: #090d18;
+}
+
+.avatar-seal:hover {
+  transform: scale(1.08) rotate(2deg);
+  box-shadow: 0 12px 30px rgba(37, 99, 235, 0.45), 0 0 25px rgba(245, 158, 11, 0.4);
+  border-color: #f59e0b;
+}
+
+.avatar-seal img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.identity-name-block h3 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--om-ink-dark);
+}
+
+body.theme-dark .identity-name-block h3 {
+  color: var(--om-ink-light);
+}
+
+.identity-name-block p {
+  margin: 3px 0 0 0;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--om-neelkanth-blue);
+}
+
+body.theme-dark .identity-name-block p {
+  color: #38bdf8;
+}
+
+.identity-badge-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 14px 0;
+}
+
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: rgba(16, 185, 129, 0.1);
+  border: 1px solid rgba(16, 185, 129, 0.25);
+  color: #059669;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+body.theme-dark .status-badge {
+  color: #34d178;
+}
+
+.identity-contact-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 16px 0;
+  font-size: 13px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--om-ink-muted);
+}
+
+body.theme-dark .contact-item {
+  color: var(--om-ink-light-muted);
+}
+
+.contact-item svg {
+  width: 16px;
+  height: 16px;
+  color: var(--om-neelkanth-blue);
+  flex-shrink: 0;
+}
+
+body.theme-dark .contact-item svg {
+  color: #38bdf8;
+}
+
+.identity-actions-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid var(--om-kailash-border);
+}
+
+body.theme-dark .identity-actions-footer {
+  border-top-color: var(--om-mahakaal-border);
+}
+
+/* Recruiter Core Skills Showcase (Wellfound Angle) */
+.cv-core-card {
+  background: #ffffff;
+  border: 1px solid var(--om-kailash-border);
+  border-radius: 18px;
+  padding: 24px;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.06);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+body.theme-dark .cv-core-card {
+  background: var(--om-mahakaal-card);
+  border-color: var(--om-mahakaal-border);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.35);
+}
+
+.core-card-header {
+  margin-bottom: 16px;
+}
+
+.core-card-header h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--om-ink-dark);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+body.theme-dark .core-card-header h3 {
+  color: var(--om-ink-light);
+}
+
+.core-card-header p {
+  margin: 4px 0 0 0;
+  font-size: 13px;
+  color: var(--om-ink-muted);
+}
+
+body.theme-dark .core-card-header p {
+  color: var(--om-ink-light-muted);
+}
+
+/* Core skills pills with authentic high-res SVG logos */
+.core-skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  gap: 10px;
+  margin: 16px 0;
+}
+
+.core-skill-pill {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--om-kailash-mist);
+  border: 1px solid var(--om-kailash-border);
+  padding: 8px 12px;
+  border-radius: 10px;
+  font-size: 12.5px;
+  font-weight: 700;
+  color: var(--om-ink-dark);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+body.theme-dark .core-skill-pill {
+  background: rgba(255, 255, 255, 0.04);
+  border-color: rgba(255, 255, 255, 0.08);
+  color: var(--om-ink-light);
+}
+
+.core-skill-pill:hover {
+  transform: translateY(-2px);
+  border-color: var(--om-neelkanth-blue);
+  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.15);
+}
+
+body.theme-dark .core-skill-pill:hover {
+  border-color: #38bdf8;
+  box-shadow: 0 4px 14px rgba(56, 189, 248, 0.2);
+}
+
+.core-skill-pill .tech-logo-icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+/* ==========================================================================
+   6. ALL PROGRAMMING LANGUAGES SHOWCASE (WITH OFFICIAL LOGOS)
+   ========================================================================== */
+.languages-section-box {
+  background: #ffffff;
+  border: 1px solid var(--om-kailash-border);
+  border-radius: 18px;
+  padding: 28px;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.06);
+}
+
+body.theme-dark .languages-section-box {
+  background: var(--om-mahakaal-card);
+  border-color: var(--om-mahakaal-border);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.35);
+}
+
+.languages-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.languages-header h3 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--om-ink-dark);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+body.theme-dark .languages-header h3 {
+  color: var(--om-ink-light);
+}
+
+.languages-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+  gap: 14px;
+}
+
+.lang-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: var(--om-kailash-mist);
+  border: 1px solid var(--om-kailash-border);
+  padding: 14px 16px;
+  border-radius: 14px;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+body.theme-dark .lang-card {
+  background: rgba(255, 255, 255, 0.03);
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+.lang-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--om-neelkanth-blue);
+  box-shadow: 0 8px 24px rgba(37, 99, 235, 0.12);
+}
+
+body.theme-dark .lang-card:hover {
+  border-color: #38bdf8;
+  box-shadow: 0 8px 24px rgba(56, 189, 248, 0.2);
+}
+
+.lang-card .lang-icon-wrap {
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--om-kailash-border);
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.05);
+  flex-shrink: 0;
+}
+
+body.theme-dark .lang-card .lang-icon-wrap {
+  background: #0f172a;
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
+.lang-card .lang-icon-wrap svg,
+.lang-card .lang-icon-wrap img {
+  width: 26px;
+  height: 26px;
+}
+
+.lang-meta h4 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--om-ink-dark);
+}
+
+body.theme-dark .lang-meta h4 {
+  color: var(--om-ink-light);
+}
+
+.lang-meta span {
+  display: block;
+  font-size: 11.5px;
+  color: var(--om-ink-muted);
+  margin-top: 2px;
+}
+
+body.theme-dark .lang-meta span {
+  color: var(--om-ink-light-muted);
+}
+
+/* ==========================================================================
+   7. HOLOGRAPHIC FLAGSHIP PROJECTS SECTION
+   ========================================================================== */
+.projects-deck-box {
+  background: #ffffff;
+  border: 1px solid var(--om-kailash-border);
+  border-radius: 18px;
+  padding: 28px;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.06);
+}
+
+body.theme-dark .projects-deck-box {
+  background: var(--om-mahakaal-card);
+  border-color: var(--om-mahakaal-border);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.35);
+}
+
+.projects-header {
+  margin-bottom: 24px;
+}
+
+.projects-header h3 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--om-ink-dark);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+body.theme-dark .projects-header h3 {
+  color: var(--om-ink-light);
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 20px;
+}
+
+.project-hologram-card {
+  background: var(--om-kailash-mist);
+  border: 1px solid var(--om-kailash-border);
+  border-radius: 16px;
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+body.theme-dark .project-hologram-card {
+  background: rgba(255, 255, 255, 0.03);
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+.project-hologram-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--om-neelkanth-blue);
+  box-shadow: 0 14px 35px rgba(37, 99, 235, 0.15);
+}
+
+body.theme-dark .project-hologram-card:hover {
+  border-color: #38bdf8;
+  box-shadow: 0 14px 40px rgba(56, 189, 248, 0.22);
+}
+
+.project-card-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.project-badge-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 3px 8px;
+  border-radius: 6px;
+  font-size: 11px;
+  font-weight: 700;
+  background: rgba(37, 99, 235, 0.08);
+  color: var(--om-neelkanth-blue);
+  border: 1px solid rgba(37, 99, 235, 0.2);
+}
+
+body.theme-dark .project-badge-tag {
+  background: rgba(56, 189, 248, 0.12);
+  color: #38bdf8;
+  border-color: rgba(56, 189, 248, 0.3);
+}
+
+.project-hologram-card h4 {
+  margin: 0 0 6px 0;
+  font-size: 17px;
+  font-weight: 800;
+  color: var(--om-ink-dark);
+}
+
+body.theme-dark .project-hologram-card h4 {
+  color: var(--om-ink-light);
+}
+
+.project-hologram-card p {
+  margin: 0 0 14px 0;
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--om-ink-muted);
+}
+
+body.theme-dark .project-hologram-card p {
+  color: var(--om-ink-light-muted);
+}
+
+.project-stack-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+
+.project-stack-pill {
+  font-size: 11px;
+  font-weight: 600;
+  background: #ffffff;
+  border: 1px solid var(--om-kailash-border);
+  padding: 2px 8px;
+  border-radius: 6px;
+  color: var(--om-ink-muted);
+}
+
+body.theme-dark .project-stack-pill {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.1);
+  color: var(--om-ink-light-muted);
+}
+
+.project-card-footer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-top: 12px;
+  border-top: 1px solid var(--om-kailash-border);
+}
+
+body.theme-dark .project-card-footer {
+  border-top-color: rgba(255, 255, 255, 0.08);
+}
+
+.project-action-link {
+  font-size: 12.5px;
+  font-weight: 700;
+  color: var(--om-neelkanth-blue);
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+body.theme-dark .project-action-link {
+  color: #38bdf8;
+}
+
+.project-action-link:hover {
+  text-decoration: underline;
+}
+
+/* ==========================================================================
+   8. CATEGORIZED DOMAIN TABS (GYAN KOSHA)
+   ========================================================================== */
+.domain-matrix-box {
+  background: #ffffff;
+  border: 1px solid var(--om-kailash-border);
+  border-radius: 18px;
+  padding: 28px;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.06);
+}
+
+body.theme-dark .domain-matrix-box {
+  background: var(--om-mahakaal-card);
+  border-color: var(--om-mahakaal-border);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.35);
+}
+
+.domain-tabs-nav {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  overflow-x: auto;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid var(--om-kailash-border);
+}
+
+body.theme-dark .domain-tabs-nav {
+  border-bottom-color: rgba(255, 255, 255, 0.08);
+}
+
+.domain-tab-btn {
+  background: var(--om-kailash-mist);
+  border: 1px solid var(--om-kailash-border);
+  color: var(--om-ink-muted);
+  padding: 8px 16px;
+  border-radius: 999px;
+  font-size: 12.5px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+}
+
+body.theme-dark .domain-tab-btn {
+  background: rgba(255, 255, 255, 0.04);
+  border-color: rgba(255, 255, 255, 0.08);
+  color: var(--om-ink-light-muted);
+}
+
+.domain-tab-btn:hover {
+  color: var(--om-ink-dark);
+  border-color: var(--om-neelkanth-blue);
+}
+
+body.theme-dark .domain-tab-btn:hover {
+  color: #fff;
+  border-color: #38bdf8;
+}
+
+.domain-tab-btn.is-active {
+  background: var(--om-neelkanth-blue);
+  color: #ffffff;
+  border-color: var(--om-neelkanth-blue);
+  font-weight: 700;
+  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.3);
+}
+
+body.theme-dark .domain-tab-btn.is-active {
+  background: #0284c7;
+  border-color: #38bdf8;
+  box-shadow: 0 4px 14px rgba(2, 132, 199, 0.4);
+}
+
+.domain-pane {
+  display: none;
+  animation: fadeInPane 0.3s ease;
+}
+
+.domain-pane.is-active {
+  display: block;
+}
+
+@keyframes fadeInPane {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.domain-items-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.domain-chip {
+  background: var(--om-kailash-mist);
+  border: 1px solid var(--om-kailash-border);
+  padding: 8px 14px;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--om-ink-dark);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+body.theme-dark .domain-chip {
+  background: rgba(255, 255, 255, 0.04);
+  border-color: rgba(255, 255, 255, 0.08);
+  color: var(--om-ink-light);
+}
+
+/* Exploring / Learning Stack Card */
+.exploring-stack-callout {
+  margin-top: 24px;
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.08) 0%, rgba(37, 99, 235, 0.06) 100%);
+  border: 1px dashed rgba(245, 158, 11, 0.4);
+  border-radius: 14px;
+  padding: 16px 20px;
+}
+
+body.theme-dark .exploring-stack-callout {
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.12) 0%, rgba(56, 189, 248, 0.08) 100%);
+  border-color: rgba(245, 158, 11, 0.5);
+}
+
+.exploring-stack-callout strong {
+  display: block;
+  font-size: 13px;
+  color: var(--om-saffron);
+  margin-bottom: 6px;
+}
+
+body.theme-dark .exploring-stack-callout strong {
+  color: #fbbf24;
+}
+
+.exploring-stack-callout p {
+  margin: 0;
+  font-size: 12.5px;
+  color: var(--om-ink-muted);
+}
+
+body.theme-dark .exploring-stack-callout p {
+  color: var(--om-ink-light-muted);
+}
+
+/* ==========================================================================
+   9. PRINTABLE OFFICIAL CV MODAL
+   ========================================================================== */
+.cv-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(6, 8, 16, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  z-index: 99999;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.cv-modal-backdrop.is-open {
+  display: flex;
+}
+
+.cv-modal-box {
+  background: #ffffff;
+  color: #0f172a;
+  width: 100%;
+  max-width: 860px;
+  max-height: 90vh;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+}
+
+body.theme-dark .cv-modal-box {
+  background: #0f172a;
+  color: #f8fafc;
+}
+
+.cv-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 24px;
+  border-bottom: 1px solid var(--om-kailash-border);
+  background: var(--om-kailash-mist);
+}
+
+body.theme-dark .cv-modal-header {
+  background: #0b1120;
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.cv-modal-header h3 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.cv-modal-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.cv-modal-scroll {
+  padding: 30px;
+  overflow-y: auto;
+  font-size: 13.5px;
+  line-height: 1.6;
+}
+
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  .cv-modal-backdrop.is-open,
+  .cv-modal-backdrop.is-open * {
+    visibility: visible;
+  }
+  .cv-modal-backdrop {
+    position: absolute;
+    inset: 0;
+    background: #fff !important;
+  }
+  .cv-modal-box {
+    box-shadow: none !important;
+    max-width: 100% !important;
+    max-height: none !important;
+  }
+  .cv-modal-header,
+  .cute-animal-switcher,
+  #cute-cursor-container {
+    display: none !important;
+  }
+}
+
+/* ==========================================================================
+   10. TOP #1 FULL WEBSITE LUXURY & 3D ELEVATION (KAILASH & MAHAKAAL THEME)
+   ========================================================================== */
+
+/* Universal 3D Perspective Card Tilt & Dynamic Glare Effect */
+.product-card,
+.gallery-card,
+.c-card,
+.signal-board,
+.hero-flagship-pill,
+.dl-card,
+.cv-identity-card,
+.cv-core-card,
+.project-hologram-card {
+  transform-style: preserve-3d;
+  will-change: transform;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s ease, border-color 0.25s ease;
+  position: relative;
+}
+
+/* Card Specular Light Glare */
+.card-3d-glare {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  border-radius: inherit;
+  background: radial-gradient(circle at var(--glare-x, 50%) var(--glare-y, 50%), rgba(255, 255, 255, 0.18) 0%, transparent 60%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 5;
+}
+
+body.theme-dark .card-3d-glare {
+  background: radial-gradient(circle at var(--glare-x, 50%) var(--glare-y, 50%), rgba(56, 189, 248, 0.16) 0%, transparent 60%);
+}
+
+.product-card:hover .card-3d-glare,
+.gallery-card:hover .card-3d-glare,
+.c-card:hover .card-3d-glare,
+.signal-board:hover .card-3d-glare {
+  opacity: 1;
+}
+
+/* --- HERO SECTION ELEVATION --- */
+.hero {
+  position: relative;
+  background: linear-gradient(180deg, #f8fafc 0%, #ffffff 50%, #f1f5f9 100%);
+  border-bottom: 1px solid var(--om-kailash-border);
+  padding: 60px 0 45px;
+  overflow: hidden;
+}
+
+body.theme-dark .hero {
+  background: radial-gradient(circle at 60% 10%, #0c1424 0%, #060810 75%, #020408 100%);
+  border-bottom-color: var(--om-mahakaal-border);
+}
+
+.hero h1 {
+  font-size: clamp(38px, 5.5vw, 64px);
+  font-weight: 850;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+.hero h1 span {
+  background: linear-gradient(135deg, var(--om-neelkanth-blue) 0%, var(--om-chandan-gold) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+body.theme-dark .hero h1 span {
+  background: linear-gradient(135deg, #38bdf8 0%, #fbbf24 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.signal-board {
+  background: #ffffff;
+  border: 1px solid var(--om-kailash-border);
+  border-radius: 18px;
+  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.08);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+body.theme-dark .signal-board {
+  background: var(--om-mahakaal-card);
+  border-color: var(--om-mahakaal-border);
+  box-shadow: 0 16px 45px rgba(0, 0, 0, 0.45);
+}
+
+.signal-row .bar {
+  background: rgba(100, 116, 139, 0.12);
+  border-radius: 999px;
+  height: 8px;
+  overflow: hidden;
+}
+
+.signal-row .bar span {
+  display: block;
+  height: 100%;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #2563eb, #0284c7);
+  box-shadow: 0 0 10px rgba(37, 99, 235, 0.4);
+}
+
+body.theme-dark .signal-row .bar span {
+  background: linear-gradient(90deg, #0284c7, #38bdf8);
+  box-shadow: 0 0 12px rgba(56, 189, 248, 0.6);
+}
+
+.hero-strip {
+  margin-top: 40px;
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid var(--om-kailash-border);
+  border-radius: 16px;
+  padding: 18px 28px;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.04);
+}
+
+body.theme-dark .hero-strip {
+  background: rgba(13, 19, 33, 0.8);
+  border-color: var(--om-mahakaal-border);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+/* --- EKARSHINGA 3D ENGINE SHOWCASE ELEVATION --- */
+.ekarshinga-cinematic-section {
+  position: relative;
+  background: linear-gradient(180deg, #f1f5f9 0%, #ffffff 50%, #f8fafc 100%);
+  padding: 60px 0;
+  border-bottom: 1px solid var(--om-kailash-border);
+}
+
+body.theme-dark .ekarshinga-cinematic-section {
+  background: radial-gradient(circle at 50% 20%, #0d1629 0%, #060812 75%, #020408 100%);
+  border-bottom-color: var(--om-mahakaal-border);
+}
+
+.cinematic-box {
+  background: #ffffff;
+  border: 1.5px solid var(--om-kailash-border);
+  border-radius: 22px;
+  padding: 36px;
+  box-shadow: 0 24px 60px rgba(15, 23, 42, 0.08);
+}
+
+body.theme-dark .cinematic-box {
+  background: rgba(9, 13, 24, 0.85);
+  border-color: rgba(56, 189, 248, 0.22);
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.6), 0 0 35px rgba(56, 189, 248, 0.08);
+}
+
+.c-card {
+  background: var(--om-kailash-mist);
+  border: 1px solid var(--om-kailash-border);
+  border-radius: 16px;
+  padding: 24px;
+  transition: all 0.25s ease;
+}
+
+body.theme-dark .c-card {
+  background: rgba(255, 255, 255, 0.03);
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+.c-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--om-neelkanth-blue);
+  box-shadow: 0 14px 35px rgba(37, 99, 235, 0.15);
+}
+
+body.theme-dark .c-card:hover {
+  border-color: #38bdf8;
+  box-shadow: 0 14px 35px rgba(56, 189, 248, 0.2);
+}
+
+/* --- INTERACTIVE 3D NEURAL CANVAS IN AI SECTION --- */
+#ai {
+  position: relative;
+  overflow: hidden;
+  padding: 60px 0;
+}
+
+.ai-neural-stage-box {
+  position: relative;
+  width: 100%;
+  height: 380px;
+  border-radius: 18px;
+  overflow: hidden;
+  background: #060913;
+  border: 1.5px solid rgba(56, 189, 248, 0.25);
+  margin-top: 24px;
+  box-shadow: 0 16px 45px rgba(0, 0, 0, 0.45);
+}
+
+#neural-3d-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  z-index: 1;
+}
+
+.neural-stage-hud {
+  position: absolute;
+  top: 14px;
+  left: 18px;
+  right: 18px;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  pointer-events: none;
+}
+
+.neural-hud-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(6, 9, 19, 0.85);
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  color: #38bdf8;
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  backdrop-filter: blur(10px);
+}
+
+.neural-stage-hint {
+  position: absolute;
+  bottom: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 5;
+  background: rgba(6, 9, 19, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #cbd5e1;
+  padding: 4px 14px;
+  border-radius: 999px;
+  font-size: 11.5px;
+  pointer-events: none;
+  backdrop-filter: blur(10px);
+}
+
+/* --- GALLERY SECTION 3D GLASS CARDS --- */
+.gallery-card {
+  background: #ffffff;
+  border: 1px solid var(--om-kailash-border);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.06);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+body.theme-dark .gallery-card {
+  background: var(--om-mahakaal-card);
+  border-color: var(--om-mahakaal-border);
+  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.4);
+}
+
+.gallery-card:hover {
+  transform: translateY(-6px) scale(1.01);
+  border-color: var(--om-neelkanth-blue);
+  box-shadow: 0 20px 45px rgba(37, 99, 235, 0.16);
+}
+
+body.theme-dark .gallery-card:hover {
+  border-color: #38bdf8;
+  box-shadow: 0 20px 50px rgba(56, 189, 248, 0.25);
+}
+
+/* --- PRODUCTS SECTION ELEVATION --- */
+.product-card {
+  background: #ffffff;
+  border: 1px solid var(--om-kailash-border);
+  border-radius: 18px;
+  padding: 28px;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.06);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+body.theme-dark .product-card {
+  background: var(--om-mahakaal-card);
+  border-color: var(--om-mahakaal-border);
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.45);
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--om-neelkanth-blue);
+  box-shadow: 0 22px 50px rgba(37, 99, 235, 0.18);
+}
+
+body.theme-dark .product-card:hover {
+  border-color: #38bdf8;
+  box-shadow: 0 22px 55px rgba(56, 189, 248, 0.28);
+}
+
+/* --- MRL 3.2 RUNTIME & TERMINAL ELEVATION --- */
+#mrl-update {
+  background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
+  padding: 60px 0;
+  border-bottom: 1px solid var(--om-kailash-border);
+}
+
+body.theme-dark #mrl-update {
+  background: radial-gradient(circle at 50% 50%, #0d1629 0%, #060810 80%);
+  border-bottom-color: var(--om-mahakaal-border);
+}
+
+/* --- DOWNLOADS SECTION ELEVATION --- */
+#downloads {
+  padding: 60px 0;
+}
+
+.dl-card,
+.download-item {
+  background: #ffffff;
+  border: 1px solid var(--om-kailash-border);
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.05);
+  transition: all 0.25s ease;
+}
+
+body.theme-dark .dl-card,
+body.theme-dark .download-item {
+  background: var(--om-mahakaal-card);
+  border-color: var(--om-mahakaal-border);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4);
+}
+
+.dl-card:hover,
+.download-item:hover {
+  transform: translateY(-4px);
+  border-color: #10b981;
+  box-shadow: 0 16px 40px rgba(16, 185, 129, 0.2);
+}
+
+/* --- SMOOTH BUTTON SOUND FEEDBACK & GLOW --- */
+button,
+a.button,
+.c-mode-btn,
+.v-ctrl-btn,
+.sacred-btn {
+  position: relative;
+  overflow: hidden;
+}
+
+button:active,
+a.button:active,
+.sacred-btn:active {
+  transform: scale(0.97) !important;
+}
+

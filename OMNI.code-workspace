@@ -1,0 +1,20 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		},
+		{
+			"path": "../../NeuroAI Platform"
+		},
+		{
+			"path": "../../MRL_HI"
+		},
+		{
+			"path": "../../Pocket Gamer"
+		}
+	],
+	"settings": {
+		"powershell.cwd": "NeuroAI Platform",
+		"liveServer.settings.multiRootWorkspaceName": "OMNI"
+	}
+}

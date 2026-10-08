@@ -1,2 +1,7 @@
-﻿node_modules/
-downloads/
+node_modules/
+.DS_Store
+Thumbs.db
+downloads/*.exe
+downloads/*.zip
+downloads/*.tar.gz
+.server.pid

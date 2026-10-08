@@ -1,0 +1,864 @@
+<!-- ==========================================================================
+     CUTE ANIMAL CURSOR CONTAINER & FLOATING SELECTOR
+     ========================================================================== -->
+<div id="cute-cursor-container" aria-hidden="true"><div id="cute-cursor-avatar"></div></div>
+
+<aside class="cute-animal-switcher" aria-label="Cute Animal Cursor Selector">
+  <span class="switcher-label"><span>🐾</span> Animals:</span>
+  <div class="cute-animal-btns">
+    <button class="c-animal-btn is-active" type="button" data-animal="kitten" title="Cute Kitten" aria-label="Select Cute Kitten">🐱</button>
+    <button class="c-animal-btn" type="button" data-animal="panda" title="Cute Panda" aria-label="Select Cute Panda">🐼</button>
+    <button class="c-animal-btn" type="button" data-animal="fox" title="Cute Fox" aria-label="Select Cute Fox">🦊</button>
+    <button class="c-animal-btn" type="button" data-animal="lion" title="Cute Lion Cub" aria-label="Select Cute Lion Cub">🦁</button>
+    <button class="c-animal-btn" type="button" data-animal="bunny" title="Cute Bunny" aria-label="Select Cute Bunny">🐰</button>
+    <button class="c-animal-btn" type="button" data-animal="elephant" title="Cute Baby Elephant" aria-label="Select Cute Baby Elephant">🐘</button>
+  </div>
+  <button class="switcher-sfx-btn" id="switcher-sfx-toggle" type="button" onclick="toggleSoundFX()" title="Toggle Sound FX">🔔 Sound ON</button>
+</aside>
+
+<!-- ==========================================================================
+     SACRED MAHADEV & OM 3D CV CINEMATIC STAGE
+     ========================================================================== -->
+<section class="section mahadev-cv-cinematic-section" id="mahadev-cv-top" aria-label="Mahipal Singh Rathore 3D CV and Portfolio">
+  <div class="mahadev-ambient-aura"></div>
+  <div class="mahadev-stage-container">
+    
+    <!-- Sacred Header Banner -->
+    <div class="mahadev-stage-banner">
+      <div class="mahadev-sacred-title">
+        <div class="om-symbol-seal" aria-hidden="true">ॐ</div>
+        <div class="title-copy">
+          <h2>MAHIPAL SINGH RATHORE <span class="sacred-accent">· 3D CV & Portfolio</span></h2>
+          <p>Website Specialist &amp; Web Developer · AI Systems &amp; 3D Creative Engineer · Bhinmal, Rajasthan</p>
+        </div>
+      </div>
+      <div class="mahadev-banner-actions">
+        <button class="sacred-btn primary" type="button" onclick="openCVModal()">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>
+          <span>Official CV (PDF / Print)</span>
+        </button>
+        <button class="sacred-btn gold" type="button" onclick="toggleAutoTour()" id="banner-tour-btn">
+          <span>⚡ 3D Story Tour</span>
+        </button>
+        <a class="sacred-btn outline" href="mailto:ramhipalsingh602@gmail.com">
+          <span>💬 Hire Me / Email</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Interactive 3D Viewport Box -->
+    <div class="mahadev-cinematic-viewport-box">
+      <canvas id="cv-3d-canvas" aria-label="Interactive 3D Sacred Om & Tech Cosmos Canvas"></canvas>
+      
+      <!-- Topbar HUD inside 3D stage -->
+      <div class="viewport-topbar">
+        <div class="viewport-tag">
+          <span class="pulse-dot"></span>
+          <span>🔱 SACRED 3D VIEWPORT · KAILASH &amp; MAHAKAAL COSMOS</span>
+        </div>
+        <div class="viewport-controls">
+          <button class="v-ctrl-btn" type="button" id="btn-auto-tour" onclick="toggleAutoTour()"><span>▶ Play Story</span></button>
+          <button class="v-ctrl-btn" type="button" onclick="openCVModal()"><span>📄 Full CV</span></button>
+        </div>
+      </div>
+
+      <!-- Story Chapter Stepper Tabs -->
+      <div class="story-chapter-tabs" role="tablist" aria-label="Story Chapters">
+        <button class="story-tab is-active" type="button" data-chapter="1"><span>ॐ</span> 1. Awakening</button>
+        <button class="story-tab" type="button" data-chapter="2"><span>⚡</span> 2. Core Arsenal</button>
+        <button class="story-tab" type="button" data-chapter="3"><span>🌌</span> 3. 3D &amp; AI Projects</button>
+        <button class="story-tab" type="button" data-chapter="4"><span>📜</span> 4. Gyan Kosha</button>
+        <button class="story-tab" type="button" data-chapter="5"><span>🏔️</span> 5. Career &amp; CV</button>
+      </div>
+
+      <!-- Interactive Story Overlays -->
+      <div class="story-content-overlay">
+        
+        <!-- Chapter 1: Awakening / Identity -->
+        <div class="story-card-panel is-active" data-card-chapter="1">
+          <div class="card-header-badge">🌟 CHAPTER 1 · SACRED AWAKENING</div>
+          <h3>Mahipal Singh Rathore · <span class="highlight">Website Specialist &amp; AI Web Developer</span></h3>
+          <p class="lead">Versatile and results-oriented developer specializing in high-performance websites, AI application workflows, and real-time 3D web interfaces. Based in Bhinmal, Rajasthan, crafting modern, cross-browser responsive solutions.</p>
+          <div class="story-tech-badges">
+            <span class="story-tech-badge">📍 Bhinmal, Rajasthan, India</span>
+            <span class="story-tech-badge">✉️ ramhipalsingh602@gmail.com</span>
+            <span class="story-tech-badge">🟢 Available for Frontend &amp; AI Roles</span>
+          </div>
+          <div class="story-panel-actions">
+            <span>🖱️ Drag 3D canvas to rotate scene freely</span>
+            <div class="story-nav-buttons">
+              <button class="story-nav-btn primary" type="button" onclick="goToStoryChapter(2)">Next: Tech Arsenal &rarr;</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Chapter 2: Core Stack & Languages -->
+        <div class="story-card-panel" data-card-chapter="2">
+          <div class="card-header-badge">⚡ CHAPTER 2 · TRISHUL OF CODE</div>
+          <h3>Core Languages &amp; <span class="highlight">Recruiter Arsenal</span></h3>
+          <p class="lead">Strong focus as a Junior Frontend / Web Developer + AI-focused engineer. Mastery across core web technologies, rapid full-stack API backends, and modern graphics pipelines.</p>
+          <div class="story-tech-badges">
+            <span class="story-tech-badge">🐍 Python</span>
+            <span class="story-tech-badge">⚡ JavaScript (ES6+)</span>
+            <span class="story-tech-badge">🌐 HTML5 / CSS3</span>
+            <span class="story-tech-badge">⚛️ React &amp; Next.js</span>
+            <span class="story-tech-badge">💨 Tailwind CSS</span>
+            <span class="story-tech-badge">🚀 FastAPI</span>
+            <span class="story-tech-badge">🧊 Three.js &amp; WebGL</span>
+            <span class="story-tech-badge">🤖 AI / LLM Applications</span>
+          </div>
+          <div class="story-panel-actions">
+            <button class="story-nav-btn" type="button" onclick="goToStoryChapter(1)">&larr; Back</button>
+            <div class="story-nav-buttons">
+              <button class="story-nav-btn primary" type="button" onclick="goToStoryChapter(3)">Next: 3D Projects &rarr;</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Chapter 3: Flagship Projects -->
+        <div class="story-card-panel" data-card-chapter="3">
+          <div class="card-header-badge">🌌 CHAPTER 3 · FLAGSHIP CREATIONS</div>
+          <h3>Autonomous AI &amp; <span class="highlight">3D Engine Systems</span></h3>
+          <p class="lead">Hands-on architecture in custom C++ game engines, autonomous AI agent frameworks, and dynamic web SaaS platforms.</p>
+          <div class="story-tech-badges">
+            <span class="story-tech-badge">🤖 NETRA AI (Local AI Assistant)</span>
+            <span class="story-tech-badge">🧠 RAIN AI / RAIN AGI (Reasoning Agents)</span>
+            <span class="story-tech-badge">🌐 VYOM (AI Web Platform)</span>
+            <span class="story-tech-badge">🎮 RUDRA TREE EYS (AI Gaming)</span>
+            <span class="story-tech-badge">🏛️ EKASHRINGA Engine (C++17 3D Bharatverse)</span>
+          </div>
+          <div class="story-panel-actions">
+            <button class="story-nav-btn" type="button" onclick="goToStoryChapter(2)">&larr; Back</button>
+            <div class="story-nav-buttons">
+              <button class="story-nav-btn primary" type="button" onclick="goToStoryChapter(4)">Next: Gyan Kosha &rarr;</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Chapter 4: Gyan Kosha -->
+        <div class="story-card-panel" data-card-chapter="4">
+          <div class="card-header-badge">📜 CHAPTER 4 · GYAN KOSHA</div>
+          <h3>10 Specialized <span class="highlight">Engineering Domains</span></h3>
+          <p class="lead">Comprehensive capabilities across Web Dev, AI/ML, Backend, Databases, Game Dev, Shaders, Mobile Dev, Auth, and Data Analytics.</p>
+          <div class="story-tech-badges">
+            <span class="story-tech-badge">🌐 Web Development</span>
+            <span class="story-tech-badge">🤖 AI &amp; Machine Learning</span>
+            <span class="story-tech-badge">🗄️ Backend &amp; PostgreSQL</span>
+            <span class="story-tech-badge">🎮 Unity &amp; Godot</span>
+            <span class="story-tech-badge">🎨 Blender &amp; Shaders</span>
+            <span class="story-tech-badge">📱 Flutter &amp; PWA</span>
+            <span class="story-tech-badge">📊 Pandas &amp; Analytics</span>
+          </div>
+          <div class="story-panel-actions">
+            <button class="story-nav-btn" type="button" onclick="goToStoryChapter(3)">&larr; Back</button>
+            <div class="story-nav-buttons">
+              <button class="story-nav-btn primary" type="button" onclick="goToStoryChapter(5)">Next: Career &amp; CV &rarr;</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Chapter 5: Career & CV -->
+        <div class="story-card-panel" data-card-chapter="5">
+          <div class="card-header-badge">🏔️ CHAPTER 5 · KAILASH HORIZON</div>
+          <h3>Experience &amp; <span class="highlight">Let's Build Together</span></h3>
+          <p class="lead">Freelance Web Developer (2023–Present) with proven records in Core Web Vitals, SEO acceleration, and modern frontend architectures. Bachelor of Arts (B.A.) completed.</p>
+          <div class="story-tech-badges">
+            <span class="story-tech-badge">⭐ 100/100 Lighthouse Performance</span>
+            <span class="story-tech-badge">🛡️ Production SSL &amp; CI/CD</span>
+            <span class="story-tech-badge">🎓 Bachelor of Arts (B.A.)</span>
+          </div>
+          <div class="story-panel-actions">
+            <button class="story-nav-btn" type="button" onclick="goToStoryChapter(4)">&larr; Back</button>
+            <div class="story-nav-buttons">
+              <button class="story-nav-btn primary" type="button" onclick="openCVModal()">📄 Open Official CV (PDF)</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ======================================================================
+         CV DOSSIER: IDENTITY BENTO & CORE SKILLS
+         ====================================================================== -->
+    <div class="cv-dossier-wrapper">
+      <div class="cv-bento-hero">
+        
+        <!-- Left Bento Card: Personal Identity -->
+        <div class="cv-identity-card">
+          <div>
+            <div class="identity-avatar-box">
+              <div class="avatar-seal" title="Mahipal Singh Rathore · AI &amp; Tech Developer">
+                <img src="assets/anime-avatar.jpg" alt="Mahipal Singh Rathore Anime Developer Avatar" />
+              </div>
+              <div class="identity-name-block">
+                <h3>Mahipal Singh Rathore</h3>
+                <p>Website Specialist &amp; AI Developer</p>
+              </div>
+            </div>
+            <div class="identity-badge-row">
+              <span class="status-badge"><span class="pulse-dot"></span> Available for Hire</span>
+              <span class="status-badge" style="background: rgba(37,99,235,0.08); color: #2563eb; border-color: rgba(37,99,235,0.2);">Remote / Freelance</span>
+            </div>
+            <p style="font-size: 13px; color: var(--om-ink-muted); margin: 10px 0 16px 0; line-height: 1.5;">
+              Versatile and results-oriented Website Specialist and Web Developer with proven expertise in building modern, responsive, and cross-browser compatible web solutions.
+            </p>
+            <div class="identity-contact-list">
+              <div class="contact-item">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                <span>Bhinmal, Rajasthan, India</span>
+              </div>
+              <div class="contact-item">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                <span>ramhipalsingh602@gmail.com</span>
+              </div>
+              <div class="contact-item">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 8.76a1.6 1.6 0 1 0 0-3.2 1.6 1.6 0 0 0 0 3.2m1.4 9.74v-8.37H5.06v8.37h2.8z"/></svg>
+                <a href="https://linkedin.com/in/mr-rathore-759236388" target="_blank" rel="noreferrer" style="color: var(--om-neelkanth-blue); text-decoration: underline;">linkedin.com/in/mr-rathore-759236388</a>
+              </div>
+            </div>
+          </div>
+          <div class="identity-actions-footer">
+            <button class="sacred-btn primary" type="button" onclick="openCVModal()" style="width: 100%; justify-content: center;">
+              <span>📄 View Official CV (Print/PDF)</span>
+            </button>
+            <a class="sacred-btn outline" href="mailto:ramhipalsingh602@gmail.com" style="width: 100%; justify-content: center;">
+              <span>✉️ Send Direct Message</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right Bento Card: Wellfound / Core Skills -->
+        <div class="cv-core-card">
+          <div class="core-card-header">
+            <h3>⭐ Recommended Core Skills <span>(Wellfound &amp; Recruiter Focus)</span></h3>
+            <p>Curated 20 primary skills for high-impact Frontend &amp; AI-focused Web engineering roles.</p>
+          </div>
+          <div class="core-skills-grid">
+            <div class="core-skill-pill">
+              <svg class="tech-logo-icon" viewBox="0 0 24 24"><path fill="#3776AB" d="M11.9 1C8.2 1 8.5 2.6 8.5 2.6L8.5 4.3H12V4.8H5.1C2.3 4.8 2.3 7.8 2.3 7.8L2.3 9.7C2.3 12.5 4.8 12.3 4.8 12.3H6.3V10.8C6.3 9.1 7.8 9.1 7.8 9.1H12.3C13.8 9.1 13.8 7.7 13.8 7.7V2.6C13.8 1 11.9 1 11.9 1ZM10.5 2.2C10.9 2.2 11.2 2.5 11.2 2.9C11.2 3.3 10.9 3.6 10.5 3.6C10.1 3.6 9.8 3.3 9.8 2.9C9.8 2.5 10.1 2.2 10.5 2.2Z"/><path fill="#FFD43B" d="M12.1 23C15.8 23 15.5 21.4 15.5 21.4V19.7H12V19.2H18.9C21.7 19.2 21.7 16.2 21.7 16.2V14.3C21.7 11.5 19.2 11.7 19.2 11.7H17.7V13.2C17.7 14.9 16.2 14.9 16.2 14.9H11.7C10.2 14.9 10.2 16.3 10.2 16.3V21.4C10.2 23 12.1 23 12.1 23ZM13.5 21.8C13.1 21.8 12.8 21.5 12.8 21.1C12.8 20.7 13.1 20.4 13.5 20.4C13.9 20.4 14.2 20.7 14.2 21.1C14.2 21.5 13.9 21.8 13.5 21.8Z"/></svg>
+              <span>Python</span>
+            </div>
+            <div class="core-skill-pill">
+              <svg class="tech-logo-icon" viewBox="0 0 24 24"><rect width="24" height="24" rx="4" fill="#F7DF1E"/><path fill="#000" d="M6 17.5l2.2-1.3c.5.8 1 1.4 2 1.4 1 0 1.6-.4 1.6-1.5V9h2.8v7.2c0 2.4-1.4 3.5-3.8 3.5-2.1 0-3.4-1-4.8-2.2zm11.2.2c.8.5 1.8.8 2.7.8 1.4 0 2.1-.6 2.1-1.6 0-1.1-.9-1.5-2.4-2.1-2.1-.8-3.4-1.8-3.4-3.7 0-2 1.6-3.4 3.8-3.4 1.5 0 2.6.4 3.4 1l-1.3 2.1c-.6-.4-1.3-.7-2.1-.7-1 0-1.6.5-1.6 1.2 0 .9.8 1.3 2.2 1.8 2.2.9 3.6 1.9 3.6 4 0 2.1-1.6 3.6-4.3 3.6-1.8 0-3.3-.6-4.3-1.4l1.6-2.6z"/></svg>
+              <span>JavaScript</span>
+            </div>
+            <div class="core-skill-pill">
+              <svg class="tech-logo-icon" viewBox="0 0 24 24"><path fill="#E34F26" d="M2.5 1L4.2 20.2L12 22.4L19.8 20.2L21.5 1H2.5ZM17.4 7.2H9.2L9.4 9.6H17.2L16.4 17.2L12 18.4L7.6 17.2L7.3 13.4H9.7L9.9 15.3L12 15.9L14.1 15.3L14.4 11.9H7.1L6.4 4.8H17.6L17.4 7.2Z"/></svg>
+              <span>HTML5</span>
+            </div>
+            <div class="core-skill-pill">
+              <svg class="tech-logo-icon" viewBox="0 0 24 24"><path fill="#1572B6" d="M2.5 1L4.2 20.2L12 22.4L19.8 20.2L21.5 1H2.5ZM17.4 7.2H9.2L9.4 9.6H17.2L16.4 17.2L12 18.4L7.6 17.2L7.3 13.4H9.7L9.9 15.3L12 15.9L14.1 15.3L14.4 11.9H7.1L6.4 4.8H17.6L17.4 7.2Z"/></svg>
+              <span>CSS3</span>
+            </div>
+            <div class="core-skill-pill">
+              <svg class="tech-logo-icon" viewBox="0 0 24 24"><path fill="#61DAFB" d="M12 9a3 3 0 1 0 0 6 3 3 0 0 0 0-6zm0-7c-5 0-9 2-9 4.5S7 11 12 11s9-2 9-4.5S17 2 12 2zm0 13c-5 0-9 2-9 4.5S7 22 12 22s9-2 9-4.5S17 15 12 15zm-8-4.5c0-2.5 3.6-4.5 8-4.5s8 2 8 4.5-3.6 4.5-8 4.5-8-2-8-4.5z"/></svg>
+              <span>React</span>
+            </div>
+            <div class="core-skill-pill">
+              <svg class="tech-logo-icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="#000"/><path fill="#FFF" d="M16 16.5L8.5 7.5H7v9h2v-6.2l6.8 8.2h.2v-11H14v6.5z"/></svg>
+              <span>Next.js</span>
+            </div>
+            <div class="core-skill-pill">
+              <svg class="tech-logo-icon" viewBox="0 0 24 24"><path fill="#06B6D4" d="M12 6c-3 0-5.5 1.5-6.5 4 1-.5 2-.8 3-.5 1.2.4 2.1 1.7 3.2 2.7 1.8 1.8 4.2 2.8 7.3 1.8 2-1 3.5-3 4-5.5-1 .5-2 .8-3 .5-1.2-.4-2.1-1.7-3.2-2.7C15 5.5 13.5 6 12 6zm-7 7c-3 0-4.5 1.5-5 4 1-.5 2-.8 3-.5 1.2.4 2.1 1.7 3.2 2.7 1.8 1.8 4.2 2.8 7.3 1.8 2-1 3.5-3 4-5.5-1 .5-2 .8-3 .5-1.2-.4-2.1-1.7-3.2-2.7-1.8-.8-3.3-.3-4.5.2z"/></svg>
+              <span>Tailwind CSS</span>
+            </div>
+            <div class="core-skill-pill">
+              <svg class="tech-logo-icon" viewBox="0 0 24 24"><path fill="#059669" d="M12 2L3 7v10l9 5 9-5V7l-9-5zm1 14h-3l2-5h-3l4-7-1 5h3l-2 7z"/></svg>
+              <span>FastAPI</span>
+            </div>
+            <div class="core-skill-pill">
+              <svg class="tech-logo-icon" viewBox="0 0 24 24"><path fill="#2563EB" d="M4 6h16v3H4zm0 5h16v3H4zm0 5h16v3H4z"/></svg>
+              <span>REST APIs</span>
+            </div>
+            <div class="core-skill-pill">
+              <svg class="tech-logo-icon" viewBox="0 0 24 24"><ellipse cx="12" cy="6" rx="8" ry="3" fill="#336791"/><path fill="#336791" d="M4 6v6c0 1.7 3.6 3 8 3s8-1.3 8-3V6H4zm0 6v6c0 1.7 3.6 3 8 3s8-1.3 8-3v-6H4z"/></svg>
+              <span>SQL</span>
+            </div>
+            <div class="core-skill-pill">
+              <svg class="tech-logo-icon" viewBox="0 0 24 24"><path fill="#F05032" d="M21.6 10.9L13.1 2.4a1.8 1.8 0 0 0-2.5 0l-1.9 1.9 2.5 2.5c.6-.2 1.3 0 1.7.5.5.5.6 1.2.3 1.8l2.4 2.4c.6-.3 1.3-.2 1.8.3.7.7.7 1.9 0 2.6s-1.9.7-2.6 0c-.5-.5-.6-1.3-.3-1.9l-2.3-2.3v5.1c.3.2.5.6.5 1 0 .8-.7 1.5-1.5 1.5s-1.5-.7-1.5-1.5c0-.4.2-.8.5-1V9.5c-.3-.2-.5-.6-.5-1 0-.6.3-1.1.8-1.3L8.6 4.8 2.4 11a1.8 1.8 0 0 0 0 2.5l8.5 8.5a1.8 1.8 0 0 0 2.5 0l8.2-8.2a1.8 1.8 0 0 0 0-2.9z"/></svg>
+              <span>Git &amp; GitHub</span>
+            </div>
+            <div class="core-skill-pill">
+              <svg class="tech-logo-icon" viewBox="0 0 24 24"><path fill="#000" d="M12 2L2 22h20L12 2zm0 4.5L18.5 20H5.5L12 6.5z"/></svg>
+              <span>Three.js</span>
+            </div>
+            <div class="core-skill-pill">
+              <svg class="tech-logo-icon" viewBox="0 0 24 24"><path fill="#990000" d="M12 2L2 7v10l10 5 10-5V7L12 2zm0 3.2L18.8 8 12 11.8 5.2 8 12 5.2zM4.5 9.7L11 13.3v7.1L4.5 16.8V9.7zm8.5 7.1v-7.1l6.5-3.6v7.1L13 16.8z"/></svg>
+              <span>WebGL</span>
+            </div>
+            <div class="core-skill-pill">
+              <svg class="tech-logo-icon" viewBox="0 0 24 24"><path fill="#7C3AED" d="M12 3c-4.4 0-8 3.6-8 8 0 3.5 2.3 6.5 5.5 7.6.4.1.6-.2.6-.4v-1.4c-2.2.5-2.7-1.1-2.7-1.1-.4-.9-.9-1.2-.9-1.2-.7-.5.1-.5.1-.5.8.1 1.2.8 1.2.8.7 1.2 1.9.9 2.4.7.1-.5.3-.9.5-1.1-1.8-.2-3.7-.9-3.7-4 0-.9.3-1.6.8-2.2-.1-.2-.4-1 .1-2.2 0 0 .7-.2 2.3.9.7-.2 1.4-.3 2.1-.3.7 0 1.4.1 2.1.3 1.6-1.1 2.3-.9 2.3-.9.5 1.2.2 2 .1 2.2.5.6.8 1.3.8 2.2 0 3.1-1.9 3.8-3.7 4 .3.3.6.8.6 1.6v2.4c0 .2.2.5.6.4 3.2-1.1 5.5-4.1 5.5-7.6 0-4.4-3.6-8-8-8z"/></svg>
+              <span>AI / LLM Apps</span>
+            </div>
+            <div class="core-skill-pill">
+              <svg class="tech-logo-icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="#F59E0B"/><path fill="#FFF" d="M10 8h4v8h-4z"/></svg>
+              <span>Ollama</span>
+            </div>
+            <div class="core-skill-pill">
+              <svg class="tech-logo-icon" viewBox="0 0 24 24"><path fill="#F97316" d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm1 15h-2v-2h2zm0-4h-2V7h2z"/></svg>
+              <span>Machine Learning</span>
+            </div>
+            <div class="core-skill-pill">
+              <svg class="tech-logo-icon" viewBox="0 0 24 24"><path fill="#000" d="M12 2L4 7v10l8 5 8-5V7l-8-5zm0 3.2l5.5 3.5L12 12.2 6.5 8.7 12 5.2zM6 10.3l5 3.2v6.2l-5-3.1v-6.3zm7 9.4v-6.2l5-3.2v6.3l-5 3.1z"/></svg>
+              <span>Unity</span>
+            </div>
+            <div class="core-skill-pill">
+              <svg class="tech-logo-icon" viewBox="0 0 24 24"><path fill="#EA580C" d="M12 3a9 9 0 0 0-9 9c0 4.1 2.8 7.6 6.6 8.7l1.4-3.3A5.5 5.5 0 0 1 6.5 12c0-3 2.5-5.5 5.5-5.5s5.5 2.5 5.5 5.5a5.5 5.5 0 0 1-4.5 5.4l1.4 3.3c3.8-1.1 6.6-4.6 6.6-8.7a9 9 0 0 0-9-9z"/></svg>
+              <span>Blender</span>
+            </div>
+            <div class="core-skill-pill">
+              <svg class="tech-logo-icon" viewBox="0 0 24 24"><path fill="#2563EB" d="M4 6h16v10H4zm2 2v6h12V8H6zM8 18h8v2H8z"/></svg>
+              <span>Responsive Web</span>
+            </div>
+            <div class="core-skill-pill">
+              <svg class="tech-logo-icon" viewBox="0 0 24 24"><path fill="#7C3AED" d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+              <span>PWA Apps</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ====================================================================
+           ALL PROGRAMMING LANGUAGES (WITH REAL SVG LOGOS)
+           ==================================================================== -->
+      <div class="languages-section-box">
+        <div class="languages-header">
+          <div>
+            <h3>⚡ Programming Languages &amp; Shaders</h3>
+            <p style="margin: 4px 0 0 0; font-size: 13px; color: var(--om-ink-muted);">Every language crafted with production standard conventions and optimized pipelines.</p>
+          </div>
+        </div>
+        <div class="languages-grid">
+          
+          <div class="lang-card">
+            <div class="lang-icon-wrap">
+              <svg viewBox="0 0 24 24"><path fill="#3776AB" d="M11.9 1C8.2 1 8.5 2.6 8.5 2.6L8.5 4.3H12V4.8H5.1C2.3 4.8 2.3 7.8 2.3 7.8L2.3 9.7C2.3 12.5 4.8 12.3 4.8 12.3H6.3V10.8C6.3 9.1 7.8 9.1 7.8 9.1H12.3C13.8 9.1 13.8 7.7 13.8 7.7V2.6C13.8 1 11.9 1 11.9 1ZM10.5 2.2C10.9 2.2 11.2 2.5 11.2 2.9C11.2 3.3 10.9 3.6 10.5 3.6C10.1 3.6 9.8 3.3 9.8 2.9C9.8 2.5 10.1 2.2 10.5 2.2Z"/><path fill="#FFD43B" d="M12.1 23C15.8 23 15.5 21.4 15.5 21.4V19.7H12V19.2H18.9C21.7 19.2 21.7 16.2 21.7 16.2V14.3C21.7 11.5 19.2 11.7 19.2 11.7H17.7V13.2C17.7 14.9 16.2 14.9 16.2 14.9H11.7C10.2 14.9 10.2 16.3 10.2 16.3V21.4C10.2 23 12.1 23 12.1 23ZM13.5 21.8C13.1 21.8 12.8 21.5 12.8 21.1C12.8 20.7 13.1 20.4 13.5 20.4C13.9 20.4 14.2 20.7 14.2 21.1C14.2 21.5 13.9 21.8 13.5 21.8Z"/></svg>
+            </div>
+            <div class="lang-meta">
+              <h4>Python</h4>
+              <span>FastAPI · AI/ML · Automation · Data</span>
+            </div>
+          </div>
+
+          <div class="lang-card">
+            <div class="lang-icon-wrap">
+              <svg viewBox="0 0 24 24"><rect width="24" height="24" rx="4" fill="#F7DF1E"/><path fill="#000" d="M6 17.5l2.2-1.3c.5.8 1 1.4 2 1.4 1 0 1.6-.4 1.6-1.5V9h2.8v7.2c0 2.4-1.4 3.5-3.8 3.5-2.1 0-3.4-1-4.8-2.2zm11.2.2c.8.5 1.8.8 2.7.8 1.4 0 2.1-.6 2.1-1.6 0-1.1-.9-1.5-2.4-2.1-2.1-.8-3.4-1.8-3.4-3.7 0-2 1.6-3.4 3.8-3.4 1.5 0 2.6.4 3.4 1l-1.3 2.1c-.6-.4-1.3-.7-2.1-.7-1 0-1.6.5-1.6 1.2 0 .9.8 1.3 2.2 1.8 2.2.9 3.6 1.9 3.6 4 0 2.1-1.6 3.6-4.3 3.6-1.8 0-3.3-.6-4.3-1.4l1.6-2.6z"/></svg>
+            </div>
+            <div class="lang-meta">
+              <h4>JavaScript (ES6+)</h4>
+              <span>Frontend · Async APIs · Node.js · Three.js</span>
+            </div>
+          </div>
+
+          <div class="lang-card">
+            <div class="lang-icon-wrap">
+              <svg viewBox="0 0 24 24"><path fill="#E34F26" d="M2.5 1L4.2 20.2L12 22.4L19.8 20.2L21.5 1H2.5ZM17.4 7.2H9.2L9.4 9.6H17.2L16.4 17.2L12 18.4L7.6 17.2L7.3 13.4H9.7L9.9 15.3L12 15.9L14.1 15.3L14.4 11.9H7.1L6.4 4.8H17.6L17.4 7.2Z"/></svg>
+            </div>
+            <div class="lang-meta">
+              <h4>HTML5</h4>
+              <span>Semantic DOM · SEO Schema · Web Standards</span>
+            </div>
+          </div>
+
+          <div class="lang-card">
+            <div class="lang-icon-wrap">
+              <svg viewBox="0 0 24 24"><path fill="#1572B6" d="M2.5 1L4.2 20.2L12 22.4L19.8 20.2L21.5 1H2.5ZM17.4 7.2H9.2L9.4 9.6H17.2L16.4 17.2L12 18.4L7.6 17.2L7.3 13.4H9.7L9.9 15.3L12 15.9L14.1 15.3L14.4 11.9H7.1L6.4 4.8H17.6L17.4 7.2Z"/></svg>
+            </div>
+            <div class="lang-meta">
+              <h4>CSS3</h4>
+              <span>Flexbox/Grid · Responsive · Animations</span>
+            </div>
+          </div>
+
+          <div class="lang-card">
+            <div class="lang-icon-wrap">
+              <svg viewBox="0 0 24 24"><ellipse cx="12" cy="6" rx="8" ry="3" fill="#336791"/><path fill="#336791" d="M4 6v6c0 1.7 3.6 3 8 3s8-1.3 8-3V6H4zm0 6v6c0 1.7 3.6 3 8 3s8-1.3 8-3v-6H4z"/></svg>
+            </div>
+            <div class="lang-meta">
+              <h4>SQL</h4>
+              <span>PostgreSQL · SQLite · SQLAlchemy · Queries</span>
+            </div>
+          </div>
+
+          <div class="lang-card">
+            <div class="lang-icon-wrap">
+              <svg viewBox="0 0 24 24"><path fill="#68217A" d="M12 2L3 7.2v9.6L12 22l9-5.2V7.2L12 2zm-1.8 13.8c-1.9 0-3.3-1.4-3.3-3.8s1.4-3.8 3.3-3.8c1.3 0 2.2.6 2.8 1.6l-1.4.9c-.3-.6-.8-.9-1.4-.9-.9 0-1.6.8-1.6 2.2s.7 2.2 1.6 2.2c.6 0 1.1-.3 1.4-.9l1.4.9c-.6 1-1.5 1.6-2.8 1.6zm7.2-2.3h-1.1v1.1h-.9v-1.1h-1.1v-.8h1.1v-1.1h.9v1.1h1.1v.8z"/></svg>
+            </div>
+            <div class="lang-meta">
+              <h4>C#</h4>
+              <span>Unity Game Scripting · .NET Logic</span>
+            </div>
+          </div>
+
+          <div class="lang-card">
+            <div class="lang-icon-wrap">
+              <svg viewBox="0 0 24 24"><path fill="#00599C" d="M12 2L3 7.2v9.6L12 22l9-5.2V7.2L12 2zm-1.8 13.8c-1.9 0-3.3-1.4-3.3-3.8s1.4-3.8 3.3-3.8c1.3 0 2.2.6 2.8 1.6l-1.4.9c-.3-.6-.8-.9-1.4-.9-.9 0-1.6.8-1.6 2.2s.7 2.2 1.6 2.2c.6 0 1.1-.3 1.4-.9l1.4.9c-.6 1-1.5 1.6-2.8 1.6zm6.8-2.8h-1v1h-.8v-1h-1v-.8h1v-1h.8v1h1v.8zm2.2 0h-1v1h-.8v-1h-1v-.8h1v-1h.8v1h1v.8z"/></svg>
+            </div>
+            <div class="lang-meta">
+              <h4>C++</h4>
+              <span>Engine Core Architecture · Native Systems</span>
+            </div>
+          </div>
+
+          <div class="lang-card">
+            <div class="lang-icon-wrap">
+              <svg viewBox="0 0 24 24"><path fill="#0175C2" d="M4.5 13.5L2 19.5 8 22l6-4.5L9.5 11l-5 2.5zm15-9L13.5 2 7.5 4.5l5 6.5 6-4.5 1-2z"/></svg>
+            </div>
+            <div class="lang-meta">
+              <h4>Dart (Basic)</h4>
+              <span>Flutter Mobile Dev · Reactive UI</span>
+            </div>
+          </div>
+
+          <div class="lang-card">
+            <div class="lang-icon-wrap">
+              <svg viewBox="0 0 24 24"><path fill="#5586A4" d="M12 2L2 8.5v7L12 22l10-6.5v-7L12 2zm0 3.5l6.5 4.2L12 14 5.5 9.7 12 5.5z"/></svg>
+            </div>
+            <div class="lang-meta">
+              <h4>GLSL / HLSL (Shaders)</h4>
+              <span>Fragment &amp; Vertex Shaders · Post-FX</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ====================================================================
+           FLAGSHIP 3D & AI PROJECTS DECK
+           ==================================================================== -->
+      <div class="projects-deck-box">
+        <div class="projects-header">
+          <h3>🧠 Flagship Projects &amp; Architectures</h3>
+          <p style="margin: 4px 0 0 0; font-size: 13px; color: var(--om-ink-muted);">Key systems demonstrating full-stack engineering, AI agents, and 3D graphics expertise.</p>
+        </div>
+        <div class="projects-grid">
+          
+          <div class="project-hologram-card">
+            <div>
+              <div class="project-card-top">
+                <span class="project-badge-tag">🤖 LOCAL AI</span>
+                <span style="font-size: 11px; font-weight: 700; color: #f59e0b;">FLAGSHIP</span>
+              </div>
+              <h4>NETRA AI</h4>
+              <p>Intelligent AI assistant built with local LLM integration, Ollama orchestration, contextual memory, and privacy-preserving document intelligence workflows.</p>
+              <div class="project-stack-tags">
+                <span class="project-stack-pill">Python</span>
+                <span class="project-stack-pill">Ollama</span>
+                <span class="project-stack-pill">Local LLM</span>
+                <span class="project-stack-pill">FastAPI</span>
+              </div>
+            </div>
+            <div class="project-card-footer">
+              <span class="project-action-link" onclick="openCVModal()">Architecture Details &rarr;</span>
+            </div>
+          </div>
+
+          <div class="project-hologram-card">
+            <div>
+              <div class="project-card-top">
+                <span class="project-badge-tag">🧠 REASONING AGENTS</span>
+                <span style="font-size: 11px; font-weight: 700; color: #10b981;">ACTIVE</span>
+              </div>
+              <h4>RAIN AI / RAIN AGI</h4>
+              <p>Autonomous AI-agent research and reasoning systems experiments. Features self-prompting execution loops, tool delegation, and multi-domain problem solving.</p>
+              <div class="project-stack-tags">
+                <span class="project-stack-pill">AI Agents</span>
+                <span class="project-stack-pill">Prompt Engineering</span>
+                <span class="project-stack-pill">Python</span>
+              </div>
+            </div>
+            <div class="project-card-footer">
+              <span class="project-action-link" onclick="openCVModal()">Explore System &rarr;</span>
+            </div>
+          </div>
+
+          <div class="project-hologram-card">
+            <div>
+              <div class="project-card-top">
+                <span class="project-badge-tag">🌐 WEB PLATFORM</span>
+                <span style="font-size: 11px; font-weight: 700; color: #38bdf8;">PRODUCTION</span>
+              </div>
+              <h4>VYOM</h4>
+              <p>High-speed AI-powered web application platform delivering automated data extraction, modern responsive dashboard UI, and fast interactive API responses.</p>
+              <div class="project-stack-tags">
+                <span class="project-stack-pill">React</span>
+                <span class="project-stack-pill">Node.js</span>
+                <span class="project-stack-pill">Tailwind</span>
+                <span class="project-stack-pill">REST APIs</span>
+              </div>
+            </div>
+            <div class="project-card-footer">
+              <span class="project-action-link" onclick="openCVModal()">Platform Specs &rarr;</span>
+            </div>
+          </div>
+
+          <div class="project-hologram-card">
+            <div>
+              <div class="project-card-top">
+                <span class="project-badge-tag">🎮 AI + GAMING</span>
+                <span style="font-size: 11px; font-weight: 700; color: #ec4899;">INTERACTIVE</span>
+              </div>
+              <h4>RUDRA TREE EYS</h4>
+              <p>Interactive platform uniting AI intelligence with 3D gaming pipelines. Features real-time spatial awareness, entity behavior, and holographic visual UI.</p>
+              <div class="project-stack-tags">
+                <span class="project-stack-pill">Three.js</span>
+                <span class="project-stack-pill">WebGL</span>
+                <span class="project-stack-pill">Game UI/UX</span>
+                <span class="project-stack-pill">C#</span>
+              </div>
+            </div>
+            <div class="project-card-footer">
+              <span class="project-action-link" onclick="openCVModal()">Engine Insights &rarr;</span>
+            </div>
+          </div>
+
+          <div class="project-hologram-card">
+            <div>
+              <div class="project-card-top">
+                <span class="project-badge-tag">⚡ SAAS CONCEPT</span>
+                <span style="font-size: 11px; font-weight: 700; color: #818cf8;">INNOVATION</span>
+              </div>
+              <h4>NETRAwebAI</h4>
+              <p>Next-generation AI website-builder SaaS concept that compiles natural language prompts into responsive, production-ready website layouts and code.</p>
+              <div class="project-stack-tags">
+                <span class="project-stack-pill">Next.js</span>
+                <span class="project-stack-pill">Tailwind</span>
+                <span class="project-stack-pill">LLM Prompt Engine</span>
+              </div>
+            </div>
+            <div class="project-card-footer">
+              <span class="project-action-link" onclick="openCVModal()">SaaS Blueprint &rarr;</span>
+            </div>
+          </div>
+
+          <div class="project-hologram-card">
+            <div>
+              <div class="project-card-top">
+                <span class="project-badge-tag">🏛️ 3D GAME ENGINE</span>
+                <span style="font-size: 11px; font-weight: 700; color: #f59e0b;">FLAGSHIP C++</span>
+              </div>
+              <h4>EKASHRINGA Engine (Bharatverse)</h4>
+              <p>Custom C++17 desktop 3D game engine and visual world editor. Features scene graph, entity-component system (ECS), physics integration, and OBJ mesh exports.</p>
+              <div class="project-stack-tags">
+                <span class="project-stack-pill">C++17</span>
+                <span class="project-stack-pill">OpenGL</span>
+                <span class="project-stack-pill">ECS</span>
+                <span class="project-stack-pill">Win32 Native</span>
+              </div>
+            </div>
+            <div class="project-card-footer">
+              <a class="project-action-link" href="#ekarshinga-spotlight">View 3D Engine Showcase &rarr;</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ====================================================================
+           GYAN KOSHA: ALL 10 DOMAINS TABBED MATRIX
+           ==================================================================== -->
+      <div class="domain-matrix-box">
+        <div style="margin-bottom: 20px;">
+          <h3 style="margin: 0; font-size: 20px; font-weight: 800; color: var(--om-ink-dark);">📜 Gyan Kosha · Complete Technical Competencies</h3>
+          <p style="margin: 4px 0 0 0; font-size: 13px; color: var(--om-ink-muted);">Browse granular skill sets across all 10 specialized engineering domains.</p>
+        </div>
+
+        <!-- Navigation Tabs -->
+        <div class="domain-tabs-nav" role="tablist">
+          <button class="domain-tab-btn is-active" type="button" data-domain="web">🌐 Web Development</button>
+          <button class="domain-tab-btn" type="button" data-domain="ai">🤖 AI &amp; ML</button>
+          <button class="domain-tab-btn" type="button" data-domain="backend">🗄️ Backend &amp; DB</button>
+          <button class="domain-tab-btn" type="button" data-domain="game">🎮 Game Dev</button>
+          <button class="domain-tab-btn" type="button" data-domain="graphics">🎨 3D &amp; Graphics</button>
+          <button class="domain-tab-btn" type="button" data-domain="tools">🛠️ Tools &amp; DevOps</button>
+          <button class="domain-tab-btn" type="button" data-domain="mobile">📱 Mobile Dev</button>
+          <button class="domain-tab-btn" type="button" data-domain="auth">🔐 Auth &amp; Payments</button>
+          <button class="domain-tab-btn" type="button" data-domain="data">📊 Data &amp; Analytics</button>
+        </div>
+
+        <!-- Domain Panes -->
+        <div class="domain-pane is-active" id="domain-web">
+          <div class="domain-items-chips">
+            <span class="domain-chip">Responsive Web Design</span>
+            <span class="domain-chip">Frontend Architecture</span>
+            <span class="domain-chip">HTML5 / CSS3 / JavaScript</span>
+            <span class="domain-chip">React</span>
+            <span class="domain-chip">Next.js</span>
+            <span class="domain-chip">Tailwind CSS</span>
+            <span class="domain-chip">PWA (Progressive Web Apps)</span>
+            <span class="domain-chip">REST APIs Integration</span>
+            <span class="domain-chip">FastAPI Client / Server</span>
+            <span class="domain-chip">Flask</span>
+            <span class="domain-chip">Node.js / Express</span>
+            <span class="domain-chip">Three.js 3D Web</span>
+            <span class="domain-chip">WebGL Context</span>
+            <span class="domain-chip">GSAP Animations</span>
+            <span class="domain-chip">Chart.js Dashboards</span>
+          </div>
+        </div>
+
+        <div class="domain-pane" id="domain-ai">
+          <div class="domain-items-chips">
+            <span class="domain-chip">AI Application Development</span>
+            <span class="domain-chip">Local AI / Local LLM Systems</span>
+            <span class="domain-chip">Ollama Model Serving</span>
+            <span class="domain-chip">LLM API Integration</span>
+            <span class="domain-chip">Prompt Engineering</span>
+            <span class="domain-chip">AI Autonomous Agents</span>
+            <span class="domain-chip">AI Workflow Automation</span>
+            <span class="domain-chip">Machine Learning Basics</span>
+            <span class="domain-chip">Scikit-learn</span>
+            <span class="domain-chip">Logistic Regression</span>
+            <span class="domain-chip">Model Evaluation &amp; Benchmarking</span>
+            <span class="domain-chip">Speech-to-Text / TTS Concepts</span>
+            <span class="domain-chip">VLM (Vision Language) Concepts</span>
+            <span class="domain-chip">AI-Powered Web Applications</span>
+          </div>
+        </div>
+
+        <div class="domain-pane" id="domain-backend">
+          <div class="domain-items-chips">
+            <span class="domain-chip">Python FastAPI</span>
+            <span class="domain-chip">Flask Microframework</span>
+            <span class="domain-chip">Node.js Server</span>
+            <span class="domain-chip">Express.js APIs</span>
+            <span class="domain-chip">SQLite Embedded DB</span>
+            <span class="domain-chip">PostgreSQL</span>
+            <span class="domain-chip">SQLAlchemy ORM</span>
+            <span class="domain-chip">JWT Authentication</span>
+            <span class="domain-chip">OAuth 2.0 / Google OAuth</span>
+            <span class="domain-chip">RESTful API Design</span>
+            <span class="domain-chip">Session Management &amp; Security</span>
+          </div>
+        </div>
+
+        <div class="domain-pane" id="domain-game">
+          <div class="domain-items-chips">
+            <span class="domain-chip">Unity Engine</span>
+            <span class="domain-chip">Godot Engine</span>
+            <span class="domain-chip">Unreal Engine (Exploration)</span>
+            <span class="domain-chip">Pygame 2D</span>
+            <span class="domain-chip">Ursina Python 3D</span>
+            <span class="domain-chip">Three.js Browser 3D</span>
+            <span class="domain-chip">Game UI/UX Design</span>
+            <span class="domain-chip">3D Game World Concepts</span>
+            <span class="domain-chip">Game Engine ECS Architecture</span>
+            <span class="domain-chip">C# Game Scripting</span>
+          </div>
+        </div>
+
+        <div class="domain-pane" id="domain-graphics">
+          <div class="domain-items-chips">
+            <span class="domain-chip">Blender 3D Modeling</span>
+            <span class="domain-chip">Three.js Shaders</span>
+            <span class="domain-chip">WebGL Shaders</span>
+            <span class="domain-chip">GLSL Shaders</span>
+            <span class="domain-chip">Spatial 3D UI</span>
+            <span class="domain-chip">Holographic UI Concepts</span>
+            <span class="domain-chip">Real-time 3D Web Interfaces</span>
+          </div>
+        </div>
+
+        <div class="domain-pane" id="domain-tools">
+          <div class="domain-items-chips">
+            <span class="domain-chip">Git Version Control</span>
+            <span class="domain-chip">GitHub CI/CD</span>
+            <span class="domain-chip">VS Code</span>
+            <span class="domain-chip">Visual Studio IDE</span>
+            <span class="domain-chip">Netlify Cloud Hosting</span>
+            <span class="domain-chip">Vercel Deployment</span>
+            <span class="domain-chip">Render</span>
+            <span class="domain-chip">Cloudflare DNS &amp; CDN</span>
+            <span class="domain-chip">Firebase</span>
+            <span class="domain-chip">Supabase</span>
+            <span class="domain-chip">Android Studio</span>
+            <span class="domain-chip">Unity Editor</span>
+            <span class="domain-chip">Ollama CLI</span>
+          </div>
+        </div>
+
+        <div class="domain-pane" id="domain-mobile">
+          <div class="domain-items-chips">
+            <span class="domain-chip">Flutter Framework</span>
+            <span class="domain-chip">Dart Language</span>
+            <span class="domain-chip">Android Studio Build</span>
+            <span class="domain-chip">PWA Mobile Web Apps</span>
+          </div>
+        </div>
+
+        <div class="domain-pane" id="domain-auth">
+          <div class="domain-items-chips">
+            <span class="domain-chip">JWT Bearer Tokens</span>
+            <span class="domain-chip">OAuth 2.0 Auth Flow</span>
+            <span class="domain-chip">Google Login Integration</span>
+            <span class="domain-chip">Firebase Authentication</span>
+            <span class="domain-chip">Razorpay Integration Concepts</span>
+            <span class="domain-chip">Stripe Payment Gateway Concepts</span>
+          </div>
+        </div>
+
+        <div class="domain-pane" id="domain-data">
+          <div class="domain-items-chips">
+            <span class="domain-chip">Python Data Analysis</span>
+            <span class="domain-chip">NumPy Array Computing</span>
+            <span class="domain-chip">Pandas Dataframes</span>
+            <span class="domain-chip">Chart.js Visualizations</span>
+            <span class="domain-chip">Interactive Dashboards</span>
+            <span class="domain-chip">ML Data Preparation</span>
+            <span class="domain-chip">Applied Statistics</span>
+          </div>
+        </div>
+
+        <!-- Exploring & Research Stack Callout -->
+        <div class="exploring-stack-callout">
+          <strong>🔬 Active Research &amp; Learning Stack:</strong>
+          <p>C++ · Rust · Go · CUDA · VHDL/Verilog · Solidity · Zig · Julia · Mojo — Actively explored for next-generation performance, systems programming, and high-performance computing.</p>
+        </div>
+
+      </div>
+
+      <!-- ====================================================================
+           EXPERIENCE & EDUCATION SHOWCASE (MATCHING OFFICIAL PDF)
+           ==================================================================== -->
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px;">
+        
+        <div class="cv-identity-card" style="justify-content: flex-start;">
+          <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px;">
+            <h3 style="margin: 0; font-size: 18px; font-weight: 800; color: var(--om-ink-dark);">💼 Professional Experience</h3>
+            <span style="font-size: 11px; font-weight: 700; color: #10b981; background: rgba(16,185,129,0.1); padding: 3px 8px; border-radius: 999px;">2023 – Present</span>
+          </div>
+          <strong style="color: var(--om-neelkanth-blue); font-size: 14px;">Freelance Web Developer &amp; Website Specialist</strong>
+          <span style="color: var(--om-ink-muted); font-size: 12.5px; margin-bottom: 12px;">Independent Practice · Remote / Client Projects</span>
+          <ul style="margin: 0; padding-left: 18px; font-size: 13px; color: var(--om-ink-muted); line-height: 1.6;">
+            <li><strong>Website Development &amp; Maintenance:</strong> Architected, built, and launched modern, responsive client websites ensuring seamless cross-device compatibility.</li>
+            <li><strong>Speed &amp; Performance:</strong> Elevated site loading speed and Lighthouse performance scores by minifying scripts, streamlining CSS, and optimizing asset pipelines.</li>
+            <li><strong>Technical SEO:</strong> Monitored Google Search Console and Google Analytics, improving organic indexing, schema markup, and crawl efficiency.</li>
+            <li><strong>Hosting, Domains &amp; Backups:</strong> Handled end-to-end DNS configuration, domain records, SSL certification, and scheduled backups.</li>
+          </ul>
+        </div>
+
+        <div class="cv-identity-card" style="justify-content: flex-start;">
+          <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px;">
+            <h3 style="margin: 0; font-size: 18px; font-weight: 800; color: var(--om-ink-dark);">🎓 Education &amp; Training</h3>
+            <span style="font-size: 11px; font-weight: 700; color: var(--om-neelkanth-blue); background: rgba(37,99,235,0.1); padding: 3px 8px; border-radius: 999px;">Completed</span>
+          </div>
+          <strong style="color: var(--om-ink-dark); font-size: 14px;">Bachelor of Arts (B.A.)</strong>
+          <span style="color: var(--om-ink-muted); font-size: 12.5px; margin-bottom: 12px;">Undergraduate Degree</span>
+          <div style="margin-top: 14px; padding-top: 14px; border-top: 1px solid var(--om-kailash-border);">
+            <strong style="color: var(--om-ink-dark); font-size: 13px;">Continuing Technical Education:</strong>
+            <p style="margin: 4px 0 0 0; font-size: 13px; color: var(--om-ink-muted); line-height: 1.55;">
+              Advanced self-directed curriculum covering Modern Web Standards, Full-Stack Architecture, Performance Auditing, and Technical SEO best practices.
+            </p>
+          </div>
+          <div style="margin-top: auto; padding-top: 16px;">
+            <button class="sacred-btn primary" type="button" onclick="openCVModal()" style="width: 100%; justify-content: center;">
+              <span>📥 Print / Download CV (PDF)</span>
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ==========================================================================
+     OFFICIAL PRINTABLE CV MODAL (MATCHING PDF ACCURATELY)
+     ========================================================================== -->
+<div class="cv-modal-backdrop" id="cv-printable-modal" role="dialog" aria-modal="true" aria-label="Official Printable CV">
+  <div class="cv-modal-box">
+    <div class="cv-modal-header">
+      <div style="display: flex; align-items: center; gap: 8px;">
+        <span style="font-size: 20px;">ॐ</span>
+        <h3>Mahipal Singh Rathore · Official Curriculum Vitae</h3>
+      </div>
+      <div class="cv-modal-actions">
+        <button class="sacred-btn primary" type="button" onclick="triggerPrintCV()">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 8H5c-1.66 0-3 1.34-3 3v6h4v4h12v-4h4v-6c0-1.66-1.34-3-3-3zm-3 11H8v-5h8v5zm3-7c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1zm-1-9H6v4h12V3z"/></svg>
+          <span>Print / Save as PDF</span>
+        </button>
+        <button class="sacred-btn outline" type="button" onclick="closeCVModal()" aria-label="Close modal">✕</button>
+      </div>
+    </div>
+    
+    <div class="cv-modal-scroll">
+      <div style="border-bottom: 2px solid #2563eb; padding-bottom: 16px; margin-bottom: 20px;">
+        <h1 style="margin: 0; font-size: 28px; font-weight: 800; letter-spacing: -0.01em; color: #0f172a;">MAHIPAL SINGH RATHORE</h1>
+        <h2 style="margin: 4px 0 10px 0; font-size: 16px; font-weight: 700; color: #2563eb;">Website Expert &amp; Web Developer | AI &amp; 3D Creative Engineer</h2>
+        <div style="font-size: 13px; color: #475569; display: flex; flex-wrap: wrap; gap: 12px;">
+          <span>Bhinmal, Rajasthan, India</span>
+          <span>• ramhipalsingh602@gmail.com</span>
+          <span>• Portfolio: mr-rathore-company-site.netlify.app</span>
+          <span>• LinkedIn: linkedin.com/in/mr-rathore-759236388</span>
+        </div>
+      </div>
+
+      <div style="margin-bottom: 20px;">
+        <h3 style="margin: 0 0 8px 0; font-size: 15px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em; color: #0f172a; border-bottom: 1px solid #e2e8f0; padding-bottom: 4px;">PROFESSIONAL SUMMARY</h3>
+        <p style="margin: 0; font-size: 13px; line-height: 1.6; color: #334155;">
+          Versatile and results-oriented Website Specialist and Web Developer with proven expertise in building modern, responsive, and cross-browser compatible web solutions. Skilled in frontend architectures (HTML5, CSS3, JavaScript), website performance acceleration, and SEO implementation. Adept at managing domain systems, web hosting platforms, and executing end-to-end site maintenance. Experienced working remotely and collaborating cross-functionally to achieve brand identity alignment, high Core Web Vitals, and optimal conversion rates.
+        </p>
+      </div>
+
+      <div style="margin-bottom: 20px;">
+        <h3 style="margin: 0 0 8px 0; font-size: 15px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em; color: #0f172a; border-bottom: 1px solid #e2e8f0; padding-bottom: 4px;">TECHNICAL SKILLS &amp; CORE COMPETENCIES</h3>
+        <div style="display: grid; grid-template-columns: 180px 1fr; gap: 6px 12px; font-size: 13px;">
+          <strong>Web Technologies:</strong> <span>HTML5, CSS3, JavaScript (ES6+), React, Next.js, Tailwind CSS, Responsive Web Design, Flexbox/Grid, REST APIs</span>
+          <strong>AI &amp; Automation:</strong> <span>Ollama, Local LLM Systems, Prompt Engineering, Autonomous AI Agents, Python FastAPI, Scikit-learn</span>
+          <strong>3D &amp; Game Dev:</strong> <span>Three.js, WebGL, GLSL Shaders, Unity, Blender, C++17 Ekarshinga Engine Architecture</span>
+          <strong>SEO &amp; Analytics:</strong> <span>Technical SEO, Google Analytics, Google Search Console, Core Web Vitals, Metadata Optimization</span>
+          <strong>Hosting &amp; DevOps:</strong> <span>Netlify, Domain &amp; DNS Management, SSL Deployment, Site Backups, Cloud Hosting, GitHub Actions</span>
+          <strong>UI/UX &amp; Tools:</strong> <span>Figma, Adobe Photoshop, Canva, Git, GitHub, Cross-Browser Testing &amp; Debugging, VS Code</span>
+        </div>
+      </div>
+
+      <div style="margin-bottom: 20px;">
+        <h3 style="margin: 0 0 8px 0; font-size: 15px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em; color: #0f172a; border-bottom: 1px solid #e2e8f0; padding-bottom: 4px;">PROFESSIONAL EXPERIENCE</h3>
+        <div style="display: flex; justify-content: space-between; font-size: 13.5px; font-weight: 700; color: #0f172a;">
+          <span>Freelance Web Developer &amp; Website Specialist | Independent Practice</span>
+          <span>2023 – Present</span>
+        </div>
+        <div style="font-size: 12.5px; color: #64748b; margin-bottom: 6px;">Remote / Client Projects</div>
+        <ul style="margin: 0; padding-left: 18px; font-size: 13px; line-height: 1.6; color: #334155;">
+          <li><strong>Website Development &amp; Maintenance:</strong> Architected, built, and launched modern, responsive client websites ensuring seamless cross-device compatibility and clean UI/UX standards.</li>
+          <li><strong>Speed &amp; Performance Optimization:</strong> Elevated site loading speed and Lighthouse performance scores by minifying scripts, streamlining CSS, and optimizing asset delivery pipelines.</li>
+          <li><strong>Technical SEO &amp; Traffic Growth:</strong> Set up and monitored Google Search Console and Google Analytics, improving organic indexing, schema markup, and search crawl efficiency.</li>
+          <li><strong>Hosting, Domains &amp; Backups:</strong> Handled end-to-end DNS configuration, domain records, SSL certification, and scheduled backups to ensure continuous uptime and robust security.</li>
+          <li><strong>Client &amp; Team Collaboration:</strong> Partnered closely with digital marketing teams to produce high-converting landing pages aligned precisely with corporate branding guidelines.</li>
+        </ul>
+      </div>
+
+      <div style="margin-bottom: 20px;">
+        <h3 style="margin: 0 0 8px 0; font-size: 15px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em; color: #0f172a; border-bottom: 1px solid #e2e8f0; padding-bottom: 4px;">KEY PROJECTS</h3>
+        <div style="display: flex; justify-content: space-between; font-size: 13.5px; font-weight: 700; color: #0f172a;">
+          <span>Agency &amp; Portfolio Web Platform | Netlify Architecture</span>
+          <span style="color: #10b981;">Live Production</span>
+        </div>
+        <div style="font-size: 12.5px; color: #2563eb; margin-bottom: 6px;">mr-rathore-company-site.netlify.app</div>
+        <ul style="margin: 0; padding-left: 18px; font-size: 13px; line-height: 1.6; color: #334155;">
+          <li>Engineered a fully responsive commercial showcase site with custom styling, high-contrast layouts, and clean modern semantics.</li>
+          <li>Configured automated CI/CD continuous deployment workflows on Netlify with SSL certificate enforcement and DNS routing.</li>
+          <li>Structured content layouts for optimal readability and rapid client lead capture.</li>
+          <li>Engineered advanced interactive 3D and local AI platform demos (NETRA AI, RAIN AGI, VYOM, Ekarshinga 3D Engine).</li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 style="margin: 0 0 8px 0; font-size: 15px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em; color: #0f172a; border-bottom: 1px solid #e2e8f0; padding-bottom: 4px;">EDUCATION &amp; PROFESSIONAL DEVELOPMENT</h3>
+        <div style="display: flex; justify-content: space-between; font-size: 13.5px; font-weight: 700; color: #0f172a;">
+          <span>Bachelor of Arts (B.A.)</span>
+          <span style="color: #2563eb;">Completed</span>
+        </div>
+        <div style="font-size: 12.5px; color: #64748b; margin-bottom: 8px;">Undergraduate Degree</div>
+        <p style="margin: 0; font-size: 13px; line-height: 1.6; color: #334155;">
+          <strong>Continuing Technical Education:</strong> Advanced self-directed curriculum covering Modern Web Standards, Full-Stack Architecture, Performance Auditing, and Technical SEO best practices.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</div>
