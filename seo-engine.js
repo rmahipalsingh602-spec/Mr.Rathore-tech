@@ -80,7 +80,7 @@
 
   const todayTheme = dailyFocusThemes[dayOfWeek];
 
-  // 3. MASTER KEYWORD ARSENAL (AI + TECH + GAMING + DEV PORTFOLIO)
+  // 3. MASTER KEYWORD ARSENAL (AI + TECH + GAMING + DEV PORTFOLIO + COMMERCIAL INTENT)
   const masterKeywordList = [
     // Brand & Identity
     'Mr. Rathore Tech Company',
@@ -89,6 +89,25 @@
     'Website Specialist Bhinmal Rajasthan',
     'Junior Frontend Developer',
     'AI-Focused Web Developer',
+
+    // Local & Commercial Intent (Top Google Search Rankings)
+    'Best Website Developer in Bhinmal Rajasthan',
+    'Website Specialist Bhinmal',
+    'Website Maker Bhinmal',
+    'Web Designer in Jalore Rajasthan',
+    'Affordable Website Development India',
+    'Custom Business Website Design',
+    'WhatsApp Order Website Maker',
+    'Zero Commission WhatsApp Store',
+    '100+ Categories Website Development',
+    'E-Commerce Website Developer India',
+    'Clinic Website Design',
+    'School Coaching Website Maker',
+    'Restaurant Digital Menu Website',
+    'Real Estate Portal Developer',
+    'Freelance Frontend Web Developer Rajasthan',
+    'Direct WhatsApp Conversion Engine',
+    'Lighthouse 100 SEO Developer',
 
     // AI & Machine Learning
     'NETRA AI',
@@ -308,8 +327,24 @@
     }
   ];
 
-  // 7. COMPREHENSIVE FAQ LIST (AI + TECH + GAMING + CAREER)
+  // 7. COMPREHENSIVE FAQ LIST (AI + TECH + GAMING + COMMERCIAL WEB DEV + CAREER)
   const faqItems = [
+    [
+      'Who is the best website developer in Bhinmal, Rajasthan?',
+      'Mahipal Singh Rathore (Founder of Mr. Rathore Tech Company) based in Bhinmal, Rajasthan is recognized for high-performance responsive web design, 100+ business category websites, zero-commission WhatsApp conversion engines, local SEO ranking, and autonomous AI integrations.'
+    ],
+    [
+      'How much does a custom business website cost with Mr. Rathore Tech Company?',
+      'Affordable business websites with Mr. Rathore Tech Company typically start from ₹4,999 to ₹15,000 for standard local businesses, retail stores, clinics, restaurants, and coaching centers with direct WhatsApp order flow. Custom web applications and AI-integrated portals are priced based on project specifications.'
+    ],
+    [
+      'How does the Direct WhatsApp Website conversion engine work?',
+      'Instead of forcing visitors to fill out lengthy contact forms or wait for email replies, visitors select their category or product and click a single button that instantly launches WhatsApp with a pre-filled order or inquiry message. This increases lead conversions by up to 300%.'
+    ],
+    [
+      'How fast can a business website be delivered and launched?',
+      'Standard business websites, retail catalogs, clinic portals, school sites, and portfolios are completed and live within 3 to 5 business days with 100/100 Core Web Vitals performance, SSL security, and Google Search Console indexing.'
+    ],
     [
       'Who is Mahipal Singh Rathore?',
       'Mahipal Singh Rathore is a professional Website Specialist, Web Developer, and AI/3D Creative Engineer based in Bhinmal, Rajasthan, India. He builds high-performance responsive web solutions, local AI integrations (NETRA AI, RAIN AGI), C++ 3D game engines (Bharatverse Engine), and desktop productivity tools.'
@@ -335,8 +370,8 @@
       'MRL 3.2.0 is a multi-runtime language platform with a unified VM, package manager, and cross-platform compilation targets for web, apps, and games. Official downloads and docs are at https://mrl-hi.netlify.app/.'
     ],
     [
-      'How can I hire or contact Mahipal Singh Rathore?',
-      'You can contact Mahipal Singh Rathore via email at ramhipalsingh602@gmail.com, view his portfolio at mr-rathore-company-site.netlify.app, or connect on LinkedIn at https://linkedin.com/in/mr-rathore-759236388. He is available for Frontend, AI, and 3D Web Creative roles.'
+      'How can I hire or contact Mahipal Singh Rathore for website development?',
+      'You can contact Mahipal Singh Rathore directly via WhatsApp or telephone (+91 78629 63112), email at ramhipalsingh602@gmail.com, or view his portfolio at mr-rathore-company-site.netlify.app. He is available for freelance client projects, web redesigns, and AI integrations.'
     ],
     [
       'Are the software downloads on this site official and safe?',
@@ -365,6 +400,7 @@
         '@type': 'PostalAddress',
         addressLocality: 'Bhinmal',
         addressRegion: 'Rajasthan',
+        postalCode: '343029',
         addressCountry: 'IN'
       },
       alumniOf: {
@@ -386,6 +422,9 @@
         'https://pocket-gamer.netlify.app/'
       ],
       knowsAbout: [
+        'Website Development',
+        'Direct WhatsApp Conversion Engines',
+        'Local SEO & Core Web Vitals',
         'Artificial Intelligence',
         'Autonomous AI Agents',
         'Local LLM Systems',
@@ -404,41 +443,102 @@
         'PostgreSQL',
         'SQLite',
         'Responsive Web Design',
-        'Lighthouse SEO Optimization',
-        'Core Web Vitals'
+        'Lighthouse SEO Optimization'
       ]
     }
   });
 
-  // B. Organization Schema
+  // B. Organization, ProfessionalService & LocalBusiness Combined Schema (Top Local & Agency SERP)
   setSchema('organization-schema', {
     '@context': 'https://schema.org',
-    '@type': 'Organization',
+    '@type': ['Organization', 'ProfessionalService', 'LocalBusiness'],
     name: 'Mr. Rathore Tech Company',
-    alternateName: 'Mr. Rathore Tech',
+    alternateName: ['Mr. Rathore Tech', 'Mahipal Singh Rathore Web Solutions'],
     url: canonical,
     logo: absolute('assets/logo-512.png'),
     image: absolute('assets/showcase-shot.jpg'),
-    description: metaDescription,
+    description: 'Premier Web Design & Development Agency, AI Platforms and Software Studio founded by Mahipal Singh Rathore in Bhinmal, Rajasthan. Specializes in 100+ business category websites, 1-click WhatsApp order flows, local SEO ranking, and autonomous AI agents.',
+    priceRange: '₹₹ (₹4,999 - ₹49,999)',
+    telephone: '+917862963112',
+    email: 'ramhipalsingh602@gmail.com',
     founder: {
       '@type': 'Person',
-      name: 'Mahipal Singh Rathore'
+      name: 'Mahipal Singh Rathore',
+      jobTitle: 'Founder & Lead Developer'
     },
-    foundingLocation: {
-      '@type': 'Place',
-      name: 'Bhinmal, Rajasthan, India',
-      address: {
-        '@type': 'PostalAddress',
-        addressLocality: 'Bhinmal',
-        addressRegion: 'Rajasthan',
-        addressCountry: 'IN'
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: 'Station Road',
+      addressLocality: 'Bhinmal',
+      addressRegion: 'Rajasthan',
+      postalCode: '343029',
+      addressCountry: 'IN'
+    },
+    geo: {
+      '@type': 'GeoCoordinates',
+      latitude: 25.0035,
+      longitude: 72.2588
+    },
+    openingHoursSpecification: [
+      {
+        '@type': 'OpeningHoursSpecification',
+        dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
+        opens: '08:00',
+        closes: '22:00'
       }
+    ],
+    areaServed: [
+      { '@type': 'AdministrativeArea', name: 'Bhinmal' },
+      { '@type': 'AdministrativeArea', name: 'Jalore' },
+      { '@type': 'AdministrativeArea', name: 'Rajasthan' },
+      { '@type': 'Country', name: 'India' },
+      { '@type': 'Place', name: 'Worldwide' }
+    ],
+    hasOfferCatalog: {
+      '@type': 'OfferCatalog',
+      name: 'Web Design, AI & Software Development Services',
+      itemListElement: [
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'Local Business & Retail Website with WhatsApp Order Engine',
+            description: 'Fast, mobile-optimized online catalog with 1-click WhatsApp checkout for retail shops, restaurants, clinics, and salons.'
+          }
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: '100+ Categories Custom Website Development',
+            description: 'High-converting custom web design for schools, coaching, real estate, professional services, gyms, and hotels.'
+          }
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'Autonomous AI Chatbot & Agent Integration',
+            description: 'Integration of local LLM assistants, 24/7 automated lead handling, and intelligent API workflows into websites.'
+          }
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'Core Web Vitals & 100/100 Lighthouse SEO Acceleration',
+            description: 'Full technical SEO, Schema markup, sitemap synchronization, and sub-second page load optimization for top Google ranking.'
+          }
+        }
+      ]
     },
     knowsAbout: [
+      'Website Design & Development',
+      'Direct WhatsApp Ordering Systems',
       'Artificial Intelligence Development',
       'Windows Desktop Software',
       'C++ 3D Game Engines',
-      'Developer Tooling',
+      'Local Business SEO',
       'Automation Systems',
       'Web Applications'
     ],

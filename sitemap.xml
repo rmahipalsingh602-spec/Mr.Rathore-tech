@@ -6,7 +6,7 @@
   <!-- 1. Main Official Portal (GitLab Architecture) -->
   <url>
     <loc>https://rmahipalsingh602-group.gitlab.io/rmahipalsingh602-project/</loc>
-    <lastmod>2026-10-08</lastmod>
+    <lastmod>2026-11-08</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -28,7 +28,7 @@
   <!-- 2. Main Official Netlify Architecture -->
   <url>
     <loc>https://mr-rathore-company-site.netlify.app/</loc>
-    <lastmod>2026-10-08</lastmod>
+    <lastmod>2026-11-08</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -40,7 +40,7 @@
   <!-- 3. Ekarshinga C++ 3D Game Engine Flagship Portal -->
   <url>
     <loc>https://ekarshinga-engine.netlify.app/</loc>
-    <lastmod>2026-10-08</lastmod>
+    <lastmod>2026-11-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -48,7 +48,7 @@
   <!-- 4. CORE-FLOW Official Workspace & Documentation -->
   <url>
     <loc>https://core-flow-website-offi.netlify.app/</loc>
-    <lastmod>2026-10-08</lastmod>
+    <lastmod>2026-11-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -56,7 +56,7 @@
   <!-- 5. MRL 3.2.0 Multi Runtime Language & Compiler Documentation -->
   <url>
     <loc>https://mrl-hi.netlify.app/</loc>
-    <lastmod>2026-10-08</lastmod>
+    <lastmod>2026-11-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -64,7 +64,7 @@
   <!-- 6. Pocket Gamer Mobile Gaming Web Property -->
   <url>
     <loc>https://pocket-gamer.netlify.app/</loc>
-    <lastmod>2026-10-08</lastmod>
+    <lastmod>2026-11-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
