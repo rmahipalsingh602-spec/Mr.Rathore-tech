@@ -2927,6 +2927,648 @@ body {
   }
 }
 
+/* ==========================================================================
+   TOP GLOBAL WEBSITE BUILDER, 3D INTERACTIVE SHOWCASE & MULTI-CURRENCY PRICING
+   ========================================================================== */
+.website-top-engine-section {
+  padding: 32px 0 40px 0;
+  position: relative;
+}
+.web-engine-card {
+  background: linear-gradient(135deg, #090e17 0%, #060912 100%);
+  border: 1.5px solid rgba(56, 189, 248, 0.28);
+  border-radius: 28px;
+  padding: 36px 32px;
+  color: #f8fafc;
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.4), 0 0 50px rgba(37, 99, 235, 0.12);
+  position: relative;
+  overflow: hidden;
+}
+.web-engine-card::before {
+  content: "";
+  position: absolute;
+  top: -120px;
+  right: -120px;
+  width: 380px;
+  height: 380px;
+  background: radial-gradient(circle, rgba(34, 197, 94, 0.18) 0%, rgba(56, 189, 248, 0.08) 50%, transparent 75%);
+  pointer-events: none;
+}
+/* Top Bar with Currency & Language */
+.web-engine-controls-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  margin-bottom: 30px;
+}
+.global-delivery-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(34, 197, 94, 0.12);
+  border: 1px solid rgba(34, 197, 94, 0.3);
+  padding: 6px 14px;
+  border-radius: 99px;
+  color: #4ade80;
+  font-size: 13px;
+  font-weight: 700;
+}
+.global-delivery-badge .pulse-beacon {
+  width: 8px;
+  height: 8px;
+  background: #22c55e;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #22c55e;
+  animation: pulseGreen 1.8s infinite;
+}
+.engine-switchers {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+}
+.switcher-group {
+  display: inline-flex;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 3px;
+  border-radius: 99px;
+}
+.switcher-btn {
+  background: transparent;
+  border: none;
+  color: #94a3b8;
+  padding: 5px 12px;
+  border-radius: 99px;
+  font-size: 12.5px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.switcher-btn:hover {
+  color: #ffffff;
+}
+.switcher-btn.is-active {
+  background: #2563eb;
+  color: #ffffff;
+  box-shadow: 0 2px 10px rgba(37, 99, 235, 0.4);
+}
+.switcher-btn.is-active.currency-btn {
+  background: #16a34a;
+  box-shadow: 0 2px 10px rgba(22, 163, 74, 0.4);
+}
+
+/* Hero Row (Copy & 3D Interactive Card) */
+.engine-hero-grid {
+  display: grid;
+  grid-template-columns: 1.25fr 1fr;
+  gap: 36px;
+  align-items: center;
+  margin-bottom: 40px;
+}
+@media (max-width: 960px) {
+  .engine-hero-grid {
+    grid-template-columns: 1fr;
+  }
+}
+.engine-hero-copy .hero-eyebrow {
+  display: inline-block;
+  color: #38bdf8;
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+}
+.engine-hero-copy h2 {
+  font-size: clamp(24px, 3.8vw, 38px);
+  font-weight: 800;
+  line-height: 1.2;
+  color: #ffffff;
+  margin: 0 0 16px 0;
+}
+.engine-hero-copy h2 .grad-text {
+  background: linear-gradient(135deg, #38bdf8 0%, #4ade80 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.engine-hero-copy p.engine-lead {
+  font-size: 15.5px;
+  line-height: 1.6;
+  color: #94a3b8;
+  margin: 0 0 20px 0;
+}
+.engine-trust-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+.engine-trust-tag {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: #cbd5e1;
+  font-size: 12.5px;
+  padding: 5px 12px;
+  border-radius: 8px;
+  font-weight: 600;
+}
+.engine-cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+}
+.btn-top-wa {
+  background: #25D366;
+  color: #060913;
+  font-weight: 800;
+  font-size: 14.5px;
+  padding: 13px 22px;
+  border-radius: 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  box-shadow: 0 8px 24px rgba(37, 211, 102, 0.35);
+  transition: all 0.25s ease;
+}
+.btn-top-wa:hover {
+  background: #20bd5a;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(37, 211, 102, 0.5);
+  color: #000000;
+}
+.btn-top-call {
+  background: rgba(37, 99, 235, 0.15);
+  border: 1px solid rgba(56, 189, 248, 0.4);
+  color: #38bdf8;
+  font-weight: 700;
+  font-size: 14px;
+  padding: 12px 20px;
+  border-radius: 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+.btn-top-call:hover {
+  background: rgba(37, 99, 235, 0.25);
+  color: #ffffff;
+  border-color: #38bdf8;
+  transform: translateY(-2px);
+}
+.btn-top-mail {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #e2e8f0;
+  font-weight: 600;
+  font-size: 13.5px;
+  padding: 12px 18px;
+  border-radius: 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+.btn-top-mail:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+}
+
+/* UNIQUE INTERACTIVE 3D TILT CARD */
+.holo-3d-stage {
+  perspective: 1200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.holo-3d-card {
+  width: 100%;
+  max-width: 440px;
+  height: 380px;
+  background: linear-gradient(145deg, rgba(15, 23, 42, 0.85) 0%, rgba(6, 9, 18, 0.95) 100%);
+  border: 1.5px solid rgba(56, 189, 248, 0.35);
+  border-radius: 24px;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6), 0 0 35px rgba(56, 189, 248, 0.18);
+  transform-style: preserve-3d;
+  transition: transform 0.15s ease-out, box-shadow 0.2s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 24px;
+}
+.holo-3d-card:hover {
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.7), 0 0 50px rgba(34, 197, 94, 0.25);
+}
+.holo-card-glare {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.15) 0%, transparent 60%);
+  pointer-events: none;
+  mix-blend-mode: overlay;
+  transition: opacity 0.2s;
+  opacity: 0.6;
+}
+.holo-3d-screen {
+  background: rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 14px;
+  padding: 16px;
+  transform: translateZ(40px);
+  position: relative;
+}
+.holo-screen-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+.holo-dots {
+  display: flex;
+  gap: 5px;
+}
+.holo-dots span {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #334155;
+}
+.holo-dots span:nth-child(1) { background: #ef4444; }
+.holo-dots span:nth-child(2) { background: #f59e0b; }
+.holo-dots span:nth-child(3) { background: #22c55e; }
+.holo-live-tag {
+  color: #38bdf8;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+.holo-preview-content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.holo-preview-line {
+  height: 8px;
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 4px;
+}
+.holo-preview-line.w-80 { width: 80%; }
+.holo-preview-line.w-60 { width: 60%; }
+.holo-preview-line.w-40 { width: 40%; background: #38bdf8; }
+
+/* Floating 3D Depth Badges */
+.floating-3d-badge {
+  position: absolute;
+  padding: 8px 14px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 700;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.5);
+  pointer-events: none;
+}
+.badge-speed-3d {
+  top: 18px;
+  right: -10px;
+  background: rgba(34, 197, 94, 0.95);
+  color: #060913;
+  transform: translateZ(65px);
+  border: 1px solid #ffffff;
+}
+.badge-wa-3d {
+  bottom: 80px;
+  left: -8px;
+  background: #111827;
+  color: #4ade80;
+  border: 1.5px solid #22c55e;
+  transform: translateZ(55px);
+}
+.holo-card-footer {
+  transform: translateZ(45px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 10px 16px;
+  border-radius: 12px;
+}
+.holo-footer-text strong {
+  display: block;
+  font-size: 13.5px;
+  color: #ffffff;
+}
+.holo-footer-text span {
+  font-size: 11.5px;
+  color: #94a3b8;
+}
+.holo-click-pill {
+  background: #2563eb;
+  color: #ffffff;
+  font-size: 11.5px;
+  font-weight: 700;
+  padding: 5px 10px;
+  border-radius: 99px;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.4);
+}
+
+/* PRICING TIERS GRID */
+.pricing-section-title {
+  text-align: center;
+  margin-bottom: 24px;
+}
+.pricing-section-title h3 {
+  font-size: 24px;
+  color: #ffffff;
+  margin: 0 0 8px 0;
+}
+.pricing-section-title p {
+  color: #94a3b8;
+  font-size: 14.5px;
+  margin: 0;
+}
+.pricing-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-bottom: 24px;
+}
+@media (max-width: 1120px) {
+  .pricing-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 600px) {
+  .pricing-cards-grid {
+    grid-template-columns: 1fr;
+  }
+}
+.pricing-card {
+  background: rgba(15, 23, 42, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 24px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  transition: all 0.25s ease;
+}
+.pricing-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(56, 189, 248, 0.4);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.35);
+}
+.pricing-card.is-popular {
+  border-color: rgba(34, 197, 94, 0.5);
+  background: linear-gradient(180deg, rgba(34, 197, 94, 0.08) 0%, rgba(15, 23, 42, 0.8) 100%);
+  box-shadow: 0 10px 30px rgba(34, 197, 94, 0.15);
+}
+.pricing-card.is-enterprise {
+  border-color: rgba(147, 51, 234, 0.5);
+  background: linear-gradient(180deg, rgba(147, 51, 234, 0.1) 0%, rgba(15, 23, 42, 0.8) 100%);
+  box-shadow: 0 10px 30px rgba(147, 51, 234, 0.15);
+}
+.pricing-badge-flag {
+  position: absolute;
+  top: -10px;
+  left: 20px;
+  font-size: 10px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 2px 8px;
+  border-radius: 99px;
+  background: #38bdf8;
+  color: #060913;
+}
+.pricing-card.is-popular .pricing-badge-flag {
+  background: #22c55e;
+}
+.pricing-card.is-enterprise .pricing-badge-flag {
+  background: #a855f7;
+  color: #ffffff;
+}
+.card-tier-name {
+  font-size: 18px;
+  font-weight: 800;
+  color: #ffffff;
+  margin: 8px 0 4px 0;
+}
+.card-tier-desc {
+  font-size: 12.5px;
+  color: #94a3b8;
+  margin: 0 0 16px 0;
+  min-height: 36px;
+}
+.card-price-row {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  margin-bottom: 16px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+.card-price-row .curr-sym {
+  font-size: 20px;
+  font-weight: 800;
+  color: #38bdf8;
+}
+.card-price-row .card-price-number {
+  font-size: 32px;
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1;
+}
+.card-price-row .price-freq {
+  font-size: 12px;
+  color: #94a3b8;
+}
+.card-features-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+.card-features-list li {
+  font-size: 13px;
+  color: #cbd5e1;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  line-height: 1.4;
+}
+.card-features-list li .check-icon {
+  color: #22c55e;
+  font-weight: 800;
+}
+.pricing-card-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: auto;
+}
+.btn-pkg-wa {
+  background: #25D366;
+  color: #060913;
+  font-weight: 800;
+  font-size: 13.5px;
+  padding: 10px 14px;
+  border-radius: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  transition: all 0.2s ease;
+}
+.btn-pkg-wa:hover {
+  background: #20bd5a;
+  transform: translateY(-1px);
+  color: #000000;
+}
+.btn-pkg-demo {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #e2e8f0;
+  font-size: 12.5px;
+  font-weight: 600;
+  padding: 8px 12px;
+  border-radius: 10px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+.btn-pkg-demo:hover {
+  background: rgba(56, 189, 248, 0.15);
+  border-color: rgba(56, 189, 248, 0.4);
+  color: #38bdf8;
+}
+
+/* INTERACTIVE DEMO PREVIEW LIGHTBOX MODAL */
+.demo-preview-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(3, 7, 18, 0.88);
+  backdrop-filter: blur(14px);
+  z-index: 100000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+.demo-preview-modal.is-open {
+  display: flex;
+}
+.demo-modal-dialog {
+  background: #0b1120;
+  border: 1px solid rgba(56, 189, 248, 0.35);
+  border-radius: 20px;
+  width: 100%;
+  max-width: 900px;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.8);
+}
+.demo-modal-header {
+  padding: 16px 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(15, 23, 42, 0.8);
+}
+.demo-modal-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 700;
+}
+.demo-device-toggles {
+  display: flex;
+  gap: 6px;
+  background: rgba(255, 255, 255, 0.06);
+  padding: 3px;
+  border-radius: 8px;
+}
+.device-toggle-btn {
+  background: transparent;
+  border: none;
+  color: #94a3b8;
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.device-toggle-btn.is-active {
+  background: #2563eb;
+  color: #ffffff;
+}
+.demo-close-btn {
+  background: transparent;
+  border: none;
+  color: #94a3b8;
+  font-size: 24px;
+  cursor: pointer;
+  line-height: 1;
+}
+.demo-close-btn:hover {
+  color: #ffffff;
+}
+.demo-modal-viewport {
+  flex: 1;
+  padding: 24px;
+  overflow-y: auto;
+  display: flex;
+  justify-content: center;
+  background: #060913;
+}
+.demo-frame-container {
+  width: 100%;
+  max-width: 100%;
+  background: #0f172a;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 20px;
+  transition: max-width 0.3s ease;
+}
+.demo-frame-container.mode-tablet {
+  max-width: 600px;
+}
+.demo-frame-container.mode-mobile {
+  max-width: 360px;
+}
+.demo-modal-footer {
+  padding: 16px 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(15, 23, 42, 0.8);
+}
+
 </style>
 </head>
 <body>
@@ -2999,6 +3641,7 @@ body {
     </a>
     <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="primary-links"><span></span></button>
     <div class="links" id="primary-links">
+      <a href="#website-pricing-engine" style="color: #22c55e; font-weight: 800; background: rgba(34, 197, 94, 0.12); border: 1px solid rgba(34, 197, 94, 0.35); border-radius: 8px; padding: 4px 10px;">⚡ Web Pricing (₹2,299+)</a>
       <a href="#mahadev-cv-top" style="color: #2563eb; font-weight: 800; background: rgba(37, 99, 235, 0.08); border-radius: 8px;">🔱 3D CV &amp; Portfolio</a>
       <a href="#products">Products</a>
       <a href="#ekarshinga-spotlight" style="color: var(--blue); font-weight: 700;">★ Ekarshinga 3D</a>
@@ -3040,6 +3683,289 @@ body {
   </div>
   <button class="switcher-sfx-btn" id="switcher-sfx-toggle" type="button" onclick="toggleSoundFX()" title="Toggle Sound FX">🔔 Sound ON</button>
 </aside>
+
+<!-- ==========================================================================
+     TOP GLOBAL WEBSITE BUILDER, 3D INTERACTIVE SHOWCASE & MULTI-CURRENCY PRICING
+     ========================================================================== -->
+<section class="section shell website-top-engine-section" id="website-pricing-engine" aria-label="Global Website Development Pricing & 3D Interactive Engine">
+  <div class="web-engine-card">
+    
+    <!-- Top Controls Bar: Global Badge, Currency & Language Toggles -->
+    <div class="web-engine-controls-bar">
+      <div class="global-delivery-badge">
+        <span class="pulse-beacon"></span>
+        <span id="txt-global-badge">🌍 Worldwide Client Delivery · India, USA, UK, UAE &amp; Global (100% Remote)</span>
+      </div>
+
+      <div class="engine-switchers">
+        <!-- Currency Switcher -->
+        <div class="switcher-group" role="group" aria-label="Select Currency">
+          <button type="button" class="switcher-btn currency-btn is-active" data-currency="INR" title="Indian Rupee">🇮🇳 ₹ INR</button>
+          <button type="button" class="switcher-btn currency-btn" data-currency="USD" title="US Dollar">🇺🇸 $ USD</button>
+          <button type="button" class="switcher-btn currency-btn" data-currency="EUR" title="Euro">🇪🇺 € EUR</button>
+          <button type="button" class="switcher-btn currency-btn" data-currency="AED" title="UAE Dirham">🇦🇪 د.إ AED</button>
+          <button type="button" class="switcher-btn currency-btn" data-currency="GBP" title="British Pound">🇬🇧 £ GBP</button>
+        </div>
+
+        <!-- Language Switcher -->
+        <div class="switcher-group" role="group" aria-label="Select Language">
+          <button type="button" class="switcher-btn lang-btn is-active" data-lang="en">English</button>
+          <button type="button" class="switcher-btn lang-btn" data-lang="hi">हिन्दी</button>
+          <button type="button" class="switcher-btn lang-btn" data-lang="hinglish">Hinglish</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hero Showcase Row -->
+    <div class="engine-hero-grid">
+      <!-- Left Copy -->
+      <div class="engine-hero-copy">
+        <span class="hero-eyebrow" id="txt-hero-eyebrow">⚡ 100+ Categories · Mobile, Tablet &amp; PC Responsive · 3–5 Days Delivery</span>
+        <h2 id="txt-hero-title">
+          Build Your High-Converting Website from <span class="grad-text" id="txt-price-hero">₹2,299 ($29) to ₹49,999 ($599)</span>
+        </h2>
+        <p class="engine-lead" id="txt-hero-desc">
+          Get a professional, ultra-fast website designed to turn visitors into direct paying customers. From normal starter retail &amp; clinic websites with instant WhatsApp ordering to enterprise 3D WebGL portals and autonomous AI agents. Available for clients anywhere in the world.
+        </p>
+
+        <div class="engine-trust-strip">
+          <span class="engine-trust-tag">📱 100% Mobile &amp; Tablet Ready</span>
+          <span class="engine-trust-tag">⚡ 100/100 Core Web Vitals</span>
+          <span class="engine-trust-tag">💬 Zero Commission WhatsApp Orders</span>
+          <span class="engine-trust-tag">🔒 Free SSL &amp; Cloud Hosting Setup</span>
+        </div>
+
+        <div class="engine-cta-row">
+          <a href="https://wa.me/917862963112?text=Hi%20Mahipal!%20Maine%20aapki%20site%20dekhi.%20Mujhe%20apne%20business%20ke%20liye%20website%20banwani%20hai." 
+             target="_blank" 
+             rel="noopener noreferrer" 
+             class="btn-top-wa" 
+             id="main-top-wa-cta">
+            <svg viewBox="0 0 32 32" width="20" height="20" fill="#060913" aria-hidden="true">
+              <path d="M16.01 3C8.83 3 3 8.83 3 16.01c0 2.4.66 4.72 1.91 6.74L3 29l6.43-1.87a12.94 12.94 0 006.58 1.88c7.18 0 13.01-5.83 13.01-13.01C29.02 8.83 23.19 3 16.01 3zm0 23.82c-2.11 0-4.17-.57-5.96-1.65l-.43-.26-3.82 1.11 1.02-3.71-.28-.45A10.78 10.78 0 015.2 16.01c0-5.96 4.85-10.81 10.81-10.81 5.96 0 10.81 4.85 10.81 10.81 0 5.96-4.85 10.81-10.81 10.81zm5.92-8.09c-.32-.16-1.92-.95-2.22-1.06-.3-.11-.52-.16-.74.16-.22.32-.85 1.06-1.04 1.28-.19.21-.39.24-.71.08-.32-.16-1.37-.5-2.6-1.6-.96-.86-1.61-1.92-1.8-2.24-.19-.32-.02-.49.14-.65.14-.14.32-.37.48-.55.16-.19.22-.32.32-.53.11-.21.05-.39-.03-.55-.08-.16-.74-1.78-1.01-2.44-.27-.64-.54-.55-.74-.56l-.63-.01c-.22 0-.57.08-.87.41-.3.32-1.15 1.12-1.15 2.74 0 1.61 1.18 3.18 1.34 3.39.16.21 2.31 3.53 5.6 4.95.78.34 1.39.54 1.87.69.79.25 1.51.21 2.08.13.64-.1 1.92-.78 2.19-1.54.27-.75.27-1.4.19-1.53-.08-.14-.3-.22-.62-.38z"/>
+            </svg>
+            <span id="txt-btn-wa">Order on WhatsApp (+91 78629 63112)</span>
+          </a>
+          <a href="tel:+917862963112" class="btn-top-call" id="main-top-call-cta">
+            <span id="txt-btn-call">📞 Call Directly: +91 78629 63112</span>
+          </a>
+          <a href="mailto:ramhipalsingh602@gmail.com?subject=Website%20Inquiry%20from%20Portfolio" class="btn-top-mail" id="main-top-mail-cta">
+            <span id="txt-btn-mail">✉️ Email Inquiry</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Right 3D Interactive Tilt Showcase -->
+      <div class="holo-3d-stage" id="holoStage">
+        <div class="holo-3d-card" id="holoCard" title="Click to view live interactive demos">
+          <div class="holo-card-glare" id="holoGlare"></div>
+          
+          <!-- Floating 3D Depth Badges -->
+          <div class="floating-3d-badge badge-speed-3d">⚡ 100/100 Lighthouse</div>
+          <div class="floating-3d-badge badge-wa-3d">💬 Direct WhatsApp Cart</div>
+
+          <!-- 3D Holographic Screen -->
+          <div class="holo-3d-screen">
+            <div class="holo-screen-bar">
+              <div class="holo-dots"><span></span><span></span><span></span></div>
+              <span class="holo-live-tag">● LIVE CLIENT ENGINE</span>
+            </div>
+            <div class="holo-preview-content">
+              <div class="holo-preview-line w-80"></div>
+              <div class="holo-preview-line w-60"></div>
+              <div class="holo-preview-line w-40"></div>
+              <div style="display: flex; gap: 8px; margin-top: 10px;">
+                <span style="font-size: 11px; padding: 3px 8px; border-radius: 6px; background: rgba(34, 197, 94, 0.2); color: #4ade80;">🛒 WhatsApp Store</span>
+                <span style="font-size: 11px; padding: 3px 8px; border-radius: 6px; background: rgba(56, 189, 248, 0.2); color: #38bdf8;">🤖 AI Assistant</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Footer of 3D Card -->
+          <div class="holo-card-footer">
+            <div class="holo-footer-text">
+              <strong>Interactive 3D Preview</strong>
+              <span>Move mouse/touch to tilt in 3D</span>
+            </div>
+            <span class="holo-click-pill">👁️ Click for Demo</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 4-Tier Multi-Currency Pricing Grid -->
+    <div class="pricing-section-title">
+      <h3 id="txt-pricing-heading">Transparent Website Pricing Packages</h3>
+      <p id="txt-pricing-sub">Select a package to view live interactive demos or order directly on WhatsApp / Email.</p>
+    </div>
+
+    <div class="pricing-cards-grid">
+      
+      <!-- Tier 1: Normal / Starter Website -->
+      <div class="pricing-card" data-tier="1">
+        <span class="pricing-badge-flag">Starter / Retail</span>
+        <div>
+          <h4 class="card-tier-name" id="tier1-name">Normal Starter Website</h4>
+          <p class="card-tier-desc" id="tier1-desc">Clean, fast 1–3 page website for local shops, clinics, single products, and personal services.</p>
+          <div class="card-price-row">
+            <span class="curr-sym">₹</span>
+            <span class="card-price-number" data-inr="2,299" data-usd="29" data-eur="27" data-aed="110" data-gbp="23">2,299</span>
+            <span class="price-freq">/ one-time</span>
+          </div>
+          <ul class="card-features-list">
+            <li><span class="check-icon">✓</span> 1–3 Clean Responsive Pages</li>
+            <li><span class="check-icon">✓</span> 1-Click WhatsApp Order/Chat Button</li>
+            <li><span class="check-icon">✓</span> Mobile, Tablet &amp; PC Pixel-Perfect</li>
+            <li><span class="check-icon">✓</span> Google Maps Location Pin</li>
+            <li><span class="check-icon">✓</span> Free SSL &amp; Cloud Hosting Setup</li>
+            <li><span class="check-icon">✓</span> <strong>Delivery: 2–3 Days</strong></li>
+          </ul>
+        </div>
+        <div class="pricing-card-actions">
+          <a href="https://wa.me/917862963112?text=Hi%20Mahipal!%20Mujhe%20Normal%20Starter%20Website%20(2299)%20banwani%20hai.%20Please%20details%20share%20karein." 
+             target="_blank" rel="noopener noreferrer" class="btn-pkg-wa">
+            💬 Order on WhatsApp
+          </a>
+          <button type="button" class="btn-pkg-demo" onclick="openDemoPreviewModal('starter')">
+            👁️ View Live Demo
+          </button>
+        </div>
+      </div>
+
+      <!-- Tier 2: Business Growth Website -->
+      <div class="pricing-card is-popular" data-tier="2">
+        <span class="pricing-badge-flag">Most Popular</span>
+        <div>
+          <h4 class="card-tier-name" id="tier2-name">Business Growth Website</h4>
+          <p class="card-tier-desc" id="tier2-desc">Complete multi-page website for restaurants, coaching institutes, salons, real estate &amp; retailers.</p>
+          <div class="card-price-row">
+            <span class="curr-sym">₹</span>
+            <span class="card-price-number" data-inr="7,999" data-usd="99" data-eur="92" data-aed="365" data-gbp="79">7,999</span>
+            <span class="price-freq">/ one-time</span>
+          </div>
+          <ul class="card-features-list">
+            <li><span class="check-icon">✓</span> 5–8 Custom Responsive Pages</li>
+            <li><span class="check-icon">✓</span> Product/Service Catalog with WhatsApp Cart</li>
+            <li><span class="check-icon">✓</span> Local SEO &amp; Google Search Console Setup</li>
+            <li><span class="check-icon">✓</span> Testimonial Slider &amp; Gallery Showcase</li>
+            <li><span class="check-icon">✓</span> Social Media &amp; Contact Form Integration</li>
+            <li><span class="check-icon">✓</span> <strong>Delivery: 3–5 Days</strong></li>
+          </ul>
+        </div>
+        <div class="pricing-card-actions">
+          <a href="https://wa.me/917862963112?text=Hi%20Mahipal!%20Mujhe%20Business%20Growth%20Website%20(7999)%20banwani%20hai.%20Please%20details%20share%20karein." 
+             target="_blank" rel="noopener noreferrer" class="btn-pkg-wa">
+            💬 Order on WhatsApp
+          </a>
+          <button type="button" class="btn-pkg-demo" onclick="openDemoPreviewModal('growth')">
+            👁️ View Live Demo
+          </button>
+        </div>
+      </div>
+
+      <!-- Tier 3: Advanced Web App & Portal -->
+      <div class="pricing-card" data-tier="3">
+        <span class="pricing-badge-flag">Dynamic Portal</span>
+        <div>
+          <h4 class="card-tier-name" id="tier3-name">Advanced Web App / Portal</h4>
+          <p class="card-tier-desc" id="tier3-desc">High-performance custom web app with database, booking workflows, and client dashboard.</p>
+          <div class="card-price-row">
+            <span class="curr-sym">₹</span>
+            <span class="card-price-number" data-inr="19,999" data-usd="249" data-eur="230" data-aed="915" data-gbp="199">19,999</span>
+            <span class="price-freq">/ one-time</span>
+          </div>
+          <ul class="card-features-list">
+            <li><span class="check-icon">✓</span> Dynamic Database &amp; API Integration</li>
+            <li><span class="check-icon">✓</span> Custom Admin Dashboard for Managing Leads</li>
+            <li><span class="check-icon">✓</span> Automated WhatsApp Lead Alerts</li>
+            <li><span class="check-icon">✓</span> Online Payment Gateway (Razorpay / Stripe)</li>
+            <li><span class="check-icon">✓</span> Role-Based Client / User Login</li>
+            <li><span class="check-icon">✓</span> <strong>Delivery: 5–7 Days</strong></li>
+          </ul>
+        </div>
+        <div class="pricing-card-actions">
+          <a href="https://wa.me/917862963112?text=Hi%20Mahipal!%20Mujhe%20Advanced%20Web%20App%20(19999)%20banwani%20hai.%20Please%20details%20share%20karein." 
+             target="_blank" rel="noopener noreferrer" class="btn-pkg-wa">
+            💬 Order on WhatsApp
+          </a>
+          <button type="button" class="btn-pkg-demo" onclick="openDemoPreviewModal('portal')">
+            👁️ View Live Demo
+          </button>
+        </div>
+      </div>
+
+      <!-- Tier 4: Enterprise Flagship 3D & AI System -->
+      <div class="pricing-card is-enterprise" data-tier="4">
+        <span class="pricing-badge-flag">VIP 3D + AI Flagship</span>
+        <div>
+          <h4 class="card-tier-name" id="tier4-name">Enterprise 3D &amp; AI System</h4>
+          <p class="card-tier-desc" id="tier4-desc">State-of-the-art cinematic 3D WebGL experience with custom autonomous AI assistant integration.</p>
+          <div class="card-price-row">
+            <span class="curr-sym">₹</span>
+            <span class="card-price-number" data-inr="49,999" data-usd="599" data-eur="550" data-aed="2,199" data-gbp="479">49,999</span>
+            <span class="price-freq">/ one-time</span>
+          </div>
+          <ul class="card-features-list">
+            <li><span class="check-icon">✓</span> Three.js / WebGL Cinematic 3D Scene</li>
+            <li><span class="check-icon">✓</span> Custom Autonomous AI Assistant (NETRA / RAIN)</li>
+            <li><span class="check-icon">✓</span> 24/7 Smart Automated AI Lead Handling</li>
+            <li><span class="check-icon">✓</span> Full CI/CD Deployment &amp; Custom Domain</li>
+            <li><span class="check-icon">✓</span> Dedicated 1-Year VIP Maintenance &amp; Updates</li>
+            <li><span class="check-icon">✓</span> <strong>Delivery: 7–10 Days</strong></li>
+          </ul>
+        </div>
+        <div class="pricing-card-actions">
+          <a href="https://wa.me/917862963112?text=Hi%20Mahipal!%20Mujhe%20Enterprise%203D%20%26%20AI%20System%20(49999)%20banwani%20hai.%20Please%20details%20share%20karein." 
+             target="_blank" rel="noopener noreferrer" class="btn-pkg-wa">
+            💬 Order on WhatsApp
+          </a>
+          <button type="button" class="btn-pkg-demo" onclick="openDemoPreviewModal('enterprise')">
+            👁️ View Live Demo
+          </button>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ==========================================================================
+     INTERACTIVE DEMO PREVIEW LIGHTBOX MODAL (Desktop, Tablet & Mobile Views)
+     ========================================================================== -->
+<div class="demo-preview-modal" id="demoPreviewModal" aria-hidden="true" role="dialog" aria-label="Interactive Website Demo Preview">
+  <div class="demo-modal-dialog">
+    <div class="demo-modal-header">
+      <div class="demo-modal-title">
+        <span id="demoModalIcon">🛒</span>
+        <span id="demoModalTitle">Starter Retail Website Demo Preview</span>
+      </div>
+      <div class="demo-device-toggles">
+        <button type="button" class="device-toggle-btn is-active" data-mode="desktop" onclick="setDemoDeviceMode('desktop')">💻 Desktop</button>
+        <button type="button" class="device-toggle-btn" data-mode="tablet" onclick="setDemoDeviceMode('tablet')">📟 Tablet</button>
+        <button type="button" class="device-toggle-btn" data-mode="mobile" onclick="setDemoDeviceMode('mobile')">📱 Mobile</button>
+      </div>
+      <button type="button" class="demo-close-btn" onclick="closeDemoPreviewModal()" aria-label="Close demo preview">&times;</button>
+    </div>
+    
+    <div class="demo-modal-viewport">
+      <div class="demo-frame-container" id="demoFrameContainer">
+        <!-- Dynamic Interactive Simulation Injected via JS -->
+        <div id="demoSimulationContent"></div>
+      </div>
+    </div>
+
+    <div class="demo-modal-footer">
+      <div>
+        <span style="font-size: 13px; color: #94a3b8;" id="demoModalTierInfo">Selected Tier: Normal Starter Website</span>
+      </div>
+      <a href="https://wa.me/917862963112?text=Hi%20Mahipal!%20Maine%20aapka%20demo%20dekha.%20Mujhe%20ye%20website%20apne%20business%20ke%20liye%20banwani%20hai." 
+         target="_blank" rel="noopener noreferrer" class="btn-top-wa" id="demoModalWaCta">
+        💬 Order This Type of Website on WhatsApp
+      </a>
+    </div>
+  </div>
+</div>
 
 <!-- ==========================================================================
      SACRED MAHADEV & OM 3D CV CINEMATIC STAGE
@@ -5794,6 +6720,383 @@ body {
         const dynamicMsg = `Hi Mahipal! Maine aapki website dekhi. Mujhe apne "${cat}" business ke liye website banwani hai. Please pricing aur details share karein.`;
         waBtn.href = `https://wa.me/${waNumber}?text=${encodeURIComponent(dynamicMsg)}`;
       });
+    });
+  }
+})();
+
+// =============================================================================
+// GLOBAL TOP ENGINE: 3D CARD TILT, CURRENCY AUTO-DETECTION, LANGUAGE & DEMO MODAL
+// =============================================================================
+(() => {
+  const activeWaNumber = '917862963112';
+
+  // 1. UNIQUE 3D HOLOGRAPHIC CARD TILT & GLARE EFFECT
+  const holoCard = document.getElementById('holoCard');
+  const holoStage = document.getElementById('holoStage');
+  const holoGlare = document.getElementById('holoGlare');
+
+  if (holoCard && holoStage) {
+    const handleMove = (x, y, rect) => {
+      const centerX = rect.left + rect.width / 2;
+      const centerY = rect.top + rect.height / 2;
+      const deltaX = (x - centerX) / (rect.width / 2);
+      const deltaY = (y - centerY) / (rect.height / 2);
+
+      const rotateY = deltaX * 16;
+      const rotateX = -deltaY * 16;
+
+      holoCard.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`;
+
+      if (holoGlare) {
+        const glareX = ((x - rect.left) / rect.width) * 100;
+        const glareY = ((y - rect.top) / rect.height) * 100;
+        holoGlare.style.background = `radial-gradient(circle at ${glareX}% ${glareY}%, rgba(255, 255, 255, 0.28) 0%, transparent 60%)`;
+      }
+    };
+
+    holoStage.addEventListener('mousemove', (e) => {
+      const rect = holoCard.getBoundingClientRect();
+      handleMove(e.clientX, e.clientY, rect);
+    });
+
+    holoStage.addEventListener('mouseleave', () => {
+      holoCard.style.transform = 'rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)';
+      if (holoGlare) {
+        holoGlare.style.background = 'radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.15) 0%, transparent 60%)';
+      }
+    });
+
+    // Touch support for mobile/tablet 3D gyro tilt
+    holoStage.addEventListener('touchmove', (e) => {
+      if (e.touches.length > 0) {
+        const touch = e.touches[0];
+        const rect = holoCard.getBoundingClientRect();
+        handleMove(touch.clientX, touch.clientY, rect);
+      }
+    }, { passive: true });
+
+    holoStage.addEventListener('touchend', () => {
+      holoCard.style.transform = 'rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)';
+    });
+
+    holoCard.addEventListener('click', () => {
+      window.openDemoPreviewModal('starter');
+    });
+  }
+
+  // 2. CURRENCY DEFINITION & CONVERSION MATRIX
+  const currencySymbols = {
+    INR: '₹',
+    USD: '$',
+    EUR: '€',
+    AED: 'د.إ ',
+    GBP: '£'
+  };
+
+  const currencyBtns = document.querySelectorAll('.currency-btn');
+  const priceNumberEls = document.querySelectorAll('.card-price-number');
+  const currSymEls = document.querySelectorAll('.curr-sym');
+  const heroPriceEl = document.getElementById('txt-price-hero');
+
+  const updateCurrency = (curr) => {
+    currencyBtns.forEach(btn => {
+      btn.classList.toggle('is-active', btn.getAttribute('data-currency') === curr);
+    });
+
+    const sym = currencySymbols[curr] || '$';
+    currSymEls.forEach(el => el.textContent = sym);
+
+    priceNumberEls.forEach(el => {
+      const val = el.getAttribute(`data-${curr.toLowerCase()}`) || el.getAttribute('data-usd') || '0';
+      el.textContent = val;
+    });
+
+    if (heroPriceEl) {
+      if (curr === 'INR') {
+        heroPriceEl.textContent = '₹2,299 ($29) to ₹49,999 ($599)';
+      } else if (curr === 'USD') {
+        heroPriceEl.textContent = '$29 to $599 (Global)';
+      } else if (curr === 'EUR') {
+        heroPriceEl.textContent = '€27 to €550 (Europe)';
+      } else if (curr === 'AED') {
+        heroPriceEl.textContent = '110 AED to 2,199 AED (Gulf/UAE)';
+      } else if (curr === 'GBP') {
+        heroPriceEl.textContent = '£23 to £479 (UK)';
+      }
+    }
+  };
+
+  currencyBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const c = btn.getAttribute('data-currency');
+      if (c) updateCurrency(c);
+    });
+  });
+
+  // AUTO-DETECT VISITOR'S GEOLOCATION / CURRENCY
+  (() => {
+    try {
+      const tz = Intl.DateTimeFormat().resolvedOptions().timeZone || '';
+      const lang = (navigator.language || '').toLowerCase();
+
+      if (tz.includes('Kolkata') || tz.includes('Calcutta') || tz.includes('India') || lang.includes('en-in') || lang.includes('hi')) {
+        updateCurrency('INR');
+      } else if (tz.includes('Dubai') || tz.includes('Abu_Dhabi') || tz.includes('Muscat')) {
+        updateCurrency('AED');
+      } else if (tz.includes('London')) {
+        updateCurrency('GBP');
+      } else if (tz.includes('Berlin') || tz.includes('Paris') || tz.includes('Madrid') || tz.includes('Rome') || tz.includes('Amsterdam')) {
+        updateCurrency('EUR');
+      } else {
+        updateCurrency('USD');
+      }
+    } catch {
+      updateCurrency('INR');
+    }
+  })();
+
+  // 3. MULTI-LANGUAGE TRANSLATION TOGGLE
+  const langBtns = document.querySelectorAll('.lang-btn');
+  const translations = {
+    en: {
+      globalBadge: '🌍 Worldwide Client Delivery · India, USA, UK, UAE & Global (100% Remote)',
+      eyebrow: '⚡ 100+ Categories · Mobile, Tablet & PC Responsive · 3–5 Days Delivery',
+      heroTitle: 'Build Your High-Converting Website from <span class="grad-text" id="txt-price-hero">₹2,299 ($29) to ₹49,999 ($599)</span>',
+      heroDesc: 'Get a professional, ultra-fast website designed to turn visitors into direct paying customers. From normal starter retail & clinic websites with instant WhatsApp ordering to enterprise 3D WebGL portals and autonomous AI agents. Available for clients anywhere in the world.',
+      btnWa: 'Order on WhatsApp (+91 78629 63112)',
+      btnCall: '📞 Call Directly: +91 78629 63112',
+      btnMail: '✉️ Email Inquiry',
+      pricingHeading: 'Transparent Website Pricing Packages',
+      pricingSub: 'Select a package to view live interactive demos or order directly on WhatsApp / Email.'
+    },
+    hi: {
+      globalBadge: '🌍 दुनिया भर में डिलीवरी · भारत, अमेरिका, यूएई, ब्रिटेन और ग्लोबल',
+      eyebrow: '⚡ 100+ श्रेणियां · मोबाइल, टैबलेट और कंप्यूटर पर परफेक्ट · 2–4 दिन में तैयार',
+      heroTitle: 'अपनी खुद की हाई-कन्वर्टिंग वेबसाइट बनवाएं सिर्फ <span class="grad-text" id="txt-price-hero">₹2,299 ($29) से ₹49,999</span> में',
+      heroDesc: 'अपनी दुकान, क्लिनिक, स्कूल, रेस्टोरेंट या बिजनेस के लिए हाई-स्पीड वेबसाइट बनवाएं। डायरेक्ट 1-क्लिक व्हाट्सएप ऑर्डरिंग, गूगल सर्च कंसोल और 100/100 मोबाइल स्पीड के साथ। पूरी दुनिया में कहीं से भी तुरंत ऑर्डर करें।',
+      btnWa: 'व्हाट्सएप पर ऑर्डर करें (+91 78629 63112)',
+      btnCall: '📞 डायरेक्ट कॉल करें: +91 78629 63112',
+      btnMail: '✉️ ईमेल भेजें',
+      pricingHeading: 'स्पष्ट और किफ़ायती वेबसाइट पैकेज',
+      pricingSub: 'लाइव इंटरैक्टिव डेमो देखने के लिए पैकेज चुनें या सीधे व्हाट्सएप / ईमेल पर संपर्क करें।'
+    },
+    hinglish: {
+      globalBadge: '🌍 Worldwide Client Delivery · India, USA, UK, UAE & Global (100% Remote)',
+      eyebrow: '⚡ 100+ Categories · Mobile, Tablet & PC me Fix · 2–4 Din me Live',
+      heroTitle: 'Apne Business ki Super-Fast Website Banwayein <span class="grad-text" id="txt-price-hero">₹2,299 se ₹49,999</span> me',
+      heroDesc: 'Dukaan, clinic, restaurant ya startup ke liye direct customers pane wali website banwayein. Instant 1-Click WhatsApp order engine, zero commission aur top Google ranking ke saath. Desh-videsh kahi se bhi direct contact karein.',
+      btnWa: 'WhatsApp par Order Karein (+91 78629 63112)',
+      btnCall: '📞 Direct Call: +91 78629 63112',
+      btnMail: '✉️ Email Inquiry',
+      pricingHeading: 'Best Website Pricing Packages',
+      pricingSub: 'Package select karke Live Demo dekhein ya direct WhatsApp / Email se order karein.'
+    }
+  };
+
+  langBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      langBtns.forEach(b => b.classList.remove('is-active'));
+      btn.classList.add('is-active');
+
+      const langKey = btn.getAttribute('data-lang') || 'en';
+      const t = translations[langKey] || translations.en;
+
+      const badge = document.getElementById('txt-global-badge');
+      const eyebrow = document.getElementById('txt-hero-eyebrow');
+      const title = document.getElementById('txt-hero-title');
+      const desc = document.getElementById('txt-hero-desc');
+      const btnWa = document.getElementById('txt-btn-wa');
+      const btnCall = document.getElementById('txt-btn-call');
+      const btnMail = document.getElementById('txt-btn-mail');
+      const pHeading = document.getElementById('txt-pricing-heading');
+      const pSub = document.getElementById('txt-pricing-sub');
+
+      if (badge) badge.textContent = t.globalBadge;
+      if (eyebrow) eyebrow.textContent = t.eyebrow;
+      if (title) title.innerHTML = t.heroTitle;
+      if (desc) desc.textContent = t.heroDesc;
+      if (btnWa) btnWa.textContent = t.btnWa;
+      if (btnCall) btnCall.textContent = t.btnCall;
+      if (btnMail) btnMail.textContent = t.btnMail;
+      if (pHeading) pHeading.textContent = t.pricingHeading;
+      if (pSub) pSub.textContent = t.pricingSub;
+    });
+  });
+
+  // 4. INTERACTIVE LIVE DEMO MODAL HANDLER
+  const demoModal = document.getElementById('demoPreviewModal');
+  const demoIcon = document.getElementById('demoModalIcon');
+  const demoTitle = document.getElementById('demoModalTitle');
+  const demoTierInfo = document.getElementById('demoModalTierInfo');
+  const demoWaCta = document.getElementById('demoModalWaCta');
+  const demoSimulation = document.getElementById('demoSimulationContent');
+  const frameContainer = document.getElementById('demoFrameContainer');
+
+  const demoTemplates = {
+    starter: {
+      icon: '🛒',
+      title: 'Starter Retail & WhatsApp Order Store Demo (₹2,299 / $29)',
+      tier: 'Normal Starter Website',
+      waMsg: 'Hi Mahipal! Maine aapka Starter Retail (2,299) ka Demo dekha. Mujhe aisi website banwani hai.',
+      html: `
+        <div style="font-family: inherit; color: #f8fafc;">
+          <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid rgba(255,255,255,0.1); padding-bottom:14px; margin-bottom:16px;">
+            <div>
+              <h3 style="margin:0; font-size:18px; color:#ffffff;">🏪 Rathore General &amp; Fashion Store</h3>
+              <p style="margin:2px 0 0; font-size:12px; color:#94a3b8;">Bhinmal, Rajasthan · Open Now · Free Home Delivery</p>
+            </div>
+            <a href="https://wa.me/${activeWaNumber}?text=Hi!%20Mujhe%20Store%20se%20order%20karna%20hai" target="_blank" style="background:#22c55e; color:#060913; padding:8px 14px; border-radius:8px; font-weight:700; font-size:12px; text-decoration:none;">💬 WhatsApp Order</a>
+          </div>
+          <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(180px, 1fr)); gap:14px;">
+            <div style="background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.08); padding:14px; border-radius:12px;">
+              <div style="height:100px; background:linear-gradient(135deg, #1e293b, #0f172a); border-radius:8px; display:flex; align-items:center; justify-content:center; font-size:28px;">👕</div>
+              <strong style="display:block; margin:8px 0 4px; font-size:14px;">Cotton Casual Shirt</strong>
+              <span style="color:#4ade80; font-weight:800; font-size:15px;">₹699</span>
+              <a href="https://wa.me/${activeWaNumber}?text=Order:%20Cotton%20Casual%20Shirt" target="_blank" style="display:block; margin-top:8px; text-align:center; background:rgba(34,197,94,0.15); border:1px solid #22c55e; color:#4ade80; padding:6px; border-radius:6px; font-size:12px; text-decoration:none; font-weight:700;">Buy on WhatsApp</a>
+            </div>
+            <div style="background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.08); padding:14px; border-radius:12px;">
+              <div style="height:100px; background:linear-gradient(135deg, #1e293b, #0f172a); border-radius:8px; display:flex; align-items:center; justify-content:center; font-size:28px;">👟</div>
+              <strong style="display:block; margin:8px 0 4px; font-size:14px;">Sport Running Shoes</strong>
+              <span style="color:#4ade80; font-weight:800; font-size:15px;">₹1,299</span>
+              <a href="https://wa.me/${activeWaNumber}?text=Order:%20Sport%20Running%20Shoes" target="_blank" style="display:block; margin-top:8px; text-align:center; background:rgba(34,197,94,0.15); border:1px solid #22c55e; color:#4ade80; padding:6px; border-radius:6px; font-size:12px; text-decoration:none; font-weight:700;">Buy on WhatsApp</a>
+            </div>
+          </div>
+          <div style="margin-top:20px; background:rgba(56,189,248,0.08); border:1px solid rgba(56,189,248,0.25); border-radius:10px; padding:12px; font-size:12.5px; color:#38bdf8;">
+            ✨ Features included: 1-Click WhatsApp checkout, Google Maps pin, zero monthly commission, 100/100 Core Web Vitals speed.
+          </div>
+        </div>
+      `
+    },
+    growth: {
+      icon: '🎓',
+      title: 'Business Growth & Services Multi-Page Demo (₹7,999 / $99)',
+      tier: 'Business Growth Website',
+      waMsg: 'Hi Mahipal! Maine Business Growth (7,999) ka Demo dekha. Mujhe aisi website banwani hai.',
+      html: `
+        <div style="font-family: inherit; color: #f8fafc;">
+          <div style="background:linear-gradient(135deg, #0284c7, #2563eb); padding:20px; border-radius:14px; margin-bottom:18px;">
+            <span style="background:rgba(255,255,255,0.2); padding:3px 10px; border-radius:99px; font-size:11px; font-weight:700; text-transform:uppercase;">Top Rated Coaching Academy</span>
+            <h2 style="margin:8px 0 4px; font-size:22px; color:#ffffff;">Apex Science &amp; Career Institute</h2>
+            <p style="margin:0 0 14px; font-size:13.5px; opacity:0.9;">Rank #1 Faculty · Admissions Open 2026–27 · 98.4% Result Record</p>
+            <a href="https://wa.me/${activeWaNumber}?text=Inquiry:%20Apex%20Academy%20Course%20Admission" target="_blank" style="display:inline-block; background:#ffffff; color:#0f172a; font-weight:800; font-size:13px; padding:8px 16px; border-radius:8px; text-decoration:none;">Apply on WhatsApp</a>
+          </div>
+          <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:12px;">
+            <div style="background:rgba(255,255,255,0.05); padding:14px; border-radius:10px; border:1px solid rgba(255,255,255,0.08);">
+              <h4 style="margin:0 0 6px; color:#38bdf8;">📚 Foundation Batch (9th–10th)</h4>
+              <p style="margin:0; font-size:12px; color:#94a3b8;">Full syllabus coverage, mock tests, and weekly doubt solving sessions.</p>
+            </div>
+            <div style="background:rgba(255,255,255,0.05); padding:14px; border-radius:10px; border:1px solid rgba(255,255,255,0.08);">
+              <h4 style="margin:0 0 6px; color:#4ade80;">🚀 Target Medical / Engg</h4>
+              <p style="margin:0; font-size:12px; color:#94a3b8;">Expert faculty guidance, daily practice papers, and personal mentorship.</p>
+            </div>
+          </div>
+          <div style="margin-top:16px; display:flex; justify-content:space-between; align-items:center; background:rgba(255,255,255,0.03); padding:10px 14px; border-radius:8px; font-size:12px; color:#94a3b8;">
+            <span>⭐ Rated 4.9/5 by 380+ Students</span>
+            <span>📍 Google Maps Verified</span>
+          </div>
+        </div>
+      `
+    },
+    portal: {
+      icon: '📊',
+      title: 'Advanced Web App & Portal Dashboard Demo (₹19,999 / $249)',
+      tier: 'Advanced Web App / Portal',
+      waMsg: 'Hi Mahipal! Maine Advanced Web App (19,999) ka Demo dekha. Mujhe custom web app banwani hai.',
+      html: `
+        <div style="font-family: inherit; color: #f8fafc;">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:16px; border-bottom:1px solid rgba(255,255,255,0.1); padding-bottom:12px;">
+            <div>
+              <span style="font-size:11px; color:#a855f7; font-weight:800;">ENTERPRISE ADMIN PORTAL</span>
+              <h3 style="margin:2px 0 0; font-size:18px;">CloudLead Pro Analytics</h3>
+            </div>
+            <span style="background:rgba(34,197,94,0.15); color:#22c55e; border:1px solid #22c55e; font-size:11px; padding:4px 10px; border-radius:99px; font-weight:700;">● Live Cloud DB Connected</span>
+          </div>
+          <div style="display:grid; grid-template-columns:repeat(3, 1fr); gap:12px; margin-bottom:16px;">
+            <div style="background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.08); padding:12px; border-radius:10px;">
+              <span style="font-size:11px; color:#94a3b8;">Total Inquiries</span>
+              <h4 style="margin:4px 0 0; font-size:22px; color:#ffffff;">1,428</h4>
+            </div>
+            <div style="background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.08); padding:12px; border-radius:10px;">
+              <span style="font-size:11px; color:#94a3b8;">WhatsApp Leads</span>
+              <h4 style="margin:4px 0 0; font-size:22px; color:#22c55e;">892</h4>
+            </div>
+            <div style="background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.08); padding:12px; border-radius:10px;">
+              <span style="font-size:11px; color:#94a3b8;">Revenue Generated</span>
+              <h4 style="margin:4px 0 0; font-size:22px; color:#38bdf8;">$14,850</h4>
+            </div>
+          </div>
+          <div style="background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.08); padding:14px; border-radius:10px;">
+            <strong style="font-size:13px; color:#ffffff; display:block; margin-bottom:8px;">Recent Automated Inquiries (Real-Time)</strong>
+            <div style="display:flex; justify-content:space-between; font-size:12px; padding:6px 0; border-bottom:1px solid rgba(255,255,255,0.05); color:#cbd5e1;">
+              <span>Dr. Sharma (Cardio Clinic)</span>
+              <span style="color:#22c55e;">WhatsApp Routed ✓</span>
+            </div>
+            <div style="display:flex; justify-content:space-between; font-size:12px; padding:6px 0; color:#cbd5e1;">
+              <span>Royal Heritage Resort</span>
+              <span style="color:#38bdf8;">Room Booked ($340)</span>
+            </div>
+          </div>
+        </div>
+      `
+    },
+    enterprise: {
+      icon: '🤖',
+      title: 'Flagship 3D WebGL & Autonomous AI System Demo (₹49,999 / $599)',
+      tier: 'Enterprise 3D & AI System',
+      waMsg: 'Hi Mahipal! Maine Flagship 3D & AI System (49,999) ka Demo dekha. Mujhe aisi platform banwani hai.',
+      html: `
+        <div style="font-family: inherit; color: #f8fafc; text-align:center; padding:10px 0;">
+          <div style="width:70px; height:70px; margin:0 auto 12px; border-radius:50%; background:radial-gradient(circle, #38bdf8 0%, #7c3aed 100%); display:flex; align-items:center; justify-content:center; font-size:32px; box-shadow:0 0 30px rgba(56,189,248,0.5);">🔱</div>
+          <span style="background:rgba(168,85,247,0.2); color:#c084fc; border:1px solid #c084fc; font-size:11px; padding:4px 12px; border-radius:99px; font-weight:800;">NETRA AI + THREE.JS 3D ENGINE</span>
+          <h3 style="margin:10px 0 6px; font-size:22px; color:#ffffff;">Bharatverse 3D &amp; Autonomous AI Hub</h3>
+          <p style="margin:0 auto 16px; max-width:440px; font-size:13px; color:#94a3b8;">Real-time WebGL shader visuals, custom 3D particle rendering, and embedded autonomous AI reasoning agent answering visitor queries 24/7 without sleep.</p>
+          <div style="background:rgba(255,255,255,0.06); border:1px solid rgba(56,189,248,0.3); border-radius:12px; padding:12px 16px; max-width:460px; margin:0 auto; display:flex; gap:8px;">
+            <input type="text" value="Can you calculate a quote for my custom app?" readonly style="flex:1; background:transparent; border:none; color:#ffffff; font-size:12.5px; outline:none;" />
+            <span style="background:#2563eb; color:#ffffff; padding:4px 12px; border-radius:6px; font-size:11px; font-weight:700;">AI Reply ✓</span>
+          </div>
+        </div>
+      `
+    }
+  };
+
+  window.openDemoPreviewModal = (templateKey) => {
+    const tmpl = demoTemplates[templateKey] || demoTemplates.starter;
+    if (demoIcon) demoIcon.textContent = tmpl.icon;
+    if (demoTitle) demoTitle.textContent = tmpl.title;
+    if (demoTierInfo) demoTierInfo.textContent = `Selected Tier: ${tmpl.tier}`;
+    if (demoSimulation) demoSimulation.innerHTML = tmpl.html;
+    if (demoWaCta) {
+      demoWaCta.href = `https://wa.me/${activeWaNumber}?text=${encodeURIComponent(tmpl.waMsg)}`;
+    }
+    if (demoModal) {
+      demoModal.classList.add('is-open');
+      demoModal.setAttribute('aria-hidden', 'false');
+    }
+  };
+
+  window.closeDemoPreviewModal = () => {
+    if (demoModal) {
+      demoModal.classList.remove('is-open');
+      demoModal.setAttribute('aria-hidden', 'true');
+    }
+  };
+
+  window.setDemoDeviceMode = (mode) => {
+    const buttons = document.querySelectorAll('.device-toggle-btn');
+    buttons.forEach(btn => {
+      btn.classList.toggle('is-active', btn.getAttribute('data-mode') === mode);
+    });
+    if (frameContainer) {
+      frameContainer.classList.remove('mode-desktop', 'mode-tablet', 'mode-mobile');
+      frameContainer.classList.add(`mode-${mode}`);
+    }
+  };
+
+  if (demoModal) {
+    demoModal.addEventListener('click', (e) => {
+      if (e.target === demoModal) {
+        window.closeDemoPreviewModal();
+      }
     });
   }
 })();
