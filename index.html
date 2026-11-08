@@ -3367,6 +3367,203 @@ body {
   box-shadow: 0 4px 12px rgba(37, 99, 235, 0.4);
 }
 
+/* ==========================================================================
+   RAIN AGI (ARGON 5.0) INTERACTIVE LIVE CHATBOT CONSOLE
+   ========================================================================== */
+.rainagi-chatbot-container {
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.95) 0%, rgba(6, 9, 18, 0.98) 100%);
+  border: 1.5px solid rgba(56, 189, 248, 0.35);
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5), 0 0 30px rgba(56, 189, 248, 0.12);
+  margin-bottom: 36px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.rainagi-bot-header {
+  padding: 16px 20px;
+  background: rgba(30, 41, 59, 0.7);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.rainagi-brand-block {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.rainagi-avatar-wrap {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #0f172a;
+  border: 1.5px solid #38bdf8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  box-shadow: 0 0 14px rgba(56, 189, 248, 0.4);
+}
+.rainagi-avatar-img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.rainagi-online-dot {
+  position: absolute;
+  top: 1px;
+  right: 1px;
+  width: 10px;
+  height: 10px;
+  background: #22c55e;
+  border: 2px solid #0f172a;
+  border-radius: 50%;
+  box-shadow: 0 0 8px #22c55e;
+  animation: pulseGreen 1.8s infinite;
+}
+.rainagi-meta-title h3 {
+  font-size: 16px;
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.rainagi-meta-title p {
+  font-size: 12px;
+  color: #94a3b8;
+  margin: 2px 0 0 0;
+}
+.rainagi-status-pill {
+  background: rgba(34, 197, 94, 0.12);
+  border: 1px solid rgba(34, 197, 94, 0.3);
+  color: #4ade80;
+  font-size: 11.5px;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 99px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.rainagi-messages-box {
+  height: 280px;
+  overflow-y: auto;
+  padding: 18px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  background: rgba(4, 7, 15, 0.6);
+  scroll-behavior: smooth;
+}
+.rainagi-msg-row {
+  display: flex;
+  gap: 10px;
+  max-width: 85%;
+  animation: fadeInMsg 0.25s ease;
+}
+@keyframes fadeInMsg {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.rainagi-msg-row.is-user {
+  margin-left: auto;
+  flex-direction: row-reverse;
+}
+.rainagi-msg-bubble {
+  padding: 12px 16px;
+  border-radius: 14px;
+  font-size: 13.5px;
+  line-height: 1.5;
+  color: #f1f5f9;
+}
+.rainagi-msg-row.is-bot .rainagi-msg-bubble {
+  background: rgba(15, 23, 42, 0.85);
+  border: 1px solid rgba(56, 189, 248, 0.25);
+  border-top-left-radius: 3px;
+  color: #e2e8f0;
+}
+.rainagi-msg-row.is-user .rainagi-msg-bubble {
+  background: linear-gradient(135deg, #0284c7, #2563eb);
+  color: #ffffff;
+  border-top-right-radius: 3px;
+  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.35);
+}
+.rainagi-chips-shelf {
+  padding: 10px 20px;
+  background: rgba(15, 23, 42, 0.5);
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.rainagi-chips-shelf::-webkit-scrollbar {
+  display: none;
+}
+.rainagi-prompt-chip {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #cbd5e1;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 5px 12px;
+  border-radius: 99px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+}
+.rainagi-prompt-chip:hover {
+  background: rgba(56, 189, 248, 0.15);
+  border-color: #38bdf8;
+  color: #38bdf8;
+}
+.rainagi-input-bar {
+  padding: 12px 16px;
+  background: rgba(15, 23, 42, 0.9);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  gap: 10px;
+}
+.rainagi-chat-input {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+  font-size: 13.5px;
+  padding: 10px 16px;
+  border-radius: 12px;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+.rainagi-chat-input:focus {
+  border-color: #38bdf8;
+  box-shadow: 0 0 10px rgba(56, 189, 248, 0.3);
+}
+.rainagi-send-btn {
+  background: linear-gradient(135deg, #0284c7, #22c55e);
+  border: none;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 13.5px;
+  padding: 10px 20px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.rainagi-send-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(34, 197, 94, 0.4);
+}
+
 /* PRICING TIERS GRID */
 .pricing-section-title {
   text-align: center;
@@ -3898,6 +4095,59 @@ body {
           </div>
         </div>
       </div>
+    </div>
+
+    <!-- ========================================================================
+         RAIN AGI 5.0 (ARGON) — LIVE INTERACTIVE WEB & PRICING ADVISOR CHATBOT
+         ======================================================================== -->
+    <div class="rainagi-chatbot-container" id="rainagi-chat-console">
+      <div class="rainagi-bot-header">
+        <div class="rainagi-brand-block">
+          <div class="rainagi-avatar-wrap">
+            <img src="assets/rainagi-logo.png" alt="RainAGI Autonomous AGI Avatar" class="rainagi-avatar-img" />
+            <span class="rainagi-online-dot"></span>
+          </div>
+          <div class="rainagi-meta-title">
+            <h3>RainAGI 5.0 · Autonomous Web &amp; AI Advisor</h3>
+            <p>Powered by Mahipal's Autonomous ReAct Engine (c:\Users\Owner\RainAGI)</p>
+          </div>
+        </div>
+        <div class="rainagi-status-pill">
+          <span class="pulse-beacon"></span>
+          <span>ReAct AGI Active · Ask for Quotes &amp; Tech</span>
+        </div>
+      </div>
+
+      <!-- Messages Stream -->
+      <div class="rainagi-messages-box" id="rainagi-msg-stream">
+        <div class="rainagi-msg-row is-bot">
+          <div class="rainagi-msg-bubble">
+            👋 <strong>Namaste! Main RainAGI hoon</strong> — Mahipal Singh Rathore ka autonomous AI assistant. 
+            <br><br>
+            Aapko apne business ke liye kis tarah ki website ya app banwani hai? (e.g. <em>Dukaan/Retail store, Doctor clinic, School coaching, Restaurant menu, ya Custom 3D &amp; AI portal</em>). 
+            <br><br>
+            Aap mujhse pricing, delivery time ya features pooch sakte hain — main turant exact package aur cost bataunga!
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Prompt Suggestion Chips -->
+      <div class="rainagi-chips-shelf" role="toolbar" aria-label="Suggested questions for RainAGI">
+        <button type="button" class="rainagi-prompt-chip" data-prompt="Normal Starter (₹2,299) me kya-kya milega?">💡 Starter (₹2,299) me kya milega?</button>
+        <button type="button" class="rainagi-prompt-chip" data-prompt="Mujhe dukaan ke liye WhatsApp order wali website banwani hai, kitna kharcha aayega?">🛍️ Dukaan ke liye WhatsApp Store?</button>
+        <button type="button" class="rainagi-prompt-chip" data-prompt="Doctor / Clinic website me kya features hote hain aur timeline kya hai?">🏥 Clinic &amp; Doctors Website</button>
+        <button type="button" class="rainagi-prompt-chip" data-prompt="School / Coaching Institute website ka package kya hai?">🎓 School &amp; Coaching Site</button>
+        <button type="button" class="rainagi-prompt-chip" data-prompt="RainAGI AGI aur Autonomous Agents kya hain?">🤖 RainAGI AGI kaise kaam karta hai?</button>
+        <button type="button" class="rainagi-prompt-chip" data-prompt="Mujhe Mahipal se direct call pe baat karni hai.">📞 Mahipal Direct Call Connect</button>
+      </div>
+
+      <!-- Chat Input Area -->
+      <form class="rainagi-input-bar" id="rainagi-chat-form" onsubmit="return false;">
+        <input type="text" id="rainagi-user-input" class="rainagi-chat-input" placeholder="RainAGI se website cost, timeline ya custom AI ke baare me poochhein..." autocomplete="off" />
+        <button type="submit" class="rainagi-send-btn" id="rainagi-send-btn">
+          <span>Poochhein </span>
+        </button>
+      </form>
     </div>
 
     <!-- 4-Tier Multi-Currency Pricing Grid -->
@@ -7307,6 +7557,230 @@ body {
       if (e.target === demoModal) {
         window.closeDemoPreviewModal();
       }
+    });
+  }
+
+  // ===========================================================================
+  // 5. RAIN AGI 5.0 (ARGON) — INTERACTIVE CHATBOT LOGIC & ADVISORY REASONING
+  // ===========================================================================
+  const chatForm = document.getElementById('rainagi-chat-form');
+  const chatInput = document.getElementById('rainagi-user-input');
+  const chatStream = document.getElementById('rainagi-msg-stream');
+  const promptChips = document.querySelectorAll('.rainagi-prompt-chip');
+
+  if (chatForm && chatInput && chatStream) {
+    const appendMsg = (role, htmlContent) => {
+      const row = document.createElement('div');
+      row.className = `rainagi-msg-row is-${role}`;
+      row.innerHTML = `<div class="rainagi-msg-bubble">${htmlContent}</div>`;
+      chatStream.appendChild(row);
+      chatStream.scrollTop = chatStream.scrollHeight;
+      return row;
+    };
+
+    const getRainResponse = async (query) => {
+      const q = query.toLowerCase().trim();
+
+      // Try local RainAGI API (if c:\Users\Owner\RainAGI server.py is running)
+      try {
+        const controller = new AbortController();
+        const timeoutId = setTimeout(() => controller.abort(), 1200);
+        const res = await fetch('http://127.0.0.1:8000/api/chat', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ message: query }),
+          signal: controller.signal
+        });
+        clearTimeout(timeoutId);
+        if (res.ok) {
+          const data = await res.json();
+          if (data && (data.reply || data.response || data.message)) {
+            return data.reply || data.response || data.message;
+          }
+        }
+      } catch (e) {
+        // Fallback to built-in autonomous client engine
+      }
+
+      // Autonomous Client Engine (Covers all services, packages, pricing & tech)
+      if (q.includes('2299') || q.includes('2,299') || q.includes('starter') || q.includes('normal') || q.includes('basic') || q.includes('sasta') || q.includes('कम')) {
+        return `
+          <strong>💡 Normal Starter Website (₹2,299 / $29):</strong>
+          <br><br>
+          Yeh package local shopkeepers, clinics, personal brands aur small businesses ke liye best hai:
+          <br>
+          • <strong>Pages:</strong> 1–3 Clean Responsive Pages (Mobile, Tablet, PC)
+          <br>
+          • <strong>WhatsApp Engine:</strong> Direct 1-Click WhatsApp Order/Inquiry Button (Zero Commission)
+          <br>
+          • <strong>Local Reach:</strong> Google Maps Location Pin &amp; Social Media Links
+          <br>
+          • <strong>Security &amp; Hosting:</strong> Free SSL Certificate + Fast Cloud Setup
+          <br>
+          • <strong>Delivery Time:</strong> Sirf 2 se 3 din me live!
+          <br><br>
+          <a href="https://wa.me/${activeWaNumber}?text=Hi%20Mahipal!%20Mujhe%20Normal%20Starter%20Website%20(2,299)%20ke%20bare%20me%20baat%20karni%20hai." target="_blank" class="btn-top-wa" style="display:inline-flex; font-size:12px; padding:6px 12px; margin-top:4px;">
+            💬 Order Starter on WhatsApp (₹2,299)
+          </a>
+        `;
+      }
+
+      if (q.includes('dukaan') || q.includes('shop') || q.includes('retail') || q.includes('store') || q.includes('ecommerce') || q.includes('e-commerce') || q.includes('order')) {
+        return `
+          <strong>🛒 Retail &amp; E-Commerce WhatsApp Website (₹2,299 se ₹7,999):</strong>
+          <br><br>
+          Hum aapki dukaan ke liye ek aisi digital site banate hain jisme customers ko koi registration ya lamba form nahi bharna padta:
+          <br>
+          • Product Catalog photo, price aur stock badge ke sath
+          <br>
+          • Grahak item select karke <strong>"Buy on WhatsApp"</strong> click karega toh uski order details direct aapke WhatsApp number par aayegi
+          <br>
+          • Koi monthly platform fees ya transaction commission nahi kat-ti!
+          <br><br>
+          <a href="https://wa.me/${activeWaNumber}?text=Hi%20Mahipal!%20Mujhe%20apni%20dukaan/retail%20store%20ke%20liye%20WhatsApp%20order%20website%20chahiye." target="_blank" class="btn-top-wa" style="display:inline-flex; font-size:12px; padding:6px 12px; margin-top:4px;">
+            💬 Dukaan Website Details on WhatsApp
+          </a>
+        `;
+      }
+
+      if (q.includes('clinic') || q.includes('doctor') || q.includes('hospital') || q.includes('medical') || q.includes('dawai')) {
+        return `
+          <strong>🏥 Doctor &amp; Clinic Website (Business Package · ₹7,999):</strong>
+          <br><br>
+          Clinics aur doctors ke liye specialized solution:
+          <br>
+          • Doctor Profile, Qualifications, Timings &amp; Services
+          <br>
+          • Direct 1-Click WhatsApp Appointment Booking (Patients can pick slot &amp; confirm)
+          <br>
+          • Google Maps Clinic Location &amp; Google Search Console Local Ranking
+          <br>
+          • Patient Testimonials &amp; Health Advice Blog section
+          <br>
+          • Delivery: 3–4 Days
+          <br><br>
+          <a href="https://wa.me/${activeWaNumber}?text=Hi%20Mahipal!%20Mujhe%20Clinic/Doctor%20website%20ke%20bare%20me%20quotation%20chahiye." target="_blank" class="btn-top-wa" style="display:inline-flex; font-size:12px; padding:6px 12px; margin-top:4px;">
+            💬 Clinic Website Quotation
+          </a>
+        `;
+      }
+
+      if (q.includes('school') || q.includes('coaching') || q.includes('institute') || q.includes('academy') || q.includes('student')) {
+        return `
+          <strong>🎓 School &amp; Coaching Academy Website (₹7,999 / $99):</strong>
+          <br><br>
+          • Course Catalog (Batches, Foundation, Target)
+          <br>
+          • Online Admission Registration Leads routed to WhatsApp
+          <br>
+          • Faculty Profiles, Achievers Gallery &amp; Test Results
+          <br>
+          • Fee Inquiry &amp; Downloadable Prospectus
+          <br>
+          • Delivery: 3–5 Days
+          <br><br>
+          <a href="https://wa.me/${activeWaNumber}?text=Hi%20Mahipal!%20Mujhe%20School/Coaching%20website%20ke%20bare%20me%20baat%20karni%20hai." target="_blank" class="btn-top-wa" style="display:inline-flex; font-size:12px; padding:6px 12px; margin-top:4px;">
+            💬 Coaching Website Inquiry
+          </a>
+        `;
+      }
+
+      if (q.includes('rainagi') || q.includes('rain') || q.includes('agi') || q.includes('netar') || q.includes('ai') || q.includes('algorithm')) {
+        return `
+          <strong>🤖 RainAGI (Argon 5.0) Architecture:</strong>
+          <br><br>
+          Main Mahipal Singh Rathore ka developed autonomous general-purpose AI system hoon (<em>c:\\Users\\Owner\\RainAGI</em>).
+          <br>
+          • <strong>ReAct Autonomous Loop:</strong> Plan $\\rightarrow$ Tool Call $\\rightarrow$ Observe $\\rightarrow$ Reflect
+          <br>
+          • <strong>Dual-Brain:</strong> Local Ollama LLM + Cloud API Fallback (Groq / Gemini)
+          <br>
+          • <strong>Memory Architecture:</strong> Episodic, semantic, procedural &amp; Turso cloud vector memory
+          <br>
+          • <strong>Enterprise Privacy:</strong> AES-256-GCM authenticated encryption at rest
+          <br><br>
+          Aap chahein toh apni custom website me bhi aisa intelligent 24/7 AI chatbot integrate karwa sakte hain (Flagship 3D &amp; AI Package · ₹49,999).
+        `;
+      }
+
+      if (q.includes('call') || q.includes('phone') || q.includes('number') || q.includes('contact') || q.includes('mahipal') || q.includes('baat')) {
+        return `
+          <strong>📞 Mahipal Singh Rathore Contact Details:</strong>
+          <br><br>
+          Aap direct Mahipal se phone ya WhatsApp par baat kar sakte hain:
+          <br>
+          • <strong>Phone / Calling:</strong> <a href="tel:+917862963112" style="color:#38bdf8; font-weight:700;">+91 78629 63112</a>
+          <br>
+          • <strong>Direct WhatsApp:</strong> <a href="https://wa.me/${activeWaNumber}?text=Hi%20Mahipal!%20Mujhe%20website%20banwane%20ke%20bare%20me%20baat%20karni%20hai." target="_blank" style="color:#22c55e; font-weight:700;">+91 78629 63112</a>
+          <br>
+          • <strong>Email:</strong> <a href="mailto:ramhipalsingh602@gmail.com" style="color:#cbd5e1;">ramhipalsingh602@gmail.com</a>
+          <br>
+          • <strong>Location:</strong> Bhinmal, Rajasthan (Remote delivery pan-India &amp; Worldwide)
+          <br><br>
+          <a href="tel:+917862963112" class="btn-top-call" style="display:inline-flex; font-size:12px; padding:6px 12px;">📞 Call Mahipal Now</a>
+        `;
+      }
+
+      if (q.includes('49999') || q.includes('49,999') || q.includes('3d') || q.includes('three.js') || q.includes('enterprise')) {
+        return `
+          <strong>🔱 Enterprise Flagship 3D &amp; AI System (₹49,999 / $599):</strong>
+          <br><br>
+          Yeh hamara sabse advanced tech showcase package hai:
+          <br>
+          • <strong>Three.js / WebGL 3D World:</strong> Interactive 3D graphics, holographic shaders, particle physics
+          <br>
+          • <strong>Custom Autonomous AI Agent:</strong> 24/7 client conversational handling &amp; automated lead capture
+          <br>
+          • <strong>Full CI/CD &amp; Cloud Architecture:</strong> Sub-second global CDN delivery, automated backups, 1-Year VIP priority support
+          <br><br>
+          <a href="https://wa.me/${activeWaNumber}?text=Hi%20Mahipal!%20Mujhe%20Enterprise%203D%20%26%20AI%20System%20(49,999)%20package%20chahiye." target="_blank" class="btn-top-wa" style="display:inline-flex; font-size:12px; padding:6px 12px;">
+            💬 Order 3D &amp; AI System on WhatsApp
+          </a>
+        `;
+      }
+
+      // Default smart advisory response
+      return `
+        <strong>⚡ RainAGI Autonomous Advisory:</strong>
+        <br><br>
+        Aapke requirement ke hisaab se hum <strong>100+ categories</strong> me ultra-fast, mobile-responsive websites build karte hain.
+        <br><br>
+        • <strong>Starter Package:</strong> ₹2,299 ($29) · 1–3 Pages, WhatsApp Order, Google Map, SSL (2–3 Din)
+        <br>
+        • <strong>Business Package:</strong> ₹7,999 ($99) · 5–8 Pages, Catalog, On-page SEO (3–5 Din)
+        <br>
+        • <strong>Advanced Portal:</strong> ₹19,999 ($249) · Database, Admin Dashboard, Payment Gateway
+        <br><br>
+        Aapki specific requirement aur timeline discuss karne ke liye direct WhatsApp par connect karein:
+        <br><br>
+        <a href="https://wa.me/${activeWaNumber}?text=${encodeURIComponent(`Hi Mahipal! Maine RainAGI se baat ki: "${query}". Mujhe iska pricing aur timeline bataiye.`)}" target="_blank" class="btn-top-wa" style="display:inline-flex; font-size:12px; padding:6px 12px;">
+          💬 Chat with Mahipal on WhatsApp
+        </a>
+      `;
+    };
+
+    const handleUserMsg = async (userText) => {
+      if (!userText.trim()) return;
+      appendMsg('user', userText);
+      chatInput.value = '';
+
+      const thinkingRow = appendMsg('bot', '⚡ <em>RainAGI is reasoning... (ReAct Loop)</em>');
+
+      const botReply = await getRainResponse(userText);
+      thinkingRow.remove();
+      appendMsg('bot', botReply);
+    };
+
+    chatForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      handleUserMsg(chatInput.value);
+    });
+
+    promptChips.forEach(chip => {
+      chip.addEventListener('click', () => {
+        const p = chip.getAttribute('data-prompt') || chip.textContent;
+        handleUserMsg(p);
+      });
     });
   }
 })();
