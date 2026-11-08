@@ -3,12 +3,29 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
         xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
 
-  <!-- 1. Main Official Portal (GitLab Architecture) -->
+  <!-- 1. Main Official Portal (Vercel Production - Mr. Rathore Official) -->
+  <url>
+    <loc>https://mrrathore-tech.vercel.app/</loc>
+    <lastmod>2026-11-08</lastmod>
+    <changefreq>always</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://mrrathore-tech.vercel.app/assets/showcase-shot.jpg</image:loc>
+      <image:title>Mr. Rathore (Mr.Rathore) Official Website &amp; Tech Company</image:title>
+      <image:caption>Official portal of Mr. Rathore (Mahipal Singh Rathore). 100+ categories web development, RainAGI 5.0 AI, C++ 3D Game Engine.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://mrrathore-tech.vercel.app/assets/logo-192.png</image:loc>
+      <image:title>Mr. Rathore Tech Logo</image:title>
+    </image:image>
+  </url>
+
+  <!-- 2. Main Official Portal (GitLab Architecture) -->
   <url>
     <loc>https://rmahipalsingh602-group.gitlab.io/rmahipalsingh602-project/</loc>
     <lastmod>2026-11-08</lastmod>
     <changefreq>daily</changefreq>
-    <priority>1.0</priority>
+    <priority>0.9</priority>
     <image:image>
       <image:loc>https://rmahipalsingh602-group.gitlab.io/rmahipalsingh602-project/assets/showcase-shot.jpg</image:loc>
       <image:title>Mr. Rathore Tech Company AI, Desktop Apps &amp; Developer Tools</image:title>

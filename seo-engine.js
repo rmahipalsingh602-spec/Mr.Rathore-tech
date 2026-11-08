@@ -18,14 +18,16 @@
   const dayOfWeek = now.getDay(); // 0 (Sun) to 6 (Sat)
   const dayOfYear = Math.floor((now - new Date(currentYear, 0, 0)) / (1000 * 60 * 60 * 24));
 
-  const fallbackUrl = 'https://rmahipalsingh602-group.gitlab.io/rmahipalsingh602-project/';
+  const vercelUrl = 'https://mrrathore-tech.vercel.app/';
+  const fallbackUrl = 'https://mrrathore-tech.vercel.app/';
+  const gitlabUrl = 'https://rmahipalsingh602-group.gitlab.io/rmahipalsingh602-project/';
   const netlifyUrl = 'https://mr-rathore-company-site.netlify.app/';
 
   const normalizePath = (pathname) => pathname.replace(/index\.html$/i, '').replace(/\/+$/, '/') || '/';
 
   const siteUrl = () => {
     const origin = window.location.origin;
-    if (!origin || origin === 'null' || /^file:/i.test(window.location.href)) return fallbackUrl;
+    if (!origin || origin === 'null' || /^file:/i.test(window.location.href)) return vercelUrl;
     return new URL(normalizePath(window.location.pathname), origin).href;
   };
 
@@ -82,7 +84,21 @@
 
   // 3. MASTER KEYWORD ARSENAL (AI + TECH + GAMING + DEV PORTFOLIO + COMMERCIAL INTENT)
   const masterKeywordList = [
-    // Brand & Identity
+    // Brand & Identity (Exact Match Rankings for Brave, Google & Bing)
+    'mr.rathore',
+    'mr rathore',
+    'Mr. Rathore',
+    'Mr Rathore',
+    'Mr.Rathore',
+    'mr.',
+    'mr. rathore',
+    'mr rathore website',
+    'mr.rathore website',
+    'mr rathore official',
+    'mr.rathore official',
+    'mr rathore tech',
+    'mr.rathore tech',
+    'mr rathore bhinmal',
     'Mr. Rathore Tech Company',
     'Mahipal Singh Rathore',
     'Mahipal Singh Rathore Developer',
@@ -390,7 +406,7 @@
     mainEntity: {
       '@type': 'Person',
       name: 'Mahipal Singh Rathore',
-      alternateName: ['Mr. Rathore', 'M. S. Rathore'],
+      alternateName: ['Mr. Rathore', 'mr.rathore', 'mr rathore', 'Mr Rathore', 'Mr.Rathore', 'mr.', 'M. S. Rathore'],
       jobTitle: 'Website Specialist & Web Developer | AI & 3D Creative Engineer',
       description: 'Versatile and results-oriented Website Specialist and Web Developer with proven expertise in building modern, responsive web solutions, local AI integrations, and real-time 3D web applications.',
       email: 'ramhipalsingh602@gmail.com',
@@ -453,7 +469,7 @@
     '@context': 'https://schema.org',
     '@type': ['Organization', 'ProfessionalService', 'LocalBusiness'],
     name: 'Mr. Rathore Tech Company',
-    alternateName: ['Mr. Rathore Tech', 'Mahipal Singh Rathore Web Solutions'],
+    alternateName: ['Mr. Rathore', 'mr.rathore', 'mr rathore', 'Mr Rathore', 'Mr.Rathore', 'mr.', 'Mr. Rathore Tech', 'Mahipal Singh Rathore Web Solutions'],
     url: canonical,
     logo: absolute('assets/logo-512.png'),
     image: absolute('assets/showcase-shot.jpg'),
@@ -556,10 +572,11 @@
   setSchema('website-schema', {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
-    name: 'Mr. Rathore Tech Company & Mahipal Singh Rathore Portfolio',
+    name: 'Mr. Rathore (Mr.Rathore) Official Website',
+    alternateName: ['Mr. Rathore', 'mr.rathore', 'mr rathore', 'Mr Rathore', 'Mr.Rathore', 'mr.', 'Mr. Rathore Tech Company'],
     url: canonical,
     description: metaDescription,
-    inLanguage: 'en-IN',
+    inLanguage: ['en-IN', 'hi-IN'],
     keywords: uniqueKeywords,
     dateModified: currentDateISO,
     potentialAction: {

@@ -46,9 +46,14 @@ Allow: /
 User-agent: YandexBot
 Allow: /
 
+# Brave Search Crawler (Bravebot)
+User-agent: Bravebot
+Allow: /
+
 User-agent: Baiduspider
 Allow: /
 
 # Official XML Sitemaps
+Sitemap: https://mrrathore-tech.vercel.app/sitemap.xml
 Sitemap: https://rmahipalsingh602-group.gitlab.io/rmahipalsingh602-project/sitemap.xml
 Sitemap: https://mr-rathore-company-site.netlify.app/sitemap.xml
