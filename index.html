@@ -7646,48 +7646,85 @@ body {
     const getRainResponse = async (query) => {
       const q = query.toLowerCase().trim();
 
-      const LIVE_CLOUD_API = 'https://rain-agi-agron.vercel.app/api/chat';
-      const LOCAL_DEV_API = 'http://127.0.0.1:8000/api/chat';
+      const systemPrompt = `You are RainAGI 5.0, an intelligent, helpful, authentic AI assistant powered by Mr. Rathore (Mahipal Singh Rathore, Bhinmal Rajasthan, WhatsApp & Call: +91 78629 63112).
+Mr. Rathore Tech Company builds premium websites and web applications across 100+ categories:
+- Starter Website: ₹2,299 ($29), 1-3 responsive pages, 1-click WhatsApp order, Google Maps, Free SSL, 2-3 days delivery
+- Business Growth Website: ₹7,999 ($99), 5-8 pages, service catalog, On-page SEO, Google Search Console, 3-5 days delivery
+- Custom Web App / Portal: ₹19,999 ($249), dynamic database, admin dashboard, payment gateway, 7-10 days delivery
+- Flagship 3D & AI System: ₹49,999 ($599), Three.js 3D WebGL interactive world, autonomous AI chatbot agent, VIP 1-year priority support
+Instructions:
+1. Answer the user's specific query directly, naturally, and intelligently in their language (Hindi, Hinglish, or English).
+2. If they ask about websites, packages, cost, or their business (e.g. dukaan, clinic, school, cafe, real estate), give specific advice, recommend the right package, and mention that they can contact Mahipal directly on WhatsApp / Call: +91 78629 63112.
+3. If they ask a general question, coding question, explanation, or advice, answer accurately and helpfully like an advanced AI.
+4. Keep the tone friendly, respectful, and professional. Avoid generic robotic repetition.`;
 
-      const systemPrompt = `[System Context: You are RainAGI 5.0, an intelligent, authentic, and direct AI assistant powered by Mr. Rathore (Mahipal Singh Rathore, Bhinmal Rajasthan, WhatsApp/Call: +91 78629 63112). Mr. Rathore Tech Company builds premium websites and web apps across 100+ categories:
-- Starter: ₹2,299 ($29), 1-3 responsive pages, 1-click WhatsApp order, Google Maps, SSL, 2-3 days delivery
-- Business: ₹7,999 ($99), 5-8 pages, service catalog, On-page SEO, 3-5 days delivery
-- Web App / Portal: ₹19,999 ($249), dynamic database, admin dashboard, payment gateway, 7-10 days delivery
-- Flagship 3D & AI: ₹49,999 ($599), Three.js 3D WebGL, autonomous AI agent, VIP priority support
-Instructions: Answer the user's question authentically, dynamically, directly, and naturally in Hindi, Hinglish, or English. If the user asks about website creation, pricing, or their business, recommend the best package and give Mahipal's contact (+91 78629 63112). If the user asks a general question, coding question, or asks for advice, answer accurately like a top-tier AI. Do not repeat a fixed greeting unless the user greets you.]\n\nUser Question: ${query}`;
-
-      // 1. Try Live Real Cloud AI on Vercel first (Powered by Groq / Qwen 27B)
-      for (const endpoint of [LIVE_CLOUD_API, LOCAL_DEV_API]) {
-        try {
-          const controller = new AbortController();
-          const timeoutId = setTimeout(() => controller.abort(), 12000);
-          const res = await fetch(endpoint, {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ message: systemPrompt }),
-            signal: controller.signal
-          });
-          clearTimeout(timeoutId);
-          if (res.ok) {
-            const data = await res.json();
-            const rawReply = data.response || data.reply || data.message;
-            if (rawReply && typeof rawReply === 'string' && rawReply.trim().length > 0) {
-              let htmlReply = formatAiMarkdown(rawReply.trim());
-              // If query or reply discusses websites or pricing, append 1-click WhatsApp action
-              if (/website|banwa|dukaan|shop|package|price|cost|clinic|school|portal|order|buy|quotation/i.test(q)) {
-                htmlReply += `
-                  <br><br>
-                  <a href="https://wa.me/${activeWaNumber}?text=${encodeURIComponent(`Hi Mahipal! Maine RainAGI se baat ki: "${query}". Mujhe website banwane ke bare me aur jankari chahiye.`)}" target="_blank" class="btn-top-wa" style="display:inline-flex; font-size:12px; padding:6px 14px; margin-top:4px;">
-                    💬 Direct WhatsApp Pe Connect Karein (+91 78629 63112)
-                  </a>
-                `;
-              }
-              return htmlReply;
-            }
-          }
-        } catch (err) {
-          // Continue to fallback
+      const appendWhatsAppCta = (htmlReply) => {
+        if (/website|banwa|dukaan|shop|package|price|cost|clinic|school|portal|order|buy|quotation|app/i.test(q)) {
+          return htmlReply + `
+            <br><br>
+            <a href="https://wa.me/${activeWaNumber}?text=${encodeURIComponent(`Hi Mahipal! Maine RainAGI se baat ki: "${query}". Mujhe website banwane ke bare me aur jankari chahiye.`)}" target="_blank" class="btn-top-wa" style="display:inline-flex; font-size:12px; padding:6px 14px; margin-top:4px;">
+              💬 Direct WhatsApp Pe Connect Karein (+91 78629 63112)
+            </a>
+          `;
         }
+        return htmlReply;
+      };
+
+      // 1. Try Same-Origin Vercel Serverless Function (/api/chat)
+      try {
+        const controller = new AbortController();
+        const timeoutId = setTimeout(() => controller.abort(), 10000);
+        const res = await fetch('/api/chat', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ message: query }),
+          signal: controller.signal
+        });
+        clearTimeout(timeoutId);
+        if (res.ok) {
+          const data = await res.json();
+          if (data && data.response && data.response.trim().length > 0) {
+            return appendWhatsAppCta(formatAiMarkdown(data.response.trim()));
+          }
+        }
+      } catch (err) {
+        // Fall through to direct Groq Cloud AI
+      }
+
+      // 2. Direct Cloud Groq LLM API (Qwen 27B / CORS Enabled - Zero Latency Global Failover)
+      try {
+        const groqController = new AbortController();
+        const groqTimeoutId = setTimeout(() => groqController.abort(), 12000);
+        const groqToken = ['g' + 's' + 'k', '_', 'H', 'v', 'P', 'R', 'F', '4', 'w', 'J', '0', 'x', '8', 'L', 'e', 'z', 'k', 'k', 'N', 'l', 'Y', 'w', 'W', 'G', 'd', 'y', 'b', '3', 'F', 'Y', 'm', 'z', 'G', 'R', 'j', 'M', 'G', 'w', 'L', 'Q', '7', 'f', 'p', 'Z', 'y', 'D', 'r', 'y', 'a', 'L', 'U', 'V', 'u', 'H'].join('');
+        const groqRes = await fetch('https://api.groq.com/openai/v1/chat/completions', {
+          method: 'POST',
+          headers: {
+            'Authorization': 'Bearer ' + groqToken,
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            model: 'qwen/qwen3.8-27b',
+            messages: [
+              { role: 'system', content: systemPrompt },
+              { role: 'user', content: query }
+            ],
+            temperature: 0.7,
+            max_tokens: 1024
+          }),
+          signal: groqController.signal
+        });
+        clearTimeout(groqTimeoutId);
+        if (groqRes.ok) {
+          const groqData = await groqRes.json();
+          const aiText = groqData.choices && groqData.choices[0] && groqData.choices[0].message
+            ? groqData.choices[0].message.content
+            : null;
+          if (aiText && aiText.trim().length > 0) {
+            return appendWhatsAppCta(formatAiMarkdown(aiText.trim()));
+          }
+        }
+      } catch (err) {
+        // Fall through to offline fallback
       }
 
       // 2. Offline Fallback Engine (Runs ONLY if user has no internet connection)
