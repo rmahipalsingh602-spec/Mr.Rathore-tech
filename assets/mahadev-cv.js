@@ -134,30 +134,22 @@
 
     function updateAvatarContent() {
       avatar.innerHTML = `
-        <div class="cursor-pointer-dot"></div>
-        <div class="cursor-animal-body">${cuteAnimals[currentAnimal]}</div>
+        <div class="cursor-brand-logo-wrap">
+          <img src="assets/logo-192.png" alt="Mr. Rathore Logo Cursor" class="cursor-logo-img" />
+          <div class="cursor-pointer-center"></div>
+        </div>
       `;
     }
     updateAvatarContent();
-
-    let lastPawTime = 0;
 
     window.addEventListener('mousemove', (e) => {
       targetX = e.clientX;
       targetY = e.clientY;
       isPointerActive = true;
-
-      // Drop cute paw prints trail every 80ms
-      const now = performance.now();
-      if (now - lastPawTime > 80) {
-        lastPawTime = now;
-        spawnPawPrint(targetX, targetY);
-      }
     });
 
     window.addEventListener('mousedown', () => {
       if (avatar) avatar.classList.add('is-clicking');
-      playCuteSound(660, 0.08);
     });
 
     window.addEventListener('mouseup', () => {
@@ -167,28 +159,27 @@
     // Hover detection over clickable elements
     document.addEventListener('mouseover', (e) => {
       const target = e.target;
-      if (target.closest('a, button, [role="button"], input, select, textarea, .c-animal-btn, .story-tab')) {
+      if (target.closest('a, button, [role="button"], input, select, textarea, .c-animal-btn, .story-tab, .mini-pill, .pricing-card')) {
         avatar.classList.add('is-hovering');
       }
     });
 
     document.addEventListener('mouseout', (e) => {
       const target = e.target;
-      if (target.closest('a, button, [role="button"], input, select, textarea, .c-animal-btn, .story-tab')) {
+      if (target.closest('a, button, [role="button"], input, select, textarea, .c-animal-btn, .story-tab, .mini-pill, .pricing-card')) {
         avatar.classList.remove('is-hovering');
       }
     });
 
-    // Silky Smooth Physics Loop
+    // Feather-Light Instant Response Loop (Zero Lag, 120Hz/60Hz Butter-Smooth)
     function renderCursor() {
       if (isPointerActive) {
         const dx = targetX - currentX;
         const dy = targetY - currentY;
-        currentX += dx * 0.22;
-        currentY += dy * 0.22;
+        currentX += dx * 0.78;
+        currentY += dy * 0.78;
 
-        const tilt = Math.max(-15, Math.min(15, dx * 0.6));
-        avatar.style.transform = `translate(${currentX}px, ${currentY}px) rotate(${tilt}deg)`;
+        avatar.style.transform = `translate3d(${currentX}px, ${currentY}px, 0)`;
       }
       requestAnimationFrame(renderCursor);
     }
